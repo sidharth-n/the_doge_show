@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>THE DOGE SHOW | ROAST KING | VERY CRINGE</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Bangers&family=Comic+Neue:wght@700&family=Press+Start+2P&family=Vt323&display=swap" rel="stylesheet">
+    <style>
+        /* MOBILE OPTIMIZATION: Prevent standard touch behaviors */
+        html, body {
+            touch-action: manipulation; /* Removes double-tap zoom delay = faster clicking */
+            -webkit-tap-highlight-color: transparent; /* Removes blue box on Android click */
+            overscroll-behavior: none; /* Prevents "bounce" scroll effect */
+        }
+
+        /* CURSOR (Desktop Only) */
+        @media (min-width: 768px) {
+            body {
+                cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" style="fill:red;stroke:white;stroke-width:2px;filter:drop-shadow(2px 2px 0px black);"><text y="25" font-size="25">🔥</text></svg>'), auto;
+            }
+            .pointer-cursor {
+                cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" style="fill:white;stroke:black;"><text y="25" font-size="25">🖕</text></svg>'), pointer;
+            }
+        }
+
+        /* FONTS */
+        .font-comic { font-family: 'Comic Neue', sans-serif; }
+        .font-pixel { font-family: 'Press Start 2P', monospace; }
+        .font-meme { font-family: 'Bangers', cursive; }
+        .font-news { font-family: 'Vt323', monospace; }
+
+        /* ANIMATIONS */
+        @keyframes shake-hard {
+            0% { transform: translate(1px, 1px) rotate(0deg); }
+            10% { transform: translate(-3px, -2px) rotate(-10deg); }
+            20% { transform: translate(-3px, 0px) rotate(10deg); }
+            30% { transform: translate(3px, 2px) rotate(0deg); }
+            40% { transform: translate(1px, -1px) rotate(10deg); }
+            50% { transform: translate(-1px, 2px) rotate(-10deg); }
+            60% { transform: translate(-3px, 1px) rotate(0deg); }
+            70% { transform: translate(3px, 1px) rotate(-10deg); }
+            80% { transform: translate(-1px, -1px) rotate(10deg); }
+            90% { transform: translate(1px, 2px) rotate(0deg); }
+            100% { transform: translate(1px, -2px) rotate(-10deg); }
+        }
+        .shake-constant { animation: shake-hard 0.5s infinite; }
+        .shake-on-hover:hover { animation: shake-hard 0.3s infinite; }
+
+        /* POPUP TEXT styling - Responsive */
+        .roast-popup {
+            position: fixed;
+            pointer-events: none;
+            z-index: 9999;
+            animation: flyUp 1.5s cubic-bezier(0.19, 1, 0.22, 1) forwards;
+            font-family: 'Bangers', cursive;
+            -webkit-text-stroke: 1px black; /* Thinner stroke on mobile */
+            font-weight: bold;
+            color: white;
+            text-shadow: 2px 2px 0px #000;
+            white-space: nowrap;
+            font-size: 32px; /* Mobile Size */
+        }
+        
+        @media (min-width: 768px) {
+            .roast-popup {
+                font-size: 50px; /* Desktop Size */
+                -webkit-text-stroke: 2px black;
+                text-shadow: 4px 4px 0px #000;
+            }
+        }
+
+        @keyframes flyUp {
+            0% { transform: translate(-50%, -50%) scale(0.5) rotate(0deg); opacity: 0; }
+            20% { opacity: 1; transform: translate(-50%, -50%) scale(1.2) rotate(var(--rot)); }
+            100% { opacity: 0; transform: translate(-50%, -150px) scale(1) rotate(var(--rot)); }
+        }
+
+        /* SCROLLBAR */
+        ::-webkit-scrollbar { width: 10px; }
+        ::-webkit-scrollbar-track { background: #000; }
+        ::-webkit-scrollbar-thumb { background: #ffff00; border: 2px solid #000; }
+    </style>
+</head>
+<body class="bg-purple-900 overflow-hidden select-none">
+
+    <!-- 1. ENTER GATE -->
+    <div id="enter-gate" class="fixed inset-0 z-[100] bg-black flex flex-col items-center justify-center text-white transition-all duration-500 px-4">
+        <div class="relative group w-full max-w-lg">
+            <div class="absolute -inset-1 bg-gradient-to-r from-red-600 to-violet-600 rounded-lg blur opacity-75 group-hover:opacity-100 transition duration-1000 group-hover:duration-200 animate-pulse"></div>
+            <button onclick="enterTheDogeverse()" class="relative w-full px-6 py-8 bg-black ring-4 ring-yellow-400 rounded-lg leading-none flex flex-col md:flex-row items-center justify-center md:divide-x divide-gray-600 pointer-cursor gap-4 md:gap-0">
+                <span class="flex items-center justify-center md:pr-6 w-full md:w-auto">
+                    <span class="text-gray-100 font-pixel text-xl md:text-4xl text-yellow-400 text-center">ENTER THE ROAST</span>
+                </span>
+                <span class="flex items-center justify-center md:pl-6 w-full md:w-auto text-indigo-400 group-hover:text-gray-100 transition duration-200 font-comic text-lg md:text-xl">
+                    (Sound Required) 🔊
+                </span>
+            </button>
+        </div>
+        <div class="mt-8 text-center font-comic text-gray-500 text-xs md:text-sm px-4">
+            WARNING: MAY CAUSE BRAIN ROT<br>
+            By clicking you agree to get roasted.
+        </div>
+    </div>
+
+    <!-- 2. MAIN APP - Using 100dvh for better mobile height -->
+    <div id="app" class="hidden h-[100dvh] w-full relative flex flex-col">
+
+        <!-- TOP HUD - Compressed for Mobile -->
+        <div class="bg-black border-b-4 border-yellow-400 px-2 py-1 flex justify-between items-center text-white font-pixel z-50 h-14 shrink-0 text-[10px] md:text-xs">
+            <div class="flex items-center gap-2 min-w-fit">
+                <span class="text-red-500 animate-pulse text-base md:text-xl">●</span> 
+                <span class="md:hidden">LIVE</span>
+                <span class="hidden md:inline">LIVE JUDGMENT</span>
+            </div>
+            
+            <!-- HEAT METER - Flexible Width -->
+            <div class="flex flex-col items-center flex-1 mx-3 md:mx-8">
+                <div class="text-[8px] md:text-xs text-yellow-400 mb-1 whitespace-nowrap">CRINGE LEVEL</div>
+                <div class="w-full h-3 md:h-4 bg-gray-800 border-2 border-white relative overflow-hidden">
+                    <div id="heat-bar" class="h-full bg-gradient-to-r from-green-500 via-yellow-500 to-red-600 w-0 transition-all duration-200"></div>
+                </div>
+            </div>
+
+            <div class="text-right min-w-fit">
+                <div class="text-[8px] md:text-xs text-gray-400 leading-tight">ROASTS</div>
+                <div id="score-counter" class="text-yellow-400 text-lg md:text-2xl font-bold">0</div>
+            </div>
+        </div>
+
+        <!-- SCROLLABLE CONTENT AREA -->
+        <div class="flex-1 overflow-y-auto overflow-x-hidden relative bg-[url('https://www.transparenttextures.com/patterns/diagmonds-light.png')] bg-fixed">
+            
+            <!-- Background Chaos -->
+            <div class="fixed inset-0 pointer-events-none opacity-20 z-0 flex items-center justify-center overflow-hidden">
+                <div class="text-[30vw] font-meme text-black rotate-45 transform select-none">ROAST</div>
+            </div>
+
+            <!-- HERO SECTION (The Clicker) -->
+            <div class="relative z-10 min-h-[calc(100dvh-8rem)] flex flex-col items-center justify-center py-4 md:py-6">
+                
+                <!-- The Main Title - Responsive sizing -->
+                <h1 class="font-meme text-5xl md:text-8xl text-white text-stroke-black drop-shadow-[3px_3px_0px_rgba(0,0,0,1)] md:drop-shadow-[5px_5px_0px_rgba(0,0,0,1)] mb-4 text-center transform -rotate-2 hover:rotate-2 transition-transform cursor-default px-2 leading-none">
+                    THE <span class="text-yellow-400">DOGE</span> SHOW
+                </h1>
+                
+                <p class="font-comic text-sm md:text-xl text-black bg-white border-2 border-black px-4 py-1 rotate-1 mb-6 shadow-[4px_4px_0px_rgba(0,0,0,1)] max-w-[90%] text-center">
+                    "I see what you posted. Use code: TOUCHGRASS"
+                </p>
+
+                <!-- THE INTERACTIVE DOGE -->
+                <!-- Adjusted size for mobile (w-64) vs desktop (w-96) -->
+                <div class="relative w-64 h-64 md:w-80 md:h-80 pointer-cursor transition-transform duration-75 active:scale-95 active:rotate-3 touch-manipulation" onclick="handleRoastClick(event)">
+                    
+                    <!-- Glow behind -->
+                    <div class="absolute inset-0 rounded-full bg-yellow-400 blur-3xl opacity-60 animate-pulse"></div>
+                    
+                    <!-- Doge Image -->
+                    <img id="main-doge" 
+                         src="uploaded_doge_show_upscaled.jpg" 
+                         class="w-full h-full object-cover rounded-full border-4 md:border-8 border-white shadow-[0px_10px_30px_rgba(0,0,0,0.5)] z-20 relative hover:brightness-110 select-none"
+                         alt="Doge Host"
+                         draggable="false">
+                    
+                    <!-- Sunglasses -->
+                    <div id="glasses" class="hidden absolute top-[30%] left-1/2 -translate-x-1/2 w-[60%] text-5xl md:text-6xl z-30 pointer-events-none text-center">
+                        🕶️
+                    </div>
+
+                    <!-- Click Instruction -->
+                    <div class="absolute -bottom-5 left-1/2 -translate-x-1/2 whitespace-nowrap bg-red-600 text-white font-pixel text-[10px] md:text-xs px-3 py-1 border-2 border-white rounded-full animate-bounce z-40">
+                        TAP TO ROAST
+                    </div>
+                </div>
+
+                <!-- Sound Controls - Stacked/Wrap on mobile -->
+                <div class="flex gap-3 md:gap-4 mt-6 md:mt-8 flex-wrap justify-center px-4">
+                    <button onclick="toggleMusic()" id="music-btn" class="font-pixel text-[10px] md:text-xs bg-gray-800 text-white px-4 py-3 border-b-4 border-black active:border-b-0 active:translate-y-1 rounded active:mt-1">
+                        🎵 MUSIC: OFF
+                    </button>
+                    <button onclick="playSound('airhorn')" class="font-pixel text-[10px] md:text-xs bg-red-600 text-white px-4 py-3 border-b-4 border-red-800 active:border-b-0 active:translate-y-1 rounded active:mt-1 shake-on-hover">
+                        📢 AIRHORN
+                    </button>
+                </div>
+            </div>
+
+            <!-- "WALL OF SHAME" SECTION -->
+            <div class="bg-yellow-400 border-t-8 border-black py-12 px-4 relative">
+                <div class="max-w-6xl mx-auto">
+                    <h2 class="font-meme text-5xl md:text-7xl text-black text-center mb-12 drop-shadow-md transform -rotate-1 leading-none">
+                        WALL OF <span class="text-white text-stroke-sm">SHAME</span>
+                    </h2>
+
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 font-comic">
+                        <!-- Roast Card 1 -->
+                        <div class="bg-white border-4 border-black p-4 shadow-[8px_8px_0px_#000] rotate-1 hover:rotate-0 transition-transform">
+                            <div class="flex justify-between border-b-2 border-gray-200 pb-2 mb-2">
+                                <span class="font-bold text-red-600">@SadInfluencer</span>
+                                <span class="text-xs text-gray-500">2m ago</span>
+                            </div>
+                            <p class="text-lg">"Doge, rate my outfit."</p>
+                            <div class="mt-4 bg-gray-100 p-3 rounded-lg border-l-4 border-yellow-500">
+                                <p class="font-bold text-yellow-600 mb-1">Doge Replied:</p>
+                                <p>"You look like a randomized Sim. 0/10. Much sad."</p>
+                            </div>
+                        </div>
+
+                        <!-- Roast Card 2 -->
+                        <div class="bg-white border-4 border-black p-4 shadow-[8px_8px_0px_#000] -rotate-1 hover:rotate-0 transition-transform">
+                            <div class="flex justify-between border-b-2 border-gray-200 pb-2 mb-2">
+                                <span class="font-bold text-blue-600">@TechBro_Eth</span>
+                                <span class="text-xs text-gray-500">5m ago</span>
+                            </div>
+                            <p class="text-lg">"Just bought another monkey JPEG!"</p>
+                            <div class="mt-4 bg-gray-100 p-3 rounded-lg border-l-4 border-yellow-500">
+                                <p class="font-bold text-yellow-600 mb-1">Doge Replied:</p>
+                                <p>"I screenshotted it. Now we both have it. I paid $0. You paid your life savings."</p>
+                            </div>
+                        </div>
+
+                         <!-- Roast Card 3 -->
+                         <div class="bg-white border-4 border-black p-4 shadow-[8px_8px_0px_#000] rotate-2 hover:rotate-0 transition-transform">
+                            <div class="flex justify-between border-b-2 border-gray-200 pb-2 mb-2">
+                                <span class="font-bold text-purple-600">@Karen99</span>
+                                <span class="text-xs text-gray-500">10m ago</span>
+                            </div>
+                            <p class="text-lg">"I would like to speak to the manager of this website."</p>
+                            <div class="mt-4 bg-gray-100 p-3 rounded-lg border-l-4 border-yellow-500">
+                                <p class="font-bold text-yellow-600 mb-1">Doge Replied:</p>
+                                <p>"Bark bark. (Translation: Get out)."</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- FAKE SUBMIT FORM -->
+            <div class="bg-black text-white py-12 md:py-16 px-4 text-center">
+                <h2 class="font-pixel text-2xl md:text-4xl text-yellow-400 mb-4">GET ROASTED LIVE</h2>
+                <p class="font-comic text-lg md:text-xl mb-8">Type your name. Accept your fate.</p>
+                
+                <div class="max-w-md mx-auto flex flex-col md:flex-row gap-2">
+                    <input type="text" placeholder="@YourName" class="flex-1 p-4 text-black font-pixel border-4 border-white focus:outline-none focus:border-yellow-400 text-sm md:text-base">
+                    <button onclick="alert('ERROR 404: YOUR DIGNITY NOT FOUND')" class="bg-red-600 hover:bg-red-500 text-white font-pixel px-8 py-4 border-4 border-white active:bg-red-700">
+                        SUBMIT
+                    </button>
+                </div>
+                <p class="mt-4 text-[10px] md:text-xs text-gray-500 font-pixel">Queue time: 69 hours</p>
+            </div>
+
+            <!-- SPACER FOR TICKER -->
+            <div class="h-14 md:h-16"></div>
+
+        </div>
+
+        <!-- 3. FIXED BOTTOM NEWS TICKER -->
+        <div class="bg-red-600 h-10 md:h-12 shrink-0 border-t-4 border-black flex items-center relative overflow-hidden z-[100]">
+            <div class="bg-yellow-400 h-full px-2 md:px-4 flex items-center font-bold font-pixel text-black border-r-4 border-black shrink-0 relative z-10 text-[10px] md:text-base">
+                NEWS
+            </div>
+            <div class="whitespace-nowrap font-news text-lg md:text-2xl text-white uppercase tracking-wider animate-[marquee_20s_linear_infinite] flex items-center">
+                <span class="mx-4">🔴 DOGE ROASTS ELON MUSK LIVE</span>
+                <span class="mx-4">● INTERNET TROLL FOUND TOUCHING GRASS (FAKE NEWS)</span>
+                <span class="mx-4">● CATS ARE OFFICIALLY CANCELLED</span>
+                <span class="mx-4">● SUBSCRIBE TO THE DOGE SHOW OR 7 YEARS BAD LUCK</span>
+                <span class="mx-4">● YOUR WIFI IS SLOW</span>
+                <span class="mx-4">● 1 ROAST = 1 PRAYER</span>
+                <span class="mx-4">● DOGE DECLARES HIMSELF CEO OF MEMES</span>
+                <span class="mx-4">● AI TAKEOVER SCHEDULED FOR NEXT TUESDAY</span>
+                <span class="mx-4">● STOP READING THIS AND CLICK THE DOGE</span>
+                <span class="mx-4">● 404: BRAINCELLS NOT FOUND</span>
+                <span class="mx-4">● BITCOIN FIXES THIS (MAYBE)</span>
+                <span class="mx-4">● REJECT HUMANITY, RETURN TO DOGE</span>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- JS LOGIC -->
+    <script>
+        // --- AUDIO ENGINE ---
+        const AudioContext = window.AudioContext || window.webkitAudioContext;
+        let audioCtx;
+        let isMusicPlaying = false;
+        let nextNoteTime = 0;
+        let timerID;
+
+        // 8-Bit Melody (Frequencies) - A fast paced silly loop
+        const melody = [
+            523.25, 0, 587.33, 659.25, 523.25, 0, 783.99, 0, // C, D, E, C, G
+            880.00, 0, 783.99, 698.46, 659.25, 587.33, 523.25, 0 // A, G, F, E, D, C
+        ];
+        let noteIndex = 0;
+
+        function initAudio() {
+            if (!audioCtx) audioCtx = new AudioContext();
+            if (audioCtx.state === 'suspended') audioCtx.resume();
+        }
+
+        // Better Synthesizer
+        function playSound(type) {
+            initAudio();
+            const osc = audioCtx.createOscillator();
+            const gain = audioCtx.createGain();
+            osc.connect(gain);
+            gain.connect(audioCtx.destination);
+
+            const now = audioCtx.currentTime;
+
+            if (type === 'bark') {
+                // Realistic-ish Woof: Triangle wave pitching down fast
+                osc.type = 'triangle';
+                osc.frequency.setValueAtTime(300, now);
+                osc.frequency.exponentialRampToValueAtTime(50, now + 0.15);
+                gain.gain.setValueAtTime(0.5, now);
+                gain.gain.exponentialRampToValueAtTime(0.01, now + 0.15);
+                osc.start(now);
+                osc.stop(now + 0.15);
+            } else if (type === 'airhorn') {
+                // Rough imitation of airhorn
+                osc.type = 'sawtooth';
+                osc.frequency.setValueAtTime(400, now);
+                osc.frequency.linearRampToValueAtTime(800, now + 0.05);
+                gain.gain.setValueAtTime(0.3, now);
+                gain.gain.exponentialRampToValueAtTime(0.01, now + 0.5);
+                
+                // Add a second oscillator for dissonance
+                const osc2 = audioCtx.createOscillator();
+                osc2.type = 'square';
+                osc2.frequency.setValueAtTime(405, now); // slightly detuned
+                osc2.connect(gain);
+                osc2.start(now);
+                osc2.stop(now + 0.5);
+
+                osc.start(now);
+                osc.stop(now + 0.5);
+            }
+        }
+
+        // Music Scheduler
+        function scheduleNote() {
+            const secondsPerBeat = 0.12; // Fast tempo
+            const now = audioCtx.currentTime;
+
+            if (nextNoteTime < now + 0.1) {
+                const freq = melody[noteIndex % melody.length];
+                
+                if (freq > 0) { // If not a rest
+                    const osc = audioCtx.createOscillator();
+                    const gain = audioCtx.createGain();
+                    osc.type = 'square'; // 8-bit sound
+                    osc.connect(gain);
+                    gain.connect(audioCtx.destination);
+                    
+                    osc.frequency.value = freq;
+                    gain.gain.value = 0.05; // Keep it background volume
+                    
+                    // Envelope (short staccato)
+                    gain.gain.setValueAtTime(0.05, nextNoteTime);
+                    gain.gain.exponentialRampToValueAtTime(0.001, nextNoteTime + 0.1);
+
+                    osc.start(nextNoteTime);
+                    osc.stop(nextNoteTime + 0.1);
+                }
+
+                nextNoteTime += secondsPerBeat;
+                noteIndex++;
+            }
+            timerID = requestAnimationFrame(scheduleNote);
+        }
+
+        function toggleMusic() {
+            initAudio();
+            const btn = document.getElementById('music-btn');
+            if (isMusicPlaying) {
+                cancelAnimationFrame(timerID);
+                isMusicPlaying = false;
+                btn.innerText = "🎵 MUSIC: OFF";
+                btn.classList.replace('bg-green-600', 'bg-gray-800');
+            } else {
+                nextNoteTime = audioCtx.currentTime + 0.1;
+                scheduleNote();
+                isMusicPlaying = true;
+                btn.innerText = "🎵 MUSIC: ON";
+                btn.classList.replace('bg-gray-800', 'bg-green-600');
+            }
+        }
+
+        // --- GAME LOGIC ---
+        let roastsDelivered = 0;
+        let heatLevel = 0;
+        const roastPhrases = [
+            "L + RATIO", "NO BITCHES?", "TOUCH GRASS", "CRINGE", 
+            "WHO ASKED?", "SKILL ISSUE", "OK BOOMER", "MID", 
+            "EMOTIONAL DAMAGE", "FATHERLESS BEHAVIOR", "COPE", "SEETHE"
+        ];
+        const colors = ["#ff0000", "#00ff00", "#ffff00", "#00ffff", "#ff00ff"];
+
+        function enterTheDogeverse() {
+            document.getElementById('enter-gate').style.display = 'none';
+            document.getElementById('app').classList.remove('hidden');
+            initAudio();
+            // Optional: Auto start music or wait for user
+            toggleMusic(); 
+        }
+
+        function handleRoastClick(e) {
+            e.preventDefault(); // Stop any double-tap zoom nonsense
+            
+            // Audio
+            playSound('bark');
+
+            // Logic
+            roastsDelivered++;
+            document.getElementById('score-counter').innerText = roastsDelivered;
+            
+            // Heat Meter
+            heatLevel = Math.min(heatLevel + 5, 100);
+            document.getElementById('heat-bar').style.width = heatLevel + '%';
+            
+            // Glasses Trigger
+            if(heatLevel > 80) {
+                document.getElementById('glasses').classList.remove('hidden');
+            } else {
+                document.getElementById('glasses').classList.add('hidden');
+            }
+            if(heatLevel >= 100) heatLevel = 0; // Reset
+            
+            // Visual Popup (Fix: Append to body to respect fixed positioning z-index)
+            createRoastText(e.clientX || e.touches[0].clientX, e.clientY || e.touches[0].clientY);
+
+            // Doge Animation
+            const doge = document.getElementById('main-doge');
+            doge.style.transform = `scale(0.95) rotate(${Math.random() * 10 - 5}deg)`;
+            setTimeout(() => doge.style.transform = 'scale(1) rotate(0deg)', 100);
+        }
+
+        function createRoastText(x, y) {
+            const text = roastPhrases[Math.floor(Math.random() * roastPhrases.length)];
+            const color = colors[Math.floor(Math.random() * colors.length)];
+            
+            const el = document.createElement('div');
+            el.className = 'roast-popup';
+            el.innerText = text;
+            el.style.color = color;
+            el.style.left = x + 'px';
+            el.style.top = y + 'px';
+            el.style.setProperty('--rot', (Math.random() * 40 - 20) + 'deg');
+
+            document.body.appendChild(el);
+
+            setTimeout(() => {
+                el.remove();
+            }, 1500);
+        }
+
+        // Decay heat over time
+        setInterval(() => {
+            if(heatLevel > 0) {
+                heatLevel -= 1;
+                document.getElementById('heat-bar').style.width = heatLevel + '%';
+            }
+        }, 200);
+
+    </script>
+</body>
+</html>

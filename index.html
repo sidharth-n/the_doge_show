@@ -83,6 +83,15 @@
 
         .animate-spin-slow { animation: spin 8s linear infinite; }
         @keyframes spin { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
+
+        /* MARQUEE ANIMATION */
+        @keyframes marquee {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+        }
+        .animate-marquee {
+            animation: marquee 45s linear infinite;
+        }
     </style>
 </head>
 <body class="bg-purple-900 overflow-hidden select-none" style="background-color: #581c87;">
@@ -285,6 +294,44 @@
                 </div>
             </div>
 
+            <!-- SOCIALS SECTION (THE CULT) -->
+            <div class="bg-blue-600 border-t-8 border-black py-12 px-4 relative overflow-hidden">
+                <div class="max-w-4xl mx-auto text-center relative z-10">
+                    <h2 class="font-meme text-5xl md:text-7xl text-white text-stroke-black mb-2 transform rotate-1">
+                        JOIN THE <span class="text-yellow-300">CULT</span>
+                    </h2>
+                    <p class="font-comic text-xl md:text-2xl text-white mb-8 bg-black inline-block px-4 py-1 transform -rotate-1 border-2 border-white">
+                        "We need validation from strangers"
+                    </p>
+
+                    <div class="flex flex-col md:flex-row justify-center gap-6 md:gap-12">
+                        <!-- X / Twitter -->
+                        <a href="https://x.com/the_doge_show" target="_blank" class="group relative inline-block transform hover:scale-110 transition-transform duration-200">
+                            <div class="absolute inset-0 bg-black translate-x-2 translate-y-2"></div>
+                            <div class="relative bg-black text-white border-4 border-white px-8 py-6 flex flex-col items-center gap-2 group-hover:-translate-y-1 group-hover:-translate-x-1 transition-transform">
+                                <span class="text-4xl">✖️</span>
+                                <span class="font-pixel text-xl md:text-2xl text-yellow-400">TOXIC BIRD APP</span>
+                                <span class="font-comic text-xs md:text-sm text-gray-400">@the_doge_show</span>
+                            </div>
+                        </a>
+
+                        <!-- YouTube -->
+                        <a href="https://www.youtube.com/@the_doge_show" target="_blank" class="group relative inline-block transform hover:scale-110 transition-transform duration-200">
+                            <div class="absolute inset-0 bg-black translate-x-2 translate-y-2"></div>
+                            <div class="relative bg-red-600 text-white border-4 border-white px-8 py-6 flex flex-col items-center gap-2 group-hover:-translate-y-1 group-hover:-translate-x-1 transition-transform">
+                                <span class="text-4xl">📺</span>
+                                <span class="font-pixel text-xl md:text-2xl text-white">BRAIN ROT TUBE</span>
+                                <span class="font-comic text-xs md:text-sm text-yellow-200">Subscribe or I cry</span>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="mt-12 font-pixel text-[10px] md:text-xs text-blue-200 opacity-50">
+                        * MORE SOCIALS COMING SOON (IF WE DON'T GET BANNED)
+                    </div>
+                </div>
+            </div>
+
             <!-- FAKE SUBMIT FORM -->
             <div class="bg-black text-white py-12 md:py-16 px-4 text-center">
                 <h2 class="font-pixel text-2xl md:text-4xl text-yellow-400 mb-4">GET ROASTED LIVE</h2>
@@ -306,22 +353,51 @@
 
         <!-- 3. FIXED BOTTOM NEWS TICKER -->
         <div class="bg-red-600 h-10 md:h-12 shrink-0 border-t-4 border-black flex items-center relative overflow-hidden z-[100]">
-            <div class="bg-yellow-400 h-full px-2 md:px-4 flex items-center font-bold font-pixel text-black border-r-4 border-black shrink-0 relative z-10 text-[10px] md:text-base">
-                NEWS
+            <div class="bg-yellow-400 h-full px-2 md:px-4 flex items-center font-bold font-pixel text-black border-r-4 border-black shrink-0 relative z-10 text-[10px] md:text-base shadow-[4px_0px_10px_rgba(0,0,0,0.5)]">
+                BREAKING NEWS
             </div>
-            <div class="whitespace-nowrap font-news text-lg md:text-2xl text-white uppercase tracking-wider animate-[marquee_20s_linear_infinite] flex items-center">
-                <span class="mx-4">🔴 DOGE ROASTS ELON MUSK LIVE</span>
-                <span class="mx-4">● INTERNET TROLL FOUND TOUCHING GRASS (FAKE NEWS)</span>
-                <span class="mx-4">● CATS ARE OFFICIALLY CANCELLED</span>
-                <span class="mx-4">● SUBSCRIBE TO THE DOGE SHOW OR 7 YEARS BAD LUCK</span>
-                <span class="mx-4">● YOUR WIFI IS SLOW</span>
-                <span class="mx-4">● 1 ROAST = 1 PRAYER</span>
-                <span class="mx-4">● DOGE DECLARES HIMSELF CEO OF MEMES</span>
-                <span class="mx-4">● AI TAKEOVER SCHEDULED FOR NEXT TUESDAY</span>
-                <span class="mx-4">● STOP READING THIS AND CLICK THE DOGE</span>
-                <span class="mx-4">● 404: BRAINCELLS NOT FOUND</span>
-                <span class="mx-4">● BITCOIN FIXES THIS (MAYBE)</span>
-                <span class="mx-4">● REJECT HUMANITY, RETURN TO DOGE</span>
+            
+            <!-- Scrolling Container -->
+            <div class="flex whitespace-nowrap font-news text-lg md:text-2xl text-white uppercase tracking-wider animate-marquee items-center">
+                <!-- Content Block 1 -->
+                <div class="flex items-center">
+                    <span class="mx-4">🔴 DOGE ROASTS ELON MUSK LIVE</span>
+                    <span class="mx-4">● INTERNET TROLL FOUND TOUCHING GRASS (FAKE NEWS)</span>
+                    <span class="mx-4">● CATS ARE OFFICIALLY CANCELLED</span>
+                    <span class="mx-4">● SUBSCRIBE TO THE DOGE SHOW OR 7 YEARS BAD LUCK</span>
+                    <span class="mx-4">● YOUR WIFI IS SLOW</span>
+                    <span class="mx-4">● 1 ROAST = 1 PRAYER</span>
+                    <span class="mx-4">● DOGE DECLARES HIMSELF CEO OF MEMES</span>
+                    <span class="mx-4">● AI TAKEOVER SCHEDULED FOR NEXT TUESDAY</span>
+                    <span class="mx-4">● STOP READING THIS AND CLICK THE DOGE</span>
+                    <span class="mx-4">● 404: BRAINCELLS NOT FOUND</span>
+                    <span class="mx-4">● BITCOIN FIXES THIS (MAYBE)</span>
+                    <span class="mx-4">● REJECT HUMANITY, RETURN TO DOGE</span>
+                    <span class="mx-4">● SCIENTISTS CONFIRM: YOU ARE CRINGE</span>
+                    <span class="mx-4">● FLORIDA MAN TRIES TO FIGHT THE SUN</span>
+                    <span class="mx-4">● DOGE COIN TO THE MOON (OR WENDYS)</span>
+                    <span class="mx-4">● BREAKING: WATER IS WET</span>
+                </div>
+                
+                <!-- Duplicate Content Block for Seamless Loop -->
+                <div class="flex items-center">
+                    <span class="mx-4">🔴 DOGE ROASTS ELON MUSK LIVE</span>
+                    <span class="mx-4">● INTERNET TROLL FOUND TOUCHING GRASS (FAKE NEWS)</span>
+                    <span class="mx-4">● CATS ARE OFFICIALLY CANCELLED</span>
+                    <span class="mx-4">● SUBSCRIBE TO THE DOGE SHOW OR 7 YEARS BAD LUCK</span>
+                    <span class="mx-4">● YOUR WIFI IS SLOW</span>
+                    <span class="mx-4">● 1 ROAST = 1 PRAYER</span>
+                    <span class="mx-4">● DOGE DECLARES HIMSELF CEO OF MEMES</span>
+                    <span class="mx-4">● AI TAKEOVER SCHEDULED FOR NEXT TUESDAY</span>
+                    <span class="mx-4">● STOP READING THIS AND CLICK THE DOGE</span>
+                    <span class="mx-4">● 404: BRAINCELLS NOT FOUND</span>
+                    <span class="mx-4">● BITCOIN FIXES THIS (MAYBE)</span>
+                    <span class="mx-4">● REJECT HUMANITY, RETURN TO DOGE</span>
+                    <span class="mx-4">● SCIENTISTS CONFIRM: YOU ARE CRINGE</span>
+                    <span class="mx-4">● FLORIDA MAN TRIES TO FIGHT THE SUN</span>
+                    <span class="mx-4">● DOGE COIN TO THE MOON (OR WENDYS)</span>
+                    <span class="mx-4">● BREAKING: WATER IS WET</span>
+                </div>
             </div>
         </div>
 

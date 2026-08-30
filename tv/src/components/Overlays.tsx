@@ -3,7 +3,7 @@ import {T} from '../theme';
 export const LiveBug: React.FC = () => {
   const f = useCurrentFrame(); const pulse = 0.55 + 0.45 * Math.abs(Math.sin(f / 12));
   return (<div style={{position: 'absolute', left: 48, top: 40, display: 'flex', alignItems: 'center', gap: 14, fontFamily: T.font}}>
-    <div style={{background: T.yellow, color: T.ink, fontWeight: 900, fontSize: 26, letterSpacing: 1, padding: '8px 14px', borderRadius: 6}}>THE DOGE SHOW</div>
+    <div style={{background: T.yellow, color: T.ink, fontFamily: T.head, fontWeight: 700, fontSize: 30, letterSpacing: 2, padding: '6px 14px', borderRadius: 6}}>THE DOGE SHOW</div>
     <div style={{display: 'flex', alignItems: 'center', gap: 8, background: 'rgba(0,0,0,0.55)', padding: '8px 14px', borderRadius: 6}}>
       <div style={{width: 14, height: 14, borderRadius: 7, background: T.red, opacity: pulse}} /><span style={{color: '#fff', fontWeight: 800, fontSize: 22, letterSpacing: 2}}>LIVE</span></div>
   </div>);
@@ -16,7 +16,7 @@ export const Clock: React.FC<{start: string}> = ({start}) => {
 export const LowerThird: React.FC<{title: string; sub?: string; enterFrame: number; breaking?: boolean}> = ({title, sub, enterFrame, breaking}) => {
   const f = useCurrentFrame(); const {fps} = useVideoConfig(); const s = spring({frame: f - enterFrame, fps, config: {damping: 200}}); const x = interpolate(s, [0, 1], [-900, 0]);
   return (<div style={{position: 'absolute', left: 48, bottom: 118, transform: `translateX(${x}px)`, fontFamily: T.font}}>
-    <div style={{display: 'inline-block', background: breaking ? T.red : T.yellow, color: breaking ? '#fff' : T.ink, fontWeight: 900, fontSize: 30, letterSpacing: 1.5, padding: '8px 18px', borderRadius: '6px 6px 0 0'}}>{title}</div>
+    <div style={{display: 'inline-block', background: breaking ? T.red : T.yellow, color: breaking ? '#fff' : T.ink, fontFamily: T.head, fontWeight: 700, fontSize: 34, letterSpacing: 2, padding: '6px 18px', borderRadius: '6px 6px 0 0'}}>{title}</div>
     {sub ? <div style={{background: 'rgba(8,8,12,0.92)', color: '#fff', fontWeight: 600, fontSize: 30, padding: '12px 20px', borderRadius: '0 8px 8px 8px', maxWidth: 1100}}>{sub}</div> : null}
   </div>);
 };
@@ -26,7 +26,7 @@ export const Ticker: React.FC<{items: string[]; prices: {sym: string; price: str
     <div style={{background: T.ink, color: '#fff', display: 'flex', alignItems: 'center', gap: 28, padding: '0 28px', fontSize: 26, fontWeight: 800, fontFamily: T.mono, zIndex: 2, borderTop: `4px solid ${T.yellow}`}}>
       {prices.map((p) => (<span key={p.sym}>{p.sym} <span style={{color: '#fff'}}>{p.price}</span> <span style={{color: p.chg >= 0 ? T.green : T.red}}>{p.chg >= 0 ? '▲' : '▼'}{Math.abs(p.chg).toFixed(2)}%</span></span>))}
     </div>
-    <div style={{flex: 1, background: T.yellow, color: T.ink, overflow: 'hidden', display: 'flex', alignItems: 'center', fontSize: 28, fontWeight: 700, whiteSpace: 'nowrap', borderTop: `4px solid ${T.yellow}`}}>
+    <div style={{flex: 1, background: T.yellow, color: T.ink, overflow: 'hidden', display: 'flex', alignItems: 'center', fontSize: 30, fontWeight: 700, fontFamily: T.head, letterSpacing: 1, whiteSpace: 'nowrap', borderTop: `4px solid ${T.yellow}`}}>
       <div style={{transform: `translateX(${x}px)`, paddingLeft: 1920}}>{text}     •     {text}     •     {text}</div>
     </div>
   </div>);
@@ -34,7 +34,24 @@ export const Ticker: React.FC<{items: string[]; prices: {sym: string; price: str
 export const BreakingBar: React.FC<{text: string; enterFrame: number}> = ({text, enterFrame}) => {
   const f = useCurrentFrame(); const {fps} = useVideoConfig(); const s = spring({frame: f - enterFrame, fps, config: {damping: 30, stiffness: 200}}); const w = interpolate(s, [0, 1], [0, 100]);
   return (<div style={{position: 'absolute', left: 0, top: 130, width: `${w}%`, overflow: 'hidden', fontFamily: T.font}}>
-    <div style={{background: T.red, color: '#fff', fontWeight: 900, fontSize: 44, letterSpacing: 4, padding: '14px 48px', whiteSpace: 'nowrap', boxShadow: '0 10px 40px rgba(0,0,0,0.5)'}}>BREAKING NEWS <span style={{fontWeight: 600, letterSpacing: 1, marginLeft: 24}}>{text}</span></div>
+    <div style={{background: T.red, color: '#fff', fontFamily: T.head, fontWeight: 700, fontSize: 52, letterSpacing: 4, padding: '10px 48px', whiteSpace: 'nowrap', boxShadow: '0 10px 40px rgba(0,0,0,0.5)'}}>BREAKING NEWS <span style={{fontWeight: 600, letterSpacing: 1, marginLeft: 24}}>{text}</span></div>
   </div>);
 };
 export const Dim: React.FC<{opacity: number}> = ({opacity}) => <AbsoluteFill style={{background: `rgba(0,0,0,${opacity})`}} />;
+
+export const TitleCard: React.FC<{enterFrame: number; title: string; sub: string}> = ({enterFrame, title, sub}) => {
+  const f = useCurrentFrame(); const {fps} = useVideoConfig(); const s = spring({frame: f - enterFrame, fps, config: {damping: 14, stiffness: 120}});
+  return (<AbsoluteFill style={{justifyContent: 'center', alignItems: 'center', background: 'linear-gradient(180deg, rgba(0,0,0,0) 30%, rgba(0,0,0,0.75) 100%)'}}>
+    <div style={{transform: `scale(${0.8 + 0.2 * s})`, opacity: s, textAlign: 'center', marginTop: 260}}>
+      <div style={{fontFamily: T.head, fontWeight: 700, fontSize: 150, color: T.yellow, letterSpacing: 6, textShadow: '0 0 40px rgba(255,200,61,0.6), 0 10px 40px rgba(0,0,0,0.8)', lineHeight: 1}}>THE DOGE SHOW</div>
+      <div style={{fontFamily: T.head, fontWeight: 500, fontSize: 54, color: '#fff', letterSpacing: 8, marginTop: 10}}>{sub.toUpperCase()}</div>
+    </div></AbsoluteFill>);
+};
+export const EndCard: React.FC<{enterFrame: number}> = ({enterFrame}) => {
+  const f = useCurrentFrame(); const {fps} = useVideoConfig(); const s = spring({frame: f - enterFrame, fps, config: {damping: 200}});
+  return (<AbsoluteFill style={{justifyContent: 'flex-end', alignItems: 'center', paddingBottom: 150}}>
+    <div style={{opacity: s, transform: `translateY(${(1 - s) * 60}px)`, background: 'rgba(8,8,12,0.9)', borderTop: `8px solid ${T.yellow}`, padding: '26px 60px', borderRadius: 12, textAlign: 'center'}}>
+      <div style={{fontFamily: T.head, fontWeight: 700, fontSize: 64, color: '#fff', letterSpacing: 3}}>LIVE 24/7 · YOUTUBE · TWITCH</div>
+      <div style={{fontFamily: T.body, fontWeight: 600, fontSize: 30, color: T.muted, marginTop: 8}}>built entirely on the Venice API · thedogeshow</div>
+    </div></AbsoluteFill>);
+};

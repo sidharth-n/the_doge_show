@@ -1,7 +1,7 @@
 import {AbsoluteFill, Audio, Sequence, staticFile, useCurrentFrame, useVideoConfig, interpolate} from 'remotion';
 import type {EpisodeData, Segment} from './types';
 import {Anchor} from './components/Anchor';
-import {LiveBug, Clock, LowerThird, Ticker, BreakingBar, Dim} from './components/Overlays';
+import {LiveBug, Clock, LowerThird, Ticker, BreakingBar, Dim, TitleCard, EndCard} from './components/Overlays';
 import {QuoteCard, HeadlineCard, BarsCard, PricesCard, HeadlinesCycle, H3Slot} from './components/Cards';
 import {T} from './theme';
 const SFX: Record<string, string> = {sting: 'sfx/sting.mp3', breaking: 'sfx/breaking.mp3', whoosh: 'sfx/whoosh.mp3', wow: 'sfx/wow.mp3'};
@@ -23,17 +23,19 @@ export const Episode: React.FC<{data: EpisodeData}> = ({data}) => {
         <Anchor data={data} seg={cur} segStartFrame={cur ? F(cur.start) : 0} scale={1.12} />
       </div>
       {hasCard ? <div style={{position: 'absolute', right: 0, top: 0, width: 1100, height: 1080, background: 'linear-gradient(90deg, rgba(11,11,15,0) 0%, rgba(11,11,15,0.85) 30%, rgba(11,11,15,0.95) 100%)'}} /> : null}
-      {h3 ? <H3Slot src={h3.ref} caption={h3.caption} full={!!h3full} enterFrame={F(cur!.start)} /> : null}
+      {h3 ? <H3Slot src={h3.ref} caption={cur?.type === 'cold_open' ? undefined : h3.caption} full={!!h3full} enterFrame={F(cur!.start)} /> : null}
       {/* cards */}
       {cur?.type === 'headlines' && cur.cards ? <HeadlinesCycle cards={cur.cards} enterFrame={F(cur.start)} durationFrames={F(cur.duration)} /> : null}
       {cur?.visual?.kind === 'quote' ? <QuoteCard v={cur.visual} enterFrame={F(cur.start)} /> : null}
       {cur?.visual?.kind === 'headline' ? <HeadlineCard v={cur.visual} enterFrame={F(cur.start)} /> : null}
       {cur?.visual?.kind === 'bars' ? <BarsCard v={cur.visual} enterFrame={F(cur.start)} /> : null}
       {cur?.visual?.kind === 'prices' ? <PricesCard v={cur.visual} enterFrame={F(cur.start)} /> : null}
+      {cur?.type === 'cold_open' && frame >= F(cur.start + 4.5) ? <TitleCard enterFrame={F(cur.start + 4.5)} title="THE DOGE SHOW" sub={data.title} /> : null}
+      {cur?.type === 'signoff' && frame >= F(cur.start + cur.duration - 5.5) ? <EndCard enterFrame={F(cur.start + cur.duration - 5.5)} /> : null}
       {cur?.type === 'breaking' ? <BreakingBar text={cur.lower?.[1] ?? ''} enterFrame={F(cur.start)} /> : null}
       {/* chrome */}
       {!h3full ? <><LiveBug /><Clock start="18:00" />
-        {cur?.lower && cur.type !== 'breaking' ? <LowerThird title={cur.lower[0]} sub={cur.lower[1]} enterFrame={F(cur.start)} /> : null}
+        {cur?.lower && cur.type !== 'breaking' && !(cur.type === 'signoff' && frame >= F(cur.start + cur.duration - 5.5)) ? <LowerThird title={cur.lower[0]} sub={cur.lower[1]} enterFrame={F(cur.start)} /> : null}
         <Ticker items={tickerItems} prices={prices} /></> : null}
       {/* audio */}
       {data.segments.map((s) => s.vo ? <Sequence key={s.id} from={F(s.start)} durationInFrames={F(s.duration)}><Audio src={staticFile(s.vo)} /></Sequence> : null)}

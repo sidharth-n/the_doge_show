@@ -15,7 +15,7 @@ export const QuoteCard: React.FC<{v: Extract<Visual, {kind: 'quote'}>; enterFram
 export const HeadlineCard: React.FC<{v: Extract<Visual, {kind: 'headline'}>; enterFrame: number}> = ({v, enterFrame}) => (
   <Panel enterFrame={enterFrame}><div style={{background: T.panel, borderLeft: `10px solid ${T.yellow}`, borderRadius: 12, padding: '28px 34px', color: '#fff', boxShadow: '0 30px 80px rgba(0,0,0,0.55)'}}>
     <div style={{color: T.yellow, fontWeight: 800, fontSize: 22, letterSpacing: 2}}>{v.src.toUpperCase()}</div>
-    <div style={{fontSize: 40, fontWeight: 800, lineHeight: 1.15, marginTop: 12}}>{v.title}</div>
+    <div style={{fontFamily: T.head, fontSize: 48, fontWeight: 700, lineHeight: 1.12, marginTop: 12}}>{v.title}</div>
     {v.sub ? <div style={{fontSize: 26, color: T.muted, marginTop: 14, lineHeight: 1.3}}>{v.sub}</div> : null}
   </div></Panel>);
 export const BarsCard: React.FC<{v: Extract<Visual, {kind: 'bars'}>; enterFrame: number}> = ({v, enterFrame}) => {
@@ -24,7 +24,7 @@ export const BarsCard: React.FC<{v: Extract<Visual, {kind: 'bars'}>; enterFrame:
     <div style={{fontSize: 26, fontWeight: 800, color: T.yellow, letterSpacing: 1}}>{v.title.toUpperCase()}</div>
     {v.rows.map((r, i) => { const s = spring({frame: f - enterFrame - 10 - i * 8, fps, config: {damping: 200}}); const w = interpolate(s, [0, 1], [0, (r.value / max) * 100]);
       return (<div key={r.label} style={{marginTop: 22}}><div style={{fontSize: 26, fontWeight: 600}}>{r.label}</div>
-        <div style={{display: 'flex', alignItems: 'center', gap: 16, marginTop: 8}}><div style={{height: 34, width: `${Math.max(w, 4)}%`, background: i ? T.green : T.red, borderRadius: 6}} /><div style={{fontFamily: T.mono, fontSize: 28, fontWeight: 800}}>{r.text}</div></div></div>); })}
+        <div style={{display: 'flex', alignItems: 'center', gap: 16, marginTop: 8}}><div style={{height: 34, width: `${Math.max(w, 4) * 0.8}%`, background: i ? T.green : T.red, borderRadius: 6}} /><div style={{fontFamily: T.mono, fontSize: 28, fontWeight: 800, whiteSpace: 'nowrap'}}>{r.text}</div></div></div>); })}
     {v.src ? <div style={{color: T.muted, fontSize: 20, marginTop: 20}}>Source: {v.src}</div> : null}
   </div></Panel>);
 };
@@ -42,7 +42,7 @@ export const HeadlinesCycle: React.FC<{cards: {tag: string; text: string; src: s
   const f = useCurrentFrame(); const per = durationFrames / cards.length; const i = Math.min(cards.length - 1, Math.max(0, Math.floor((f - enterFrame) / per))); const c = cards[i];
   return (<Panel enterFrame={enterFrame + i * per}><div style={{background: T.panel, borderRadius: 12, padding: '28px 34px', color: '#fff', borderLeft: `10px solid ${T.yellow}`}}>
     <div style={{display: 'flex', justifyContent: 'space-between', color: T.yellow, fontWeight: 800, fontSize: 22, letterSpacing: 2}}><span>{c.tag}</span><span style={{color: T.muted}}>{i + 1} / {cards.length}</span></div>
-    <div style={{fontSize: 44, fontWeight: 800, lineHeight: 1.15, marginTop: 12}}>{c.text}</div><div style={{color: T.muted, fontSize: 22, marginTop: 14}}>{c.src}</div>
+    <div style={{fontFamily: T.head, fontSize: 54, fontWeight: 700, lineHeight: 1.12, marginTop: 12}}>{c.text}</div><div style={{color: T.muted, fontSize: 22, marginTop: 14}}>{c.src}</div>
   </div></Panel>);
 };
 export const H3Slot: React.FC<{src: string; caption?: string; full: boolean; enterFrame: number}> = ({src, caption, full, enterFrame}) => {

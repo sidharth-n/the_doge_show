@@ -4,7 +4,7 @@ import {Anchor} from './components/Anchor';
 import {LiveBug, Clock, LowerThird, Ticker, BreakingBar, Dim, TitleCard, EndCard, SectionBumper, StudioBackdrop} from './components/Overlays';
 import {QuoteCard, HeadlineCard, BarsCard, PricesCard, HeadlinesCycle, H3Slot, ListCard} from './components/Cards';
 import {T} from './theme';
-const SFX: Record<string, string> = {sting: 'sfx/sting.mp3', breaking: 'sfx/breaking.mp3', whoosh: 'sfx/whoosh.mp3', wow: 'sfx/wow.mp3'};
+const SFX: Record<string, string> = {sting: 'sfx/sting-q.mp3', breaking: 'sfx/breaking-q.mp3', whoosh: 'sfx/whoosh-q.mp3', wow: 'sfx/wow-q.mp3'};
 export const Episode: React.FC<{data: EpisodeData}> = ({data}) => {
   if (!data) return null;
   const {fps} = useVideoConfig(); const frame = useCurrentFrame();
@@ -51,8 +51,8 @@ export const Episode: React.FC<{data: EpisodeData}> = ({data}) => {
         <Ticker items={tickerItems} prices={prices} /></> : null}
       {/* audio */}
       {data.segments.map((s) => s.vo ? <Sequence key={s.id} from={F(s.start)} durationInFrames={F(s.duration)}><Audio src={staticFile(s.vo)} /></Sequence> : null)}
-      {data.segments.flatMap((s) => (s.sfx ?? []).map((x, i) => SFX[x] ? <Sequence key={s.id + x + i} from={F(s.start)} durationInFrames={F(3)}><Audio src={staticFile(SFX[x])} volume={0.8} /></Sequence> : null))}
-      <Audio src={staticFile('music/bed.mp3')} volume={(f) => (f < F(8) ? 0.45 : 0.11)} loop />
+      {data.segments.flatMap((s) => (s.sfx ?? []).map((x, i) => SFX[x] ? <Sequence key={s.id + x + i} from={F(s.start)} durationInFrames={F(3)}><Audio src={staticFile(SFX[x])} volume={0.7} /></Sequence> : null))}
+      <Audio src={staticFile('music/bed-quiet.mp3')} volume={(f) => (f < F(8) ? 6 : 1)} loop />
     </AbsoluteFill>
   );
 };

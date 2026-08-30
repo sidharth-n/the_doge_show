@@ -1,4 +1,4 @@
-import {AbsoluteFill, Img, OffthreadVideo, staticFile, useCurrentFrame, useVideoConfig} from 'remotion';
+import {AbsoluteFill, Img, Loop, OffthreadVideo, staticFile, useCurrentFrame, useVideoConfig} from 'remotion';
 import type {EpisodeData, Segment} from '../types';
 // Idle loop (5.08 s) looped by seeking; mouth sprite chosen from the segment's precomputed viseme list.
 export const Anchor: React.FC<{data: EpisodeData; seg?: Segment; segStartFrame: number; scale?: number}> = ({data, seg, segStartFrame, scale = 1}) => {
@@ -8,7 +8,7 @@ export const Anchor: React.FC<{data: EpisodeData; seg?: Segment; segStartFrame: 
   const a = data.anchor; const sx = 1920 / a.srcW; // loop is 1928x1072 → fit to 1920x1080 cover
   return (
     <div style={{position: 'absolute', left: 0, top: 0, width: 1920, height: 1080, overflow: 'hidden', transform: `scale(${scale})`, transformOrigin: 'top left'}}>
-      <OffthreadVideo src={staticFile(a.loop)} muted startFrom={loopFrame} style={{width: 1920, height: 1080, objectFit: 'cover'}} />
+      <Loop durationInFrames={loopFrames} layout="none"><OffthreadVideo src={staticFile(a.loop)} muted style={{position: 'absolute', left: 0, top: 0, width: 1920, height: 1080, objectFit: 'cover'}} /></Loop>
       <Img src={staticFile(`mouth/v${v}.png`)} style={{position: 'absolute', left: a.cx * sx - (a.w * sx) / 2, top: (a.cy - (a.w * 224 / 308) / 2) * (1080 / a.srcH), width: a.w * sx}} />
     </div>
   );

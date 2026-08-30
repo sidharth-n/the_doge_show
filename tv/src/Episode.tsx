@@ -4,7 +4,7 @@ import {Anchor} from './components/Anchor';
 import {LiveBug, Clock, LowerThird, Ticker, BreakingBar, Dim} from './components/Overlays';
 import {QuoteCard, HeadlineCard, BarsCard, PricesCard, HeadlinesCycle, H3Slot} from './components/Cards';
 import {T} from './theme';
-const SFX: Record<string, string> = {sting: 'sfx/sting.wav', breaking: 'sfx/breaking.wav', whoosh: 'sfx/whoosh.wav', wow: 'sfx/wow.wav'};
+const SFX: Record<string, string> = {sting: 'sfx/sting.mp3', breaking: 'sfx/breaking.mp3', whoosh: 'sfx/whoosh.mp3', wow: 'sfx/wow.mp3'};
 export const Episode: React.FC<{data: EpisodeData}> = ({data}) => {
   if (!data) return null;
   const {fps} = useVideoConfig(); const frame = useCurrentFrame();

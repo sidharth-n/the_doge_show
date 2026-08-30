@@ -8,8 +8,9 @@ def call(path,body):
         r=urllib.request.urlopen(req,timeout=180); data=r.read(); ct=r.headers.get("Content-Type","")
         return json.loads(data) if "json" in ct else {"_binary":data,"_ct":ct}
     except urllib.error.HTTPError as e: print("ERR",path,e.code,e.read()[:500]); sys.exit(1)
-a=argparse.ArgumentParser(); a.add_argument("out"); a.add_argument("prompt"); a.add_argument("--model",default="minimax-music-v26"); a.add_argument("--seconds",type=int,default=30); a.add_argument("--instrumental",action="store_true"); a.add_argument("--quote-only",action="store_true")
-o=a.parse_args(); body={"model":o.model,"prompt":o.prompt,"duration_seconds":o.seconds}
+a=argparse.ArgumentParser(); a.add_argument("out"); a.add_argument("prompt"); a.add_argument("--model",default="minimax-music-v26"); a.add_argument("--seconds",type=int,default=None); a.add_argument("--instrumental",action="store_true"); a.add_argument("--quote-only",action="store_true")
+o=a.parse_args(); body={"model":o.model,"prompt":o.prompt}
+if o.seconds: body["duration_seconds"]=o.seconds
 if o.instrumental: body["force_instrumental"]=True
 def quote(b):
     for keys in (("model","duration_seconds"),("model",)):

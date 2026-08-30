@@ -100,3 +100,16 @@ Two backends behind one interface (same pattern as `privoice` engines.py):
 2. Venice balance: top up (H3 Max packages ≈ $X each; confirm price on venice.ai/pricing).
 3. Anchor look: 3D-ish generated Doge (Venice image) vs the legacy 2D style.
 4. Delay: 5–10 min behind real time OK?
+
+## 6. Lineage (settled 2026-08-30)
+- The channel: YouTube **The Doge Show** `UCcd-IviqTtc0Gq-udPP8fSg`. Prior stream 2025-12-01
+  "I Am Only Roasting SUBSCRIBERS" (8 min, https://www.youtube.com/live/M-8iUii-A8U): a chat-roast
+  show built on `sidharth-n/dynamic-live-youtube` (React overlay, YouTube chat poller, Cartesia TTS).
+  The Doge variant was never committed; only the Hanuman version is on GitHub.
+- **Anchor technique = still studio image + mouth-sprite overlay while TTS plays** (no lip-sync model).
+  Frames in `docs/reference/`. New version drives the sprite from the audio envelope.
+- Studio DNA to keep: photoreal Shiba at a broadcast mic, neon "THE DOGE SHOW", polaroid board,
+  Pepe/Wojak plushies, warm wood-panel set. News version: Venice cap/hoodie, desk, lower thirds + ticker.
+- Voice: old show used Cartesia. New show auditions 4 (Kokoro-pitched, Chatterbox HD, MiniMax
+  Speech-02 HD, ElevenLabs on Venice); Sid picks by ear.
+- Venice: $6.57 balance. H3 Max 768p = $0.24/5s, $0.48/10s, $0.72/15s. Music $0.18/track.

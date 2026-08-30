@@ -23,7 +23,7 @@ export const LowerThird: React.FC<{title: string; sub?: string; enterFrame: numb
 export const Ticker: React.FC<{items: string[]; prices: {sym: string; price: string; chg: number}[]}> = ({items, prices}) => {
   const f = useCurrentFrame(); const text = items.join('     •     '); const x = -((f * 2.6) % 6000);
   return (<div style={{position: 'absolute', left: 0, right: 0, bottom: 0, height: 92, fontFamily: T.font, display: 'flex'}}>
-    <div style={{background: T.ink, color: '#fff', display: 'flex', alignItems: 'center', gap: 28, padding: '0 28px', fontSize: 26, fontWeight: 800, fontFamily: T.mono, zIndex: 2, borderTop: `4px solid ${T.yellow}`}}>
+    <div style={{background: T.ink, color: '#fff', display: 'flex', alignItems: 'center', gap: 18, padding: '0 22px', fontSize: 21, fontWeight: 800, fontFamily: T.mono, zIndex: 2, borderTop: `4px solid ${T.yellow}`}}>
       {prices.map((p) => (<span key={p.sym}>{p.sym} <span style={{color: '#fff'}}>{p.price}</span> <span style={{color: p.chg >= 0 ? T.green : T.red}}>{p.chg >= 0 ? '▲' : '▼'}{Math.abs(p.chg).toFixed(2)}%</span></span>))}
     </div>
     <div style={{flex: 1, background: T.yellow, color: T.ink, overflow: 'hidden', display: 'flex', alignItems: 'center', fontSize: 30, fontWeight: 700, fontFamily: T.head, letterSpacing: 1, whiteSpace: 'nowrap', borderTop: `4px solid ${T.yellow}`}}>
@@ -55,3 +55,19 @@ export const EndCard: React.FC<{enterFrame: number}> = ({enterFrame}) => {
       <div style={{fontFamily: T.body, fontWeight: 600, fontSize: 30, color: T.muted, marginTop: 8}}>built entirely on the Venice API · thedogeshow</div>
     </div></AbsoluteFill>);
 };
+
+export const SectionBumper: React.FC<{text: string; enterFrame: number}> = ({text, enterFrame}) => {
+  const f = useCurrentFrame(); const {fps} = useVideoConfig(); const t = f - enterFrame;
+  const s = spring({frame: t, fps, config: {damping: 22, stiffness: 160}}); const out = interpolate(t, [fps * 2.2, fps * 2.7], [1, 0], {extrapolateLeft: 'clamp', extrapolateRight: 'clamp'});
+  return (<div style={{position: 'absolute', left: 0, right: 0, top: 380, opacity: out, transform: `scaleX(${s})`, transformOrigin: 'left', fontFamily: T.head}}>
+    <div style={{background: T.yellow, height: 14}} />
+    <div style={{background: 'rgba(8,8,12,0.94)', padding: '26px 80px', color: '#fff', fontWeight: 700, fontSize: 120, letterSpacing: 8, lineHeight: 1}}>{text}</div>
+    <div style={{background: T.yellow, height: 14}} />
+  </div>);
+};
+export const StudioBackdrop: React.FC = () => (
+  <AbsoluteFill style={{background: 'radial-gradient(1200px 700px at 30% 40%, #2a1c0e 0%, #12100f 55%, #0b0b0f 100%)'}}>
+    <div style={{position: 'absolute', inset: 0, backgroundImage: 'repeating-linear-gradient(90deg, rgba(255,200,61,0.05) 0 2px, transparent 2px 46px)'}} />
+    <div style={{position: 'absolute', left: 60, bottom: 140, fontFamily: T.head, fontWeight: 700, fontSize: 200, color: 'rgba(255,200,61,0.06)', letterSpacing: 10}}>DOGE</div>
+  </AbsoluteFill>
+);

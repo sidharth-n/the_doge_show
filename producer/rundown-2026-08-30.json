@@ -12,7 +12,7 @@
    "visual": {
     "kind": "h3",
     "ref": "h3-1.mp4",
-    "caption": "THE DOGE SHOW — This Week in AI & Crypto"
+    "caption": "THE DOGE SHOW, This Week in AI & Crypto"
    },
    "sfx": [
     "sting"
@@ -26,7 +26,8 @@
     "DOGE",
     "Anchor · The Doge Show"
    ],
-   "script": "Much good evening. I'm Doge, and this is The Doge Show — the first news channel run by a dog. Here's what's happening in AI and crypto right now."
+   "script": "Much good evening. I am Doge, and this is The Doge Show, the first news channel run by a dog. Here is what is happening in AI and crypto right now. Very news. Wow.",
+   "script_v1": "Much good evening. I'm Doge, and this is The Doge Show, the first news channel run by a dog. Here's what's happening in AI and crypto right now."
   },
   {
    "id": "heads",
@@ -36,7 +37,7 @@
     "TONIGHT'S HEADLINES",
     ""
    ],
-   "script": "Tonight: Venice ships the fastest video model on the planet. Sony and Warner take Anthropic to court. Bitcoin tags a three-month high, then trips over the Fed. Solana votes to cut its own inflation. And Jensen Huang says Nvidia hit A-G-I — again.",
+   "script": "Tonight: Venice ships the fastest video model on the planet. Sony and Warner drag Anthropic to court. Bitcoin tags a three-month high, then trips over the Fed. Solana votes to cut its own inflation. And Jensen Huang says Nvidia hit A-G-I. Again. Such headlines.",
    "cards": [
     {
      "tag": "VENICE",
@@ -63,7 +64,9 @@
      "text": "Jensen: \"Nvidia achieved AGI, again\"",
      "src": "The Verge"
     }
-   ]
+   ],
+   "script_v1": "Tonight: Venice ships the fastest video model on the planet. Sony and Warner take Anthropic to court. Bitcoin tags a three-month high, then trips over the Fed. Solana votes to cut its own inflation. And Jensen Huang says Nvidia hit A-G-I, again.",
+   "bumper": "TONIGHT'S HEADLINES"
   },
   {
    "id": "brk",
@@ -73,10 +76,12 @@
     "BREAKING",
     "VENICE LAUNCHES MINIMAX H3 MAX"
    ],
-   "script": "We begin with breaking news from Venice.",
+   "script": "We begin with breaking news from Venice. Much breaking.",
    "sfx": [
     "breaking"
-   ]
+   ],
+   "script_v1": "We begin with breaking news from Venice.",
+   "bumper": null
   },
   {
    "id": "v1",
@@ -86,7 +91,7 @@
     "VENICE AI",
     "MiniMax H3 Max now live"
    ],
-   "script": "Venice A-I has switched on MiniMax H3 Max — and the headline number is speed. Venice says fifteen seconds of footage, generated in twenty-one seconds. That's faster than real time. Erik Voorhees, Venice's founder, kept it short —",
+   "script": "Venice A-I has switched on MiniMax H3 Max, and the headline number is speed. Venice says fifteen seconds of footage, generated in twenty-one seconds. That is faster than real time. Very fast. Erik Voorhees, Venice's founder, kept it short, quote,",
    "visual": {
     "kind": "quote",
     "handle": "@AskVenice",
@@ -94,7 +99,9 @@
     "date": "Aug 27, 2026",
     "text": "MiniMax H3 Max is by far the fastest frontier video model yet. 15 seconds of footage generated in just 21 seconds.",
     "likes": "137"
-   }
+   },
+   "script_v1": "Venice A-I has switched on MiniMax H3 Max, and the headline number is speed. Venice says fifteen seconds of footage, generated in twenty-one seconds. That's faster than real time. Erik Voorhees, Venice's founder, kept it short ,",
+   "bumper": "VENICE"
   },
   {
    "id": "v2",
@@ -104,7 +111,7 @@
     "ERIK VOORHEES",
     "Founder, Venice"
    ],
-   "script": "— quote, 'Amazing model, generates vids in fifteen seconds.' Much understatement.",
+   "script": "Amazing model, generates vids in fifteen seconds. End quote. Much understatement, Erik.",
    "visual": {
     "kind": "quote",
     "handle": "@ErikVoorhees",
@@ -112,32 +119,34 @@
     "date": "Aug 27, 2026",
     "text": "Amazing model, generates vids in 15 seconds",
     "likes": "205"
-   }
+   },
+   "script_v1": ", quote, 'Amazing model, generates vids in fifteen seconds.' Much understatement."
   },
   {
    "id": "v3",
    "type": "story",
-   "title": "Venice 3 — demo",
+   "title": "Venice 3, demo",
    "lower": [
     "GENERATED ON VENICE",
     "MiniMax H3 Max · 10 s clip · ~15 s render"
    ],
-   "script": "And here's what that looks like. This clip was generated on Venice, with H3 Max, for this broadcast — in about the time it takes me to say this sentence.",
+   "script": "And here is what that looks like. This clip was generated on Venice, with H3 Max, for this broadcast, in about the time it takes me to say this sentence. Such speed.",
    "visual": {
     "kind": "h3",
     "ref": "h3-2.mp4",
     "fullscreenAfter": 6
-   }
+   },
+   "script_v1": "And here's what that looks like. This clip was generated on Venice, with H3 Max, for this broadcast, in about the time it takes me to say this sentence."
   },
   {
    "id": "v4",
    "type": "story",
-   "title": "Venice 4 — head to head",
+   "title": "Venice 4, head to head",
    "lower": [
     "HEAD TO HEAD",
     "Seedance 2.5 vs MiniMax H3 Max"
    ],
-   "script": "Venice ran the same prompt through Seedance 2.5 and H3 Max. Seedance: four minutes fifty-six. H3 Max: about twenty-one seconds. Seedance renders in ten-eighty-p, H3 Max in seven-sixty-eight — so the argument on X is speed versus polish.",
+   "script": "Venice ran the same prompt through Seedance 2.5 and H3 Max. Seedance took four minutes fifty-six. H3 Max, about twenty-one seconds. Seedance renders in ten-eighty-p, H3 Max in seven-sixty-eight, so the argument on X is speed versus polish. Many opinions. Wow.",
    "visual": {
     "kind": "bars",
     "title": "Render time · same prompt · 15 s clip",
@@ -154,25 +163,58 @@
      }
     ],
     "src": "@AskVenice · Aug 28"
-   }
+   },
+   "script_v1": "Venice ran the same prompt through Seedance 2.5 and H3 Max. Seedance: four minutes fifty-six. H3 Max: about twenty-one seconds. Seedance renders in ten-eighty-p, H3 Max in seven-sixty-eight, so the argument on X is speed versus polish."
   },
   {
    "id": "v5",
    "type": "story",
-   "title": "Venice 5 — reddit + week",
+   "title": "Venice 5, reddit + week",
    "lower": [
     "THIS WEEK ON VENICE",
     "Gemini Omni 1.1 Flash · GLM 5.3 Flash · Wan 3.0 · Lumara"
    ],
-   "script": "Reddit's Stable Diffusion crowd is already asking how to get this open-source: one arena benchmark puts it nearly fifty times faster than the base model. And it wasn't Venice's only drop this week — Gemini Omni 1.1 Flash, GLM 5.3 Flash and Wan 3.0 all landed, plus a hundred-thousand-dollar AI film festival called Lumara. H3 Max is half price until September first. Such timing.",
-   "visual": {
-    "kind": "quote",
-    "handle": "r/StableDiffusion",
-    "name": "Reddit · 68 comments",
-    "date": "Aug 27, 2026",
-    "text": "MiniMax H3 Max sets the new Pareto Frontier for video generation, nearly 50x faster than the base model… Image-to-Video generation time is just 6.4 seconds.",
-    "likes": "36"
-   }
+   "script": "Reddit's Stable Diffusion crowd is already asking how to get this open source: one arena benchmark puts it nearly fifty times faster than the base model. And it was not Venice's only drop this week. Gemini Omni 1.1 Flash, GLM 5.3 Flash and Wan 3.0 all landed, plus a hundred-thousand-dollar AI film festival called Lumara. H3 Max is half price until September first. Such timing. Many treats.",
+   "script_v1": "Reddit's Stable Diffusion crowd is already asking how to get this open-source: one arena benchmark puts it nearly fifty times faster than the base model. And it wasn't Venice's only drop this week, Gemini Omni 1.1 Flash, GLM 5.3 Flash and Wan 3.0 all landed, plus a hundred-thousand-dollar AI film festival called Lumara. H3 Max is half price until September first. Such timing.",
+   "visuals": [
+    {
+     "at": 0,
+     "kind": "quote",
+     "handle": "r/StableDiffusion",
+     "name": "Reddit · 68 comments",
+     "date": "Aug 27, 2026",
+     "text": "MiniMax H3 Max sets the new Pareto Frontier for video generation, nearly 50x faster than the base model. Image-to-Video generation time is just 6.4 seconds.",
+     "likes": "36"
+    },
+    {
+     "at": 9,
+     "kind": "list",
+     "title": "This week on Venice",
+     "items": [
+      {
+       "k": "Gemini Omni 1.1 Flash",
+       "v": "Google's frontier video model · Aug 28"
+      },
+      {
+       "k": "GLM 5.3 Flash",
+       "v": "Zai's stealth model, formerly Ox Alpha · Aug 26"
+      },
+      {
+       "k": "Wan 3.0",
+       "v": "Alibaba video model · Aug 24"
+      },
+      {
+       "k": "Lumara Film Festival",
+       "v": "$100K prizes + 10M Venice credits"
+      },
+      {
+       "k": "MiniMax H3 Max",
+       "v": "50% off until Sept 1"
+      }
+     ],
+     "src": "@AskVenice"
+    }
+   ]
   },
   {
    "id": "b1",
@@ -182,7 +224,9 @@
     "AI THIS WEEK",
     ""
    ],
-   "script": "Now, the rest of AI this week."
+   "script": "Now, the rest of AI this week. Much AI.",
+   "script_v1": "Now, the rest of AI this week.",
+   "bumper": "AI THIS WEEK"
   },
   {
    "id": "a1",
@@ -192,13 +236,14 @@
     "THE VERGE",
     "Sony Music & Warner Chappell v. Anthropic"
    ],
-   "script": "Sony Music and Warner Chappell have sued Anthropic, The Verge reports — the music industry's biggest move yet against an AI lab over training data. Anthropic had a better day in court on Wednesday: a judge ruled it was illegally blacklisted by the administration.",
+   "script": "Sony Music and Warner Chappell have sued Anthropic, The Verge reports, the music industry's biggest move yet against an AI lab over training data. Anthropic had a better day in court on Wednesday: a judge ruled it was illegally blacklisted by the administration. Such lawyers. Very billable.",
    "visual": {
     "kind": "headline",
     "src": "The Verge · Aug 29",
     "title": "Sony Music and Warner Chappell are suing Anthropic",
     "sub": "Court also rules Anthropic was illegally blacklisted by the Trump administration (Aug 27)"
-   }
+   },
+   "script_v1": "Sony Music and Warner Chappell have sued Anthropic, The Verge reports, the music industry's biggest move yet against an AI lab over training data. Anthropic had a better day in court on Wednesday: a judge ruled it was illegally blacklisted by the administration."
   },
   {
    "id": "a2",
@@ -208,13 +253,14 @@
     "THE VERGE",
     "Nvidia · OpenAI"
    ],
-   "script": "Jensen Huang says Nvidia has achieved A-G-I. Again. The Verge's take: not that it matters. And at OpenAI, the executive exodus has one clear winner — Greg Brockman, who's consolidating control.",
+   "script": "Jensen Huang says Nvidia has achieved A-G-I. Again. The Verge's take: not that it matters. And at OpenAI, the executive exodus has one clear winner, Greg Brockman, who is consolidating control. Much power. Very org chart.",
    "visual": {
     "kind": "headline",
     "src": "The Verge · Aug 27",
-    "title": "Jensen Huang says Nvidia achieved AGI, again — not that it matters",
+    "title": "Jensen Huang says Nvidia achieved AGI, again, not that it matters",
     "sub": "OpenAI's executive exodus has one big winner"
-   }
+   },
+   "script_v1": "Jensen Huang says Nvidia has achieved A-G-I. Again. The Verge's take: not that it matters. And at OpenAI, the executive exodus has one clear winner, Greg Brockman, who's consolidating control."
   },
   {
    "id": "a3",
@@ -224,7 +270,7 @@
     "THE VERGE",
     "Hugging Face"
    ],
-   "script": "Also this week: Hugging Face built a rollerskating robot duck. No further questions. Very wholesome.",
+   "script": "Also this week: Hugging Face built a rollerskating robot duck. No further questions. Very wholesome. Ten out of ten, would chase.",
    "visual": {
     "kind": "headline",
     "src": "The Verge · Aug 27",
@@ -233,7 +279,8 @@
    },
    "sfx": [
     "wow"
-   ]
+   ],
+   "script_v1": "Also this week: Hugging Face built a rollerskating robot duck. No further questions. Very wholesome."
   },
   {
    "id": "b2",
@@ -243,7 +290,9 @@
     "MARKETS",
     ""
    ],
-   "script": "Let's check the markets."
+   "script": "Let's check the markets. Much numbers.",
+   "script_v1": "Let's check the markets.",
+   "bumper": "MARKETS"
   },
   {
    "id": "mk",
@@ -253,32 +302,43 @@
     "MARKETS",
     "Prices via CoinGecko · 30 Aug"
    ],
-   "script": "Bitcoin is trading around seventy-eight thousand dollars, up half a percent on the day — after hitting a three-month high on Friday and sliding below seventy-eight when Fed Chair Warsh told Jackson Hole, quote, 'we have work to do' on inflation. Ether at twenty-four fifty. Solana at one-oh-five. And Dogecoin, flat at eight and a half cents — I have no comment. I am a dog.",
+   "script": "Bitcoin is trading around seventy-eight thousand dollars, up half a percent on the day, after hitting a three-month high on Friday and sliding below seventy-eight when Fed Chair Warsh told Jackson Hole, quote, we have work to do on inflation. Bonk. Ether at twenty-four fifty. Solana at one-oh-five. Venice's own token, V-V-V, sixteen dollars forty-nine, up three percent, and one DIEM, the Venice compute token, fourteen hundred eighty-five dollars. And Dogecoin, eight and a half cents. I have no comment. I am a dog. Conflict of interest.",
    "visual": {
     "kind": "prices",
     "rows": [
      {
       "sym": "BTC",
-      "price": "$78,070",
-      "chg": 0.54
+      "price": "$78,133",
+      "chg": 0.58
      },
      {
       "sym": "ETH",
-      "price": "$2,456",
-      "chg": 0.71
+      "price": "$2,455",
+      "chg": 0.61
      },
      {
       "sym": "SOL",
-      "price": "$105.08",
-      "chg": 1.11
+      "price": "$104.96",
+      "chg": 0.91
      },
      {
       "sym": "DOGE",
       "price": "$0.085",
-      "chg": 0.0
+      "chg": -0.26
+     },
+     {
+      "sym": "VVV",
+      "price": "$16.49",
+      "chg": 2.97
+     },
+     {
+      "sym": "DIEM",
+      "price": "$1,485",
+      "chg": -0.09
      }
     ]
-   }
+   },
+   "script_v1": "Bitcoin is trading around seventy-eight thousand dollars, up half a percent on the day, after hitting a three-month high on Friday and sliding below seventy-eight when Fed Chair Warsh told Jackson Hole, quote, 'we have work to do' on inflation. Ether at twenty-four fifty. Solana at one-oh-five. And Dogecoin, flat at eight and a half cents, I have no comment. I am a dog."
   },
   {
    "id": "c1",
@@ -288,13 +348,15 @@
     "COINDESK",
     "Solana · On-chain"
    ],
-   "script": "Solana holders voted to speed up the network's disinflation — it passed by a hair. And on-chain: Bitcoin wallets dormant for ten years just moved forty million dollars' worth of coin. Somebody found their old paws-word.",
+   "script": "Solana holders voted to speed up the network's disinflation, and it passed by a hair. Very democracy. And on-chain: Bitcoin wallets dormant for ten years just moved forty million dollars' worth of coin. Somebody found their old paws-word.",
    "visual": {
     "kind": "headline",
     "src": "CoinDesk · Aug 28",
     "title": "Solana vote to double disinflation passes by a hair in dramatic finish",
     "sub": "Bitcoin wallets untouched for 10 years moved $40 million worth of coin"
-   }
+   },
+   "script_v1": "Solana holders voted to speed up the network's disinflation, it passed by a hair. And on-chain: Bitcoin wallets dormant for ten years just moved forty million dollars' worth of coin. Somebody found their old paws-word.",
+   "bumper": "CRYPTO"
   },
   {
    "id": "off",
@@ -304,11 +366,12 @@
     "THE DOGE SHOW",
     "Live 24/7 · YouTube · Twitch · powered by Venice"
    ],
-   "script": "That's the show. We are live twenty-four seven on YouTube and Twitch, built entirely on the Venice API — every clip you saw was made by a dog with an API key. Stay bullish. Much love.",
+   "script": "That's the show. We are live twenty-four seven on YouTube and Twitch. Everything you just watched, the anchor, the voice, the clips, the music, the script, was made by a dog with a Venice API key. No humans were harmed. Stay bullish. Much love.",
    "visual": null,
    "sfx": [
     "sting"
-   ]
+   ],
+   "script_v1": "That's the show. We are live twenty-four seven on YouTube and Twitch. Everything you just watched, the anchor, the voice, the clips, the music, was made by a dog with a Venice API key. Stay bullish. Much love."
   }
  ]
 }

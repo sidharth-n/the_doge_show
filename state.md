@@ -3,10 +3,11 @@
 _Last updated: 2026-08-30_
 
 ## Now
-- Building the 3:10 sample episode "This Week in AI & Crypto" (2026-08-30). Pipeline is end-to-end local except
+- **Final cut rendered 2026-08-30 11:21: `tv/out/episode-final.mp4` (1920x1080, 3:35), copy on `~/Desktop/DogeShow/`.** Awaiting Sid's review; then upload + send to Erik.
+- Built the sample episode "This Week in AI & Crypto" (2026-08-30). Pipeline is end-to-end local except
   Venice calls for stills/clips/music. Screenplay: `docs/screenplay-2026-08-30.md`; rundown data:
   `producer/rundown-2026-08-30.json`; frame: `tv/` (Remotion). Preview render in progress.
-- Venice balance ≈ $3.50. Remaining planned spend: 2 H3 Max clips (cold open 8 s + demo 10 s, 768p) ≈ $0.86.
+- Venice balance ≈ $2.30 after both H3 Max clips (h3-1 newsroom 8 s, h3-2 Shiba astronaut 10 s; ~20 s each to generate).
 
 ## Locked decisions (Sid)
 - Anchor still: `studio/assets/still-cap-v3.png` (Nano Banana Pro edit of the 2025 roast-stream set: Venice cap, MacBook, meme jars).

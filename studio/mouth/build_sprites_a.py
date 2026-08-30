@@ -1,27 +1,44 @@
-"""Photoreal mouth sprites from registered edits. Mask = where the edit differs from the base (dilated + feathered),
-so cut edges sit on identical pixels (no halo) and the whole mouth/tongue is always inside. Exports at loop scale."""
+"""Photoreal mouth sprites v6: mask = the MOUTH ONLY (black lips, dark interior, pink tongue, white teeth) detected in the
+edit itself; fur is never replaced, so there is no seam through fur. Exports at loop scale + placement.json."""
 from PIL import Image, ImageChops, ImageFilter, ImageDraw
 import os,json
 A='studio/assets'; OUT='studio/mouth/a'; os.makedirs(OUT,exist_ok=True)
 BOX=(1100,780,1540,1100); SC=1928/2752
-base=Image.open(f'{A}/still-cap-v3.png').convert('RGB').crop(BOX)
-ORDER=['smile','slight','half','oh','open','tongue']  # v0..v5 by openness
-bw,bh=base.size; lipline=base.convert('L').point(lambda p:255 if p<70 else 0).filter(ImageFilter.MaxFilter(21)).filter(ImageFilter.GaussianBlur(5))
-lipline=ImageChops.multiply(lipline,Image.new('L',(bw,bh),0).paste(255,(60,60,bw-60,bh-40)) or lipline) guard=Image.new('L',(bw,bh),0); ImageDraw.Draw(guard).ellipse((10,10,bw-10,bh-10),fill=255); guard=guard.filter(ImageFilter.GaussianBlur(10))
+base=Image.open(f'{A}/still-cap-v3.png').convert('RGB').crop(BOX); bw,bh=base.size
+ORDER=['smile','slight','half','oh','open','tongue']
+guard=Image.new('L',(bw,bh),0); ImageDraw.Draw(guard).ellipse((30,40,bw-30,bh-20),fill=255); guard=guard.filter(ImageFilter.GaussianBlur(6))
+def keep_blob(m, seed):
+    """keep only the connected component of mask m containing seed (BFS on a 1/4 scale copy)."""
+    sm=m.resize((m.width//4,m.height//4),Image.NEAREST); px=sm.load(); w,h=sm.size
+    sx,sy=seed[0]//4,seed[1]//4
+    # find nearest set pixel to seed
+    best=None
+    for y in range(h):
+        for x in range(w):
+            if px[x,y]>127 and (best is None or (x-sx)**2+(y-sy)**2<best[0]): best=((x-sx)**2+(y-sy)**2,x,y)
+    if best is None: return m
+    keep=set(); stack=[(best[1],best[2])]
+    while stack:
+        x,y=stack.pop()
+        if (x,y) in keep or x<0 or y<0 or x>=w or y>=h or px[x,y]<=127: continue
+        keep.add((x,y)); stack+= [(x+1,y),(x-1,y),(x,y+1),(x,y-1)]
+    out=Image.new('L',(w,h),0); op=out.load()
+    for (x,y) in keep: op[x,y]=255
+    return ImageChops.multiply(m,out.resize(m.size,Image.BILINEAR).filter(ImageFilter.MaxFilter(9)))
+def mouth_mask(im):
+    hsv=im.convert('HSV'); H,S,V=hsv.split()
+    dark=V.point(lambda p:255 if p<85 else 0)                                            # black lips / interior
+    tongue=ImageChops.multiply(ImageChops.multiply(H.point(lambda p:255 if (p<14 or p>236) else 0), S.point(lambda p:255 if p>80 else 0)), V.point(lambda p:255 if p>100 else 0))
+    m=ImageChops.lighter(dark,tongue).filter(ImageFilter.MaxFilter(9)).filter(ImageFilter.MinFilter(5))   # close teeth gaps
+    m=keep_blob(m,(bw//2,bh//2-20))
+    teeth=ImageChops.multiply(V.point(lambda p:255 if p>190 else 0), m.filter(ImageFilter.MaxFilter(15)))   # bright pixels inside lips = teeth
+    m=ImageChops.lighter(m,teeth).filter(ImageFilter.MaxFilter(5)).filter(ImageFilter.GaussianBlur(1.4))
+    return ImageChops.multiply(m,guard)
 for i,n in enumerate(ORDER):
     im=Image.open(f'{A}/still-mouth-{n}-aligned.png').convert('RGB').crop(BOX)
-    # low-frequency colour match: im *= blur(base)/blur(im), so fur tone equals the base while mouth detail stays
-    bb=base.filter(ImageFilter.GaussianBlur(20)); ib=im.filter(ImageFilter.GaussianBlur(20))
-    px=im.load(); pb=bb.load(); pi=ib.load()
-    for y in range(bh):
-        for x in range(bw):
-            r,g,b=px[x,y]; R,G,B=pb[x,y]; r2,g2,b2=pi[x,y]
-            px[x,y]=(min(255,int(r*min(1.25,max(0.8,R/max(1,r2))))),min(255,int(g*min(1.25,max(0.8,G/max(1,g2))))),min(255,int(b*min(1.25,max(0.8,B/max(1,b2))))))
-    d=ImageChops.difference(base,im).convert('L').filter(ImageFilter.GaussianBlur(3))  # computed AFTER colour match
-    m=d.point(lambda p:255 if p>26 else 0).filter(ImageFilter.MaxFilter(15)).filter(ImageFilter.GaussianBlur(6))
-    if i>0: m=ImageChops.lighter(m,lipline)
-    m=ImageChops.multiply(m,guard)
+    m=mouth_mask(im)
+    if i>0: m=ImageChops.lighter(m,mouth_mask(base))      # base closed lip line always covered when open
     sp=im.copy(); sp.putalpha(m); sp=sp.resize((round(bw*SC),round(bh*SC)),Image.LANCZOS); sp.save(f'{OUT}/v{i}.png')
-    print(i,n,'mask coverage',round(sum(m.getdata())/255/(bw*bh),3))
-cx=round((BOX[0]+BOX[2])/2*SC); cy=round((BOX[1]+BOX[3])/2*SC); w=round(bw*SC)
-json.dump({'cx':cx,'cy':cy,'w':w,'n':len(ORDER),'order':ORDER},open(f'{OUT}/placement.json','w')); print('place',cx,cy,w)
+    print(i,n,'coverage',round(sum(m.get_flattened_data() if hasattr(m,'get_flattened_data') else m.getdata())/255/(bw*bh),3))
+cx=round((BOX[0]+BOX[2])/2*SC); cy=round((BOX[1]+BOX[3])/2*SC)
+json.dump({'cx':cx,'cy':cy,'w':round(bw*SC),'n':len(ORDER),'order':ORDER},open(f'{OUT}/placement.json','w')); print('place',cx,cy)

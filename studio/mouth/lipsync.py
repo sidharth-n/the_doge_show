@@ -25,16 +25,23 @@ def analyse(voice,fps):
         elif v<0.65: k=2 if bright else (3 if (i//3)%2 else 4)
         else: k=4 if bright else (5 if (i//4)%2 else 4)
         vis.append(min(k,P["n"]-1))
-    # min hold 2 frames to avoid 1-frame flicker
-    for i in range(1,len(vis)-1):
-        if vis[i]!=vis[i-1] and vis[i+1]==vis[i-1]: vis[i]=vis[i-1]
-    return vis,n/sr
+    # smooth: move at most one shape per frame toward the target (passes through intermediate shapes)
+    cur=0; out=[]; hold=0
+    for t in vis:
+        if hold>0: hold-=1
+        elif t!=cur: cur+= (1 if t>cur else -1); hold=1     # one step per 2 frames → ~12 shape changes/s max
+        out.append(cur)
+    return out,n/sr
 vis,dur=analyse(o.voice,o.fps); json.dump({"fps":o.fps,"visemes":vis,"duration":dur},open(o.out+".visemes.json","w"))
 if o.json_only: print("visemes",len(vis)); sys.exit()
 TMP=o.out+".frames"; os.makedirs(TMP,exist_ok=True)
 sprites=[Image.open(f"{o.sprites}/v{i}.png").convert("RGBA") for i in range(P["n"])]
 probe=json.loads(subprocess.check_output(["ffprobe","-v","error","-select_streams","v:0","-show_entries","stream=width,height","-of","json",o.bg])); W,H=probe["streams"][0]["width"],probe["streams"][0]["height"]
+def blend(a,b,k):
+    return Image.blend(a,b,k)   # premultiplied-ish blend of RGBA sprites (same size)
 for i,v in enumerate(vis):
-    fr=Image.new("RGBA",(W,H),(0,0,0,0)); s=sprites[v]; fr.paste(s,(P["cx"]-s.width//2,P["cy"]-s.height//2),s); fr.save(f"{TMP}/{i:05d}.png")
+    prev=vis[i-1] if i else v
+    s=sprites[v]
+    fr=Image.new("RGBA",(W,H),(0,0,0,0)); fr.paste(s,(P["cx"]-s.width//2,P["cy"]-s.height//2),s); fr.save(f"{TMP}/{i:05d}.png")
 subprocess.run(["ffmpeg","-loglevel","error","-y","-stream_loop","-1","-i",o.bg,"-framerate",str(o.fps),"-i",f"{TMP}/%05d.png","-i",o.voice,"-filter_complex","[0:v][1:v]overlay=0:0:shortest=1[v]","-map","[v]","-map","2:a","-c:v","libx264","-pix_fmt","yuv420p","-crf","18","-c:a","aac","-t",f"{dur:.3f}",o.out],check=True)
 subprocess.run(["rm","-rf",TMP]); from collections import Counter; print("done",o.out,f"{dur:.2f}s","viseme use",dict(sorted(Counter(vis).items())))

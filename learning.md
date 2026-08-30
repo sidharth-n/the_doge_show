@@ -15,3 +15,6 @@
 - **2026-08-30 · Audio mix · Sid's ear vs the number:** three rounds of "still too loud" on a `volume={0.06}` prop. Bake gain
   into the file with ffmpeg (`volume=-30dB`) and A/B a 10-s cut per change; bed ended at −30 dB, SFX −12 dB, VO untouched.
 - **2026-08-30 · Process · Sid wants a 10-s sample render before any full render when tuning a single parameter.**
+- **2026-08-30 · Shipping · Sid does account auth/uploads himself.** When a rail needs an OAuth consent on one of
+  Sid's accounts (YouTube for a new channel), draft the metadata and hand it over; do not run the consent flow
+  unasked. He said "no i do it" mid-run. Also: port 8765 on this Mac is held by a stray `python -m http.server`.

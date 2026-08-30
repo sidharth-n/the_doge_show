@@ -3,38 +3,39 @@
 _Last updated: 2026-08-30_
 
 ## Now
-- **Sample episode DONE and locked:** `tv/out/episode-final-v3.mp4` (1920x1080, 3:35), copies at
-  `~/Desktop/DogeShow/dogeshow-2026-08-30-this-week-in-ai-crypto-v3.mp4` and sent to Sid's Telegram.
-  Branch `main`, everything committed + pushed. Venice balance ≈ $2.30.
-- Sid's verdict on v3: "perfect / this is fine" after the audio lock. Not yet published anywhere.
+- **Sample episode DONE and locked:** `tv/out/episode-final-v3.mp4` (1920x1080, 3:35, ~87 MB), copy at
+  `~/Desktop/DogeShow/dogeshow-2026-08-30-this-week-in-ai-crypto-v3.mp4`, sent to Sid's Telegram.
+  Branch `main`. Venice balance ≈ $2.30.
+- **Shipping in progress:** Sid is uploading v3 to The Doge Show YouTube channel HIMSELF (manual, not via
+  youtube-api skill). Metadata (title/description/tags) was drafted in session 2 and handed over in chat.
+- **Telegram message to Erik Voorhees drafted and approved in wording** (session 2). Waiting on the YouTube
+  link to append, then send text + link (+ video if Sid wants) via the Telegram MCP. Nothing sent yet.
 
 ## Next
-1. **Ship**: upload v3 to The Doge Show YouTube (`UCcd-IviqTtc0Gq-udPP8fSg`; the youtube-api skill is bound to BHKScanner,
-   token expired, so re-auth for this channel or upload manually) + draft the reply to Erik's 2026-08-27 post
-   (https://x.com/ErikVoorhees/status/2092992500348727551) for Sid's approval. Nothing posts without Sid.
-2. Runtime is 3:35; Sid asked for ~3:10. Optional trim: cut ~20 s from the AI block (a2/a3) and re-render.
+1. Get the YouTube link from Sid → add to the Erik message → send on Telegram (only on Sid's "go").
+2. Optional: trim ~20 s from the AI block (a2/a3) to hit ~3:10 and re-render.
 3. Day 3 scope: wheel scheduler + RTMP (Twitch first) + clip saver; chat-roast block; needs a Venice top-up.
 
 ## Blockers
-- Venice balance $2.30 (fine for tweaks, not for a 24/7 run). YouTube API auth for The Doge Show channel.
+- Venice balance $2.30 (fine for tweaks, not for a 24/7 run).
+- YouTube API for The Doge Show channel: not authed. Sid chose to do the upload/auth himself; do NOT run
+  `auth.mjs` for him. (If ever needed: `YT_CREDENTIALS=.../.yt-credentials-dogeshow.json node auth.mjs`;
+  port 8765 is occupied by a stray `python -m http.server 8765`, so the port must be made configurable first.)
 
-## Latest handoff — 2026-08-30 (session 1, full day: sample episode built end to end)
-**Pipeline (all in repo):** `newsroom/raw/2026-08-30.json` (real pulls: Verge/CoinDesk/HN/CoinGecko RSS+API,
-agent-reach `twitter -c user-posts` for Erik/AskVenice, opencli reddit) → `producer/rundown-2026-08-30.json`
-(scripts, visuals, bumpers; `producer/punchup.py` = Venice uncensored rewrite, then hand-fixed for facts) →
-`producer/build.py` (Kokoro VO via `studio/tts.py`, visemes via `studio/mouth/lipsync.py --json-only`, writes
-`tv/public/episode.json`; run inside `~/Developer/Personal/privoice` uv env) → `tv/` Remotion app
-(`npx remotion render Episode out/x.mp4`; stills `npx remotion still Episode out/x.jpg --frame=N`).
-**Anchor:** still `studio/assets/still-cap-v3.png` (Nano Banana Pro edit of the 2025 roast set + Venice cap + MacBook +
-meme jars) → idle loop `studio/assets/anchor-idle-v1.mp4` (Kling 2.6 Pro, first=last frame, 5.08 s) → mouth: 6 photoreal
-visemes `studio/mouth/a/` built by `studio/mouth/build_sprites_poisson.py` (needs opencv venv; Poisson clone vs
-`loop-frame0.png`, mouth-only masks, wide feather). Cartoon option kept in `studio/mouth/b/`.
-**Frame:** two-box layout when content shows (anchor box left 50%, cards right), full studio otherwise; section
-bumpers (`bumper` field), 2.5 s linger, timed `visuals[]` per segment, LIVE bug, clock, lower-thirds, breaking bar,
-title/end cards, ticker with rotating price pair (BTC ETH SOL DOGE VVV DIEM) + news crawl. Fonts Oswald/Inter.
-**Audio (LOCKED):** `tv/public/music/bed-quiet.mp3` = bed −30 dB baked (intro ×6 first 8 s), SFX `*-q.mp3` −12 dB at 0.7,
-VO untouched. **H3 Max clips:** `tv/public/h3-1.mp4` (newsroom push-in 8 s), `h3-2.mp4` (Shiba astronaut 10 s), 768p,
-~20 s each to generate, $0.86 total. Wrapped in `<Sequence>` (was frozen before). Idle loop uses `<Loop>` (was frozen).
-**Rules Sid set (keep):** no em dashes anywhere; visuals follow what is being said; graphics linger a few seconds;
-big section headers; full studio visible; only 2 H3 clips; ask before verifying/moving on look-and-feel calls.
-**First thing next session:** confirm Telegram delivery happened, then do Next #1.
+## Latest handoff — 2026-08-30 (session 2, short: ship prep)
+- Cleaned up Sid's message to Erik (kept his words, fixed language, no em dashes). Final text:
+  "Hey Erik, I chatted with Vanessa last week and sent over my resume, waiting for the callback. Meanwhile I saw
+  your tweet on the H3 Max model yesterday and really got intrigued by the possibilities ahead. Also saw fal.ai now
+  has a 24x7 live stream running on the model they trained, on Twitch. So I thought I'd build something along
+  similar lines. This is an experiment I have done: the world's first fully AI-powered 24x7 live news channel. The
+  AI aggregates news from across social media and other authentic sources, verifies it, and puts it live through a
+  show called The Doge Show. It consumes very few credits since the audio models are cheaper ones (Kokoro), and
+  it's basically collecting data and using LLMs (I used the Venice uncensored model here since Doge needs some
+  comedy and freedom of speech). Occasionally we can use H3 Max for b-roll or content that needs video, and we can
+  also scrape real images or articles from the internet to show on screen, so it looks much like a real news
+  channel. This is a 3-minute concept I've done and the project v1 is ready. Would love to know your thoughts on it."
+  Unconfirmed: "Vanessa" was a guess for "avennsa"; check with Sid before sending.
+- YouTube metadata drafted: title "The Doge Show | This Week in AI & Crypto | Ep. 1 (30 Aug 2026)", description
+  with tonight's headlines + how-it's-built list, tags, category News & Politics, altered-content = Yes.
+- Tried to re-auth youtube-api for the Doge Show channel; Sid stopped it ("no i do it"). `auth.mjs` unchanged.
+- **First thing next session:** ask Sid for the YouTube link and the Vanessa name check, then send to Erik.

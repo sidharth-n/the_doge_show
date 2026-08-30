@@ -4,7 +4,7 @@ background with ffmpeg. Produces a lipsynced anchor clip the length of the audio
 import sys,os,argparse,subprocess,wave,struct,math,json
 from PIL import Image
 a=argparse.ArgumentParser(); a.add_argument("voice"); a.add_argument("out"); a.add_argument("--bg",default=os.path.join(os.path.dirname(__file__),"..","assets","anchor-idle-v1.mp4"))
-a.add_argument("--cx",type=int,default=918); a.add_argument("--cy",type=int,default=641); a.add_argument("--w",type=int,default=158); a.add_argument("--fps",type=int,default=24)
+a.add_argument("--cx",type=int,default=918); a.add_argument("--cy",type=int,default=641); a.add_argument("--w",type=int,default=158); a.add_argument("--fps",type=int,default=24); a.add_argument("--sprites",default=None)
 o=a.parse_args(); HERE=os.path.dirname(os.path.abspath(__file__)); TMP=o.out+".frames"; os.makedirs(TMP,exist_ok=True)
 # audio → mono 24k pcm
 pcm=o.out+".pcm.wav"; subprocess.run(["ffmpeg","-loglevel","error","-y","-i",o.voice,"-ac","1","-ar","24000",pcm],check=True)
@@ -16,7 +16,7 @@ peak=max(rms) or 1; lv=[min(1,r/peak*1.4) for r in rms]
 sm=[]; prev=0
 for v in lv: prev=max(v,prev*0.55); sm.append(prev)
 vis=[0 if v<0.08 else 1 if v<0.25 else 2 if v<0.45 else 3 if v<0.7 else 4 for v in sm]
-sprites=[Image.open(f"{HERE}/v{i}.png").convert("RGBA") for i in range(5)]
+SD=o.sprites or HERE; sprites=[Image.open(f"{SD}/v{i}.png").convert("RGBA") for i in range(5)]
 scale=o.w/sprites[0].width; sp=[s.resize((int(s.width*scale),int(s.height*scale)),Image.LANCZOS) for s in sprites]
 # write one transparent PNG per frame (only mouth) — ffmpeg overlays them on the looping bg
 probe=json.loads(subprocess.check_output(["ffprobe","-v","error","-select_streams","v:0","-show_entries","stream=width,height","-of","json",o.bg]))

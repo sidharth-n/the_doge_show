@@ -1,0 +1,1 @@
+2026-08-30 audition — line: 'Much breaking news. Venice just dropped MiniMax H3 Max, and it makes a whole video in fifteen seconds. Wow. Bitcoin is up, my treats are not. Stay tuned.'. Sid picks by ear; files in out/.

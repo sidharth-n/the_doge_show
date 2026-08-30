@@ -1,0 +1,5 @@
+node_modules/
+out/
+public/vo/
+public/anchor-idle.mp4
+public/h3-*.mp4

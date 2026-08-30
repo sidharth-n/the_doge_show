@@ -1,0 +1,4 @@
+{"name":"dogeshow-tv","private":true,"version":"0.1.0","type":"module",
+ "scripts":{"dev":"remotion studio","render":"remotion render Episode out/episode.mp4 --concurrency=4","still":"remotion still Episode"},
+ "dependencies":{"@remotion/cli":"4.0.484","@remotion/media":"4.0.484","react":"19.1.0","react-dom":"19.1.0","remotion":"4.0.484"},
+ "devDependencies":{"@types/react":"^19.1.0","typescript":"^5.9.0"}}

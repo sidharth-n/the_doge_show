@@ -3,7 +3,7 @@
 _Last updated: 2026-08-30_
 
 ## Now
-- **Final cut rendered 2026-08-30 11:21: `tv/out/episode-final.mp4` (1920x1080, 3:35), copy on `~/Desktop/DogeShow/`.** Awaiting Sid's review; then upload + send to Erik.
+- **Final v2 rendered 2026-08-30 ~12:00: `tv/out/episode-final-v2.mp4` (1920x1080, 3:35), copy `~/Desktop/DogeShow/…-v2.mp4`.** Fixes vs v1: H3 clip sequenced + windowed, rotating ticker prices, ListCard restored. Awaiting Sid; then upload + send to Erik.
 - Built the sample episode "This Week in AI & Crypto" (2026-08-30). Pipeline is end-to-end local except
   Venice calls for stills/clips/music. Screenplay: `docs/screenplay-2026-08-30.md`; rundown data:
   `producer/rundown-2026-08-30.json`; frame: `tv/` (Remotion). Preview render in progress.

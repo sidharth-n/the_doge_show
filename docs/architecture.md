@@ -113,3 +113,7 @@ Two backends behind one interface (same pattern as `privoice` engines.py):
 - Voice: old show used Cartesia. New show auditions 4 (Kokoro-pitched, Chatterbox HD, MiniMax
   Speech-02 HD, ElevenLabs on Venice); Sid picks by ear.
 - Venice: $6.57 balance. H3 Max 768p = $0.24/5s, $0.48/10s, $0.72/15s. Music $0.18/track.
+
+## 7. Decisions log
+- **2026-08-30 Voice = Kokoro `am_santa` (local, mlx-audio) + "toon-heavy"**: `asetrate=24000*1.32,aresample=24000,atempo=0.80`.
+  Sid picked it by ear over 10 Venice TTS voices, 8 local Kokoro voices, Inworld males. Free, on-device.

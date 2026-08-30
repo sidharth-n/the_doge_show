@@ -21,13 +21,18 @@ export const LowerThird: React.FC<{title: string; sub?: string; enterFrame: numb
   </div>);
 };
 export const Ticker: React.FC<{items: string[]; prices: {sym: string; price: string; chg: number}[]}> = ({items, prices}) => {
-  const f = useCurrentFrame(); const text = items.join('     •     '); const x = -((f * 2.6) % 6000);
+  const f = useCurrentFrame(); const {fps} = useVideoConfig(); const text = items.join('     •     '); const x = -((f * 2.6) % 6000);
+  const per = fps * 3; const slot = Math.floor(f / per); const i = (slot * 2) % Math.max(1, prices.length); const pair = [prices[i], prices[(i + 1) % prices.length]].filter(Boolean);
+  const t = (f % per) / per; const y = t < 0.12 ? (1 - t / 0.12) * 40 : 0; const op = t < 0.12 ? t / 0.12 : 1;
   return (<div style={{position: 'absolute', left: 0, right: 0, bottom: 0, height: 92, fontFamily: T.font, display: 'flex'}}>
-    <div style={{background: T.ink, color: '#fff', display: 'flex', alignItems: 'center', gap: 18, padding: '0 22px', fontSize: 21, fontWeight: 800, fontFamily: T.mono, zIndex: 2, borderTop: `4px solid ${T.yellow}`}}>
-      {prices.map((p) => (<span key={p.sym}>{p.sym} <span style={{color: '#fff'}}>{p.price}</span> <span style={{color: p.chg >= 0 ? T.green : T.red}}>{p.chg >= 0 ? '▲' : '▼'}{Math.abs(p.chg).toFixed(2)}%</span></span>))}
+    <div style={{width: 660, background: T.ink, color: '#fff', display: 'flex', alignItems: 'center', gap: 26, padding: '0 24px', fontSize: 24, fontWeight: 800, fontFamily: T.mono, zIndex: 2, borderTop: `4px solid ${T.yellow}`, overflow: 'hidden'}}>
+      <span style={{color: T.yellow, fontFamily: T.head, fontSize: 22, letterSpacing: 2}}>MARKETS</span>
+      <div style={{display: 'flex', gap: 26, transform: `translateY(${y}px)`, opacity: op}}>
+        {pair.map((p) => (<span key={p.sym} style={{whiteSpace: 'nowrap'}}>{p.sym} {p.price} <span style={{color: p.chg >= 0 ? T.green : T.red}}>{p.chg >= 0 ? '▲' : '▼'}{Math.abs(p.chg).toFixed(2)}%</span></span>))}
+      </div>
     </div>
     <div style={{flex: 1, background: T.yellow, color: T.ink, overflow: 'hidden', display: 'flex', alignItems: 'center', fontSize: 30, fontWeight: 700, fontFamily: T.head, letterSpacing: 1, whiteSpace: 'nowrap', borderTop: `4px solid ${T.yellow}`}}>
-      <div style={{transform: `translateX(${x}px)`, paddingLeft: 1920}}>{text}     •     {text}     •     {text}</div>
+      <div style={{transform: `translateX(${x}px)`, paddingLeft: 1400}}>{text}     •     {text}     •     {text}</div>
     </div>
   </div>);
 };

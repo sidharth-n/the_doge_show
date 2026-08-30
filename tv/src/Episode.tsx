@@ -34,7 +34,7 @@ export const Episode: React.FC<{data: EpisodeData}> = ({data}) => {
       <div style={{position: 'absolute', left: twoBox ? 64 : 0, top: twoBox ? 190 : 0, width: twoBox ? 1920 * 0.5 : 1920, height: twoBox ? 1080 * 0.5 : 1080, overflow: 'hidden', borderRadius: twoBox ? 14 : 0, boxShadow: twoBox ? '0 30px 80px rgba(0,0,0,0.6)' : 'none', outline: twoBox ? `6px solid ${T.yellow}` : 'none'}}>
         <Anchor data={data} seg={cur} segStartFrame={cur ? F(cur.start) : 0} scale={twoBox ? 0.5 : 1} />
       </div>
-      {h3 ? <H3Slot src={h3.ref} caption={card!.seg.type === 'cold_open' ? undefined : h3.caption} full={!!h3full} enterFrame={card!.enter} /> : null}
+      {h3 ? <H3Slot src={h3.ref} caption={card!.seg.type === 'cold_open' ? undefined : h3.caption} full={!!h3full} enterFrame={card!.enter} durationFrames={F(card!.seg.start + card!.seg.duration) - card!.enter} /> : null}
       {headlines && cur?.cards ? <HeadlinesCycle cards={cur.cards} enterFrame={F(cur.start)} durationFrames={F(cur.duration)} /> : null}
       {card?.v.kind === 'quote' ? <QuoteCard v={card.v} enterFrame={card.enter} /> : null}
       {card?.v.kind === 'headline' ? <HeadlineCard v={card.v} enterFrame={card.enter} /> : null}

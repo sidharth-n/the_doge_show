@@ -1,4 +1,4 @@
-import {AbsoluteFill, Img, OffthreadVideo, interpolate, spring, staticFile, useCurrentFrame, useVideoConfig} from 'remotion';
+import {AbsoluteFill, Img, OffthreadVideo, Sequence, interpolate, spring, staticFile, useCurrentFrame, useVideoConfig} from 'remotion';
 import {T} from '../theme';
 import type {Visual} from '../types';
 const Panel: React.FC<{enterFrame: number; children: React.ReactNode; wide?: boolean}> = ({enterFrame, children, wide}) => {
@@ -45,22 +45,12 @@ export const HeadlinesCycle: React.FC<{cards: {tag: string; text: string; src: s
     <div style={{fontFamily: T.head, fontSize: 38, fontWeight: 700, lineHeight: 1.15, marginTop: 12, whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis'}}>{c.text}</div><div style={{color: T.muted, fontSize: 22, marginTop: 14}}>{c.src}</div>
   </div></Panel>);
 };
-export const H3Slot: React.FC<{src: string; caption?: string; full: boolean; enterFrame: number}> = ({src, caption, full, enterFrame}) => {
-  const f = useCurrentFrame(); const {fps} = useVideoConfig(); const s = spring({frame: f - enterFrame, fps, config: {damping: 200}});
-  const box = full ? {left: 0, top: 0, width: 1920, height: 1080, borderRadius: 0} : {left: 960, top: 130, width: 900, height: 506, borderRadius: 16};
-  return (<div style={{position: 'absolute', ...box, overflow: 'hidden', boxShadow: full ? 'none' : '0 30px 80px rgba(0,0,0,0.6)', opacity: s, background: '#000'}}>
-    <OffthreadVideo src={staticFile(src)} muted style={{width: '100%', height: '100%', objectFit: 'cover'}} />
-    {caption ? <div style={{position: 'absolute', left: 24, bottom: 20, background: 'rgba(0,0,0,0.7)', color: '#fff', fontFamily: T.font, fontSize: 24, fontWeight: 700, padding: '8px 14px', borderRadius: 6}}>{caption}</div> : null}
-  </div>);
-};
-
-export const ListCard: React.FC<{v: Extract<Visual, {kind: 'list'}>; enterFrame: number}> = ({v, enterFrame}) => {
-  const f = useCurrentFrame(); const {fps} = useVideoConfig();
-  return (<Panel enterFrame={enterFrame}><div style={{background: T.panel, borderRadius: 12, padding: '26px 34px', color: '#fff', borderLeft: `10px solid ${T.yellow}`}}>
-    <div style={{fontFamily: T.head, fontWeight: 700, fontSize: 40, color: T.yellow, letterSpacing: 2}}>{v.title.toUpperCase()}</div>
-    {v.items.map((it, i) => { const s = spring({frame: f - enterFrame - 6 - i * 5, fps, config: {damping: 200}});
-      return (<div key={it.k} style={{display: 'flex', alignItems: 'baseline', gap: 18, marginTop: 16, opacity: s, transform: `translateX(${(1 - s) * 40}px)`}}>
-        <div style={{fontFamily: T.head, fontWeight: 700, fontSize: 36, whiteSpace: 'nowrap'}}>{it.k}</div><div style={{fontSize: 24, color: T.muted, whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis'}}>{it.v}</div></div>); })}
-    {v.src ? <div style={{color: T.muted, fontSize: 20, marginTop: 18}}>Source: {v.src}</div> : null}
-  </div></Panel>);
+export const H3Slot: React.FC<{src: string; caption?: string; full: boolean; enterFrame: number; durationFrames: number}> = ({src, caption, full, enterFrame, durationFrames}) => {
+  const box = full ? {left: 0, top: 0, width: 1920, height: 1080, borderRadius: 0} : {left: 1040, top: 190, width: 816, height: 459, borderRadius: 14};
+  return (<Sequence from={enterFrame} durationInFrames={durationFrames} layout="none">
+    <div style={{position: 'absolute', ...box, overflow: 'hidden', boxShadow: full ? 'none' : '0 30px 80px rgba(0,0,0,0.6)', outline: full ? 'none' : `6px solid ${T.yellow}`, background: '#000'}}>
+      <OffthreadVideo src={staticFile(src)} muted loop style={{width: '100%', height: '100%', objectFit: 'cover'}} />
+      {caption ? <div style={{position: 'absolute', left: 24, bottom: 20, background: 'rgba(0,0,0,0.7)', color: '#fff', fontFamily: T.font, fontSize: 24, fontWeight: 700, padding: '8px 14px', borderRadius: 6}}>{caption}</div> : null}
+    </div>
+  </Sequence>);
 };

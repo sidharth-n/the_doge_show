@@ -54,3 +54,13 @@ export const H3Slot: React.FC<{src: string; caption?: string; full: boolean; ent
     </div>
   </Sequence>);
 };
+export const ListCard: React.FC<{v: Extract<Visual, {kind: 'list'}>; enterFrame: number}> = ({v, enterFrame}) => {
+  const f = useCurrentFrame(); const {fps} = useVideoConfig();
+  return (<Panel enterFrame={enterFrame}><div style={{background: T.panel, borderRadius: 12, padding: '26px 34px', color: '#fff', borderLeft: `10px solid ${T.yellow}`}}>
+    <div style={{fontFamily: T.head, fontWeight: 700, fontSize: 40, color: T.yellow, letterSpacing: 2}}>{v.title.toUpperCase()}</div>
+    {v.items.map((it, i) => { const s = spring({frame: f - enterFrame - 6 - i * 5, fps, config: {damping: 200}});
+      return (<div key={it.k} style={{display: 'flex', alignItems: 'baseline', gap: 18, marginTop: 16, opacity: s, transform: `translateX(${(1 - s) * 40}px)`}}>
+        <div style={{fontFamily: T.head, fontWeight: 700, fontSize: 34, whiteSpace: 'nowrap'}}>{it.k}</div><div style={{fontSize: 22, color: T.muted, whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis'}}>{it.v}</div></div>); })}
+    {v.src ? <div style={{color: T.muted, fontSize: 20, marginTop: 18}}>Source: {v.src}</div> : null}
+  </div></Panel>);
+};

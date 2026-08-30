@@ -4,8 +4,11 @@ seamless against every loop frame. Run inside the cvenv (opencv+numpy)."""
 import cv2, numpy as np, json, os
 A='studio/assets'; OUT='studio/mouth/a'; os.makedirs(OUT,exist_ok=True)
 BOX=(1100,780,1540,1100); SC=1928/2752; ORDER=['smile','slight','half','oh','open','tongue']
-base=cv2.imread(f'{A}/still-cap-v3.png'); H,W=base.shape[:2]
-ROI=(1150,872,1480,1095); MC=(1311,905)   # mouth search window + known mouth centre (still coords)
+LOOP=cv2.imread(f'{A}/loop-frame0.png'); H,W=LOOP.shape[:2]
+base_still=cv2.imread(f'{A}/still-cap-v3.png')
+base=cv2.resize(base_still,(W,H),interpolation=cv2.INTER_AREA)
+SC1=W/base_still.shape[1]
+ROI=tuple(int(v*1928/2752) for v in (1150,872,1480,1095)); MC=(int(1311*1928/2752),int(905*1928/2752))   # mouth search window + known mouth centre (still coords)
 def mouth_mask(img):
     full=np.zeros(img.shape[:2],np.uint8); rx0,ry0,rx1,ry1=ROI; img=img[ry0:ry1,rx0:rx1]
     hsv=cv2.cvtColor(img,cv2.COLOR_BGR2HSV); h,s,v=cv2.split(hsv)
@@ -23,23 +26,22 @@ def mouth_mask(img):
     teeth=((v>190)&(cv2.dilate(m,np.ones((25,25),np.uint8))>0)).astype(np.uint8)*255
     full[ry0:ry1,rx0:rx1]=cv2.bitwise_or(m,teeth); return full
 basemask=mouth_mask(base)
-x0,y0,x1,y1=BOX; bw,bh=x1-x0,y1-y0
+x0,y0,x1,y1=[int(v*SC1) for v in BOX]; bw,bh=x1-x0,y1-y0
 for i,n in enumerate(ORDER):
-    im=cv2.imread(f'{A}/still-mouth-{n}-aligned.png')
+    im=cv2.resize(cv2.imread(f'{A}/still-mouth-{n}-aligned.png'),(W,H),interpolation=cv2.INTER_AREA)
     m=mouth_mask(im)
     if i>0: m=cv2.bitwise_or(m,basemask)
-    m=cv2.dilate(m,np.ones((31,31),np.uint8))            # generous margin: Poisson handles the tone, fur texture is the edit's near the lips only
+    m=cv2.dilate(m,np.ones((51,51),np.uint8))            # generous margin: Poisson handles the tone, fur texture is the edit's near the lips only
     m[:y0]=0; m[y1:]=0; m[:,:x0]=0; m[:,x1:]=0
     bx,by,bwid,bhei=cv2.boundingRect(m); center=(bx+bwid//2,by+bhei//2)
-    print('   mask@centre before',m[905,1311]); blended=cv2.seamlessClone(im,base,m.copy(),center,cv2.NORMAL_CLONE); print('   after',m[905,1311])
+    blended=cv2.seamlessClone(im,LOOP,m.copy(),center,cv2.NORMAL_CLONE)
     patch=blended[y0:y1,x0:x1]
-    d=np.abs(blended.astype(int)-base.astype(int)).sum(2); ys,xs=np.where(d>30); print('   changed bbox',xs.min(),ys.min(),xs.max(),ys.max()) if len(xs) else print('   no change')
-    cv2.imwrite(f'/tmp/claude-501/-Users-sid-Developer-Personal-dogeshow/93659d53-addb-4386-b0f9-ea023ba6df79/scratchpad/blend_{n}.jpg',blended[y0-60:y1+60,x0-60:x1+60])
+    d=np.abs(blended.astype(int)-LOOP.astype(int)).sum(2); ys,xs=np.where(d>30); print('   changed bbox',xs.min(),ys.min(),xs.max(),ys.max()) if len(xs) else print('   no change')
+    
     # alpha: the (un-dilated-by-margin) region, soft edge — outside it the base is already identical
-    a=cv2.GaussianBlur(cv2.erode(m,np.ones((7,7),np.uint8))[y0:y1,x0:x1],(0,0),4)
+    a=cv2.GaussianBlur(cv2.erode(m,np.ones((31,31),np.uint8))[y0:y1,x0:x1],(0,0),9)
     rgba=cv2.cvtColor(patch,cv2.COLOR_BGR2BGRA); rgba[:,:,3]=a
-    rgba=cv2.resize(rgba,(round(bw*SC),round(bh*SC)),interpolation=cv2.INTER_AREA)
     from PIL import Image; Image.fromarray(cv2.cvtColor(rgba,cv2.COLOR_BGRA2RGBA)).save(f'{OUT}/v{i}.png')
     print('   alpha centre',rgba[rgba.shape[0]//2-20,rgba.shape[1]//2,3],'corner',rgba[3,3,3])
     print(i,n,'mask px',int((m>0).sum()))
-json.dump({'cx':round((x0+x1)/2*SC),'cy':round((y0+y1)/2*SC),'w':round(bw*SC),'n':len(ORDER),'order':ORDER},open(f'{OUT}/placement.json','w'))
+json.dump({'cx':round((x0+x1)/2),'cy':round((y0+y1)/2),'w':bw,'n':len(ORDER),'order':ORDER},open(f'{OUT}/placement.json','w'))

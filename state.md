@@ -3,7 +3,7 @@
 _Last updated: 2026-08-30_
 
 ## Now
-- **Final v2 rendered 2026-08-30 ~12:00: `tv/out/episode-final-v2.mp4` (1920x1080, 3:35), copy `~/Desktop/DogeShow/…-v2.mp4`.** Fixes vs v1: H3 clip sequenced + windowed, rotating ticker prices, ListCard restored. Awaiting Sid; then upload + send to Erik.
+- **Final v3 (LOCKED mix) rendered 2026-08-30: `tv/out/episode-final-v3.mp4` (1920x1080, 3:35), copy `~/Desktop/DogeShow/…-v3.mp4`.** v2→v3: bed −30 dB baked, SFX −12 dB, idle loop fixed with <Loop>. Next: Sid final watch → upload + Erik.
 - Built the sample episode "This Week in AI & Crypto" (2026-08-30). Pipeline is end-to-end local except
   Venice calls for stills/clips/music. Screenplay: `docs/screenplay-2026-08-30.md`; rundown data:
   `producer/rundown-2026-08-30.json`; frame: `tv/` (Remotion). Preview render in progress.

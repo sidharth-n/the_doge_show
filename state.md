@@ -1,8 +1,12 @@
 # dogeshow — State
 
-_Last updated: 2026-08-30_
+_Last updated: 2026-09-02_
 
 ## Now
+- **2026-09-02 direction change: "Venice Live"** (audience-steered live AI TV on Venice, channel 1 = The Doge Show).
+  Analysis + Erik credits-ask draft: `docs/venice-live-opportunity-2026-09-02.md` (HTML in `~/.cache/mdread/`).
+  Measured H3 Max on Venice: `knowledge/h3max-venice-latency-2026-09-02.md`. Venice balance is **$6.16** (not $2.30).
+  Waiting on Sid: Vanessa name check, YouTube link, domain decision (thedogeshow.live free), go on the DM.
 - **Sample episode DONE and locked:** `tv/out/episode-final-v3.mp4` (1920x1080, 3:35, ~87 MB), copy at
   `~/Desktop/DogeShow/dogeshow-2026-08-30-this-week-in-ai-crypto-v3.mp4`, sent to Sid's Telegram.
   Branch `main`. Venice balance ≈ $2.30.

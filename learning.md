@@ -18,3 +18,13 @@
 - **2026-08-30 · Shipping · Sid does account auth/uploads himself.** When a rail needs an OAuth consent on one of
   Sid's accounts (YouTube for a new channel), draft the metadata and hand it over; do not run the consent flow
   unasked. He said "no i do it" mid-run. Also: port 8765 on this Mac is held by a stray `python -m http.server`.
+- **2026-09-02 · Vercel · A CLI deploy from a subfolder can register the project as framework "Other" and the Next.js
+  build then 404s on the production alias** while the deployment URL only shows the SSO redirect, so the 404 is invisible
+  until you hit the canonical domain. Fix: `vercel.json` with `{"framework":"nextjs"}` and redeploy. Check `vercel project
+  inspect <name>` for "Framework Preset" right after the first deploy.
+- **2026-09-02 · Tailwind v4 · Custom classes written outside `@layer components` beat utilities like `hidden`** (unlayered
+  CSS wins over layered). Wrap `.btn`/`.field` style helpers in `@layer components {}`.
+- **2026-09-02 · CSS · A keyframe that fades to opacity 0 snaps back when it ends unless `animation-fill-mode: forwards`.**
+  The cut-flash overlay stayed at 70% white over the player for one whole screenshot round.
+- **2026-09-02 · Process · Sid stopped a paid pre-render mid-run ("no generation now, UI only").** Background render jobs
+  keep spending after the decision; kill the process the moment scope changes and report what was already spent ($4.80).

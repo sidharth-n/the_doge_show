@@ -7,7 +7,9 @@ _Last updated: 2026-09-02_
   Analysis + Erik credits-ask draft: `docs/venice-live-opportunity-2026-09-02.md` (HTML in `~/.cache/mdread/`).
   Measured H3 Max on Venice: `knowledge/h3max-venice-latency-2026-09-02.md`. Venice balance is **$6.16** (not $2.30).
   Waiting on Sid: Vanessa name check, YouTube link, domain decision (thedogeshow.live free), go on the DM.
-- **Doge Live demo site is LIVE: https://dogeshow-live.vercel.app** (`live/`, Next.js 16 on Vercel project
+- **2026-09-02 evening: the live-TV product moved to its own project `Personal/infinite-stream`** (v1 live at
+  https://infinite-stream-henna.vercel.app, Sable Penrose channel, pay-to-direct in chat). The Doge Show stays as is.
+- **Doge Live four-option demo (superseded) is still up: https://dogeshow-live.vercel.app** (`live/`, Next.js 16 on Vercel project
   `dogeshow-live`, Upstash Redis for rounds/votes/chat, Vercel Blob for clips). 6 channels, real 40 s vote rounds,
   VVV wallet weighting, director's chair (test mode), BYO-DIEM wildcard (real Venice call on the viewer's key),
   create-a-channel. Clips: Chaos + Sitcom are real H3 Max renders (`live/prerender/`, gitignored; re-upload with

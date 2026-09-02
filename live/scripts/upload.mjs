@@ -66,8 +66,7 @@ const channels = spec.channels.map((ch, ci) => {
       if (isReal) clipId = `${ch.id}/r${ri + 1}${"ABCD"[oi]}`;
       else if (own.length) clipId = own[k++ % own.length];
       else clipId = chaosPool[(k++ * 5 + ci * 3) % chaosPool.length];
-      if (!isReal) clips[clipId].sample = true;
-      return { label: o.label, clipId };
+      return isReal ? { label: o.label, clipId } : { label: o.label, clipId, sample: true };
     }),
   }));
   return { id: ch.id, name: ch.name, tagline: ch.tagline, adult: ch.adult, system: ch.system, rounds };

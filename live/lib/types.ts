@@ -1,5 +1,5 @@
 export type Clip = { id: string; url: string; poster: string; duration: number; sample?: boolean };
-export type Option = { label: string; clipId: string };
+export type Option = { label: string; clipId: string; sample?: boolean };
 export type Round = { beat: string; options: Option[] };
 export type Channel = {
   id: string;

@@ -1,5 +1,5 @@
 import { NextResponse } from "next/server";
-import { allChannels, samplePool, manifest } from "@/lib/manifest";
+import { allChannels, samplePool } from "@/lib/manifest";
 import { getView } from "@/lib/engine";
 import { redis } from "@/lib/redis";
 import type { Channel } from "@/lib/types";
@@ -39,7 +39,7 @@ export async function POST(req: Request) {
   const pool = samplePool(id.length);
   const rounds = [0, 1].map((ri) => ({
     beat: ri === 0 ? "Opening scene" : "What happens next",
-    options: (body.options as string[]).map((label, oi) => ({ label: String(label).slice(0, 80), clipId: pool[(ri * 4 + oi) % pool.length] })),
+    options: (body.options as string[]).map((label, oi) => ({ label: String(label).slice(0, 80), clipId: pool[(ri * 4 + oi) % pool.length], sample: true })),
   }));
   const ch: Channel = {
     id,
@@ -51,7 +51,6 @@ export async function POST(req: Request) {
     creator: String(body.creator ?? "anon").slice(0, 40),
     rounds,
   };
-  for (const c of pool) if (manifest.clips[c]) manifest.clips[c].sample = true;
   await redis().set(`community:${id}`, ch);
   await redis().sadd("community:index", id);
   return NextResponse.json({ ok: true, id });

@@ -8,7 +8,7 @@ export default function Header() {
       <div className="mx-auto flex h-14 max-w-[1400px] items-center gap-4 px-4">
         <Link href="/" className="flex items-center gap-2">
           <span className="tally on" aria-hidden />
-          <span className="display text-2xl font-800 leading-none">{BRAND}</span>
+          <span className="display whitespace-nowrap text-2xl font-800 leading-none">{BRAND}</span>
         </Link>
         <span className="mono hidden text-[11px] text-muted sm:inline">powered by Venice</span>
         <div className="ml-auto flex items-center gap-2">

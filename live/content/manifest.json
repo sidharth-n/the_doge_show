@@ -1,54 +1,47 @@
 {
-  "generated": "2026-09-02T08:30:21.283Z",
+  "generated": "2026-09-02T10:14:44.228Z",
   "clips": {
     "doge/asteroid": {
       "id": "doge/asteroid",
       "url": "https://0eb0v3mz56dk7efu.public.blob.vercel-storage.com/clips/doge/asteroid.mp4",
       "poster": "https://0eb0v3mz56dk7efu.public.blob.vercel-storage.com/clips/doge/asteroid.jpg",
-      "duration": 10.144,
-      "sample": true
+      "duration": 10.144
     },
     "doge/astronaut": {
       "id": "doge/astronaut",
       "url": "https://0eb0v3mz56dk7efu.public.blob.vercel-storage.com/clips/doge/astronaut.mp4",
       "poster": "https://0eb0v3mz56dk7efu.public.blob.vercel-storage.com/clips/doge/astronaut.jpg",
-      "duration": 10.144,
-      "sample": true
+      "duration": 10.144
     },
     "doge/idle": {
       "id": "doge/idle",
       "url": "https://0eb0v3mz56dk7efu.public.blob.vercel-storage.com/clips/doge/idle.mp4",
       "poster": "https://0eb0v3mz56dk7efu.public.blob.vercel-storage.com/clips/doge/idle.jpg",
-      "duration": 5.083333,
-      "sample": true
+      "duration": 5.083333
     },
     "doge/newsroom": {
       "id": "doge/newsroom",
       "url": "https://0eb0v3mz56dk7efu.public.blob.vercel-storage.com/clips/doge/newsroom.mp4",
       "poster": "https://0eb0v3mz56dk7efu.public.blob.vercel-storage.com/clips/doge/newsroom.jpg",
-      "duration": 8,
-      "sample": true
+      "duration": 8
     },
     "doge/paw": {
       "id": "doge/paw",
       "url": "https://0eb0v3mz56dk7efu.public.blob.vercel-storage.com/clips/doge/paw.mp4",
       "poster": "https://0eb0v3mz56dk7efu.public.blob.vercel-storage.com/clips/doge/paw.jpg",
-      "duration": 5.184,
-      "sample": true
+      "duration": 5.184
     },
     "doge/rocket": {
       "id": "doge/rocket",
       "url": "https://0eb0v3mz56dk7efu.public.blob.vercel-storage.com/clips/doge/rocket.mp4",
       "poster": "https://0eb0v3mz56dk7efu.public.blob.vercel-storage.com/clips/doge/rocket.jpg",
-      "duration": 15.104,
-      "sample": true
+      "duration": 15.104
     },
     "chaos/r1A": {
       "id": "chaos/r1A",
       "url": "https://0eb0v3mz56dk7efu.public.blob.vercel-storage.com/clips/chaos/r1A.mp4",
       "poster": "https://0eb0v3mz56dk7efu.public.blob.vercel-storage.com/clips/chaos/r1A.jpg",
-      "duration": 8,
-      "sample": true
+      "duration": 8
     },
     "chaos/r1B": {
       "id": "chaos/r1B",
@@ -60,8 +53,7 @@
       "id": "chaos/r1C",
       "url": "https://0eb0v3mz56dk7efu.public.blob.vercel-storage.com/clips/chaos/r1C.mp4",
       "poster": "https://0eb0v3mz56dk7efu.public.blob.vercel-storage.com/clips/chaos/r1C.jpg",
-      "duration": 8,
-      "sample": true
+      "duration": 8
     },
     "chaos/r1D": {
       "id": "chaos/r1D",
@@ -73,15 +65,13 @@
       "id": "chaos/r2A",
       "url": "https://0eb0v3mz56dk7efu.public.blob.vercel-storage.com/clips/chaos/r2A.mp4",
       "poster": "https://0eb0v3mz56dk7efu.public.blob.vercel-storage.com/clips/chaos/r2A.jpg",
-      "duration": 8,
-      "sample": true
+      "duration": 8
     },
     "chaos/r2B": {
       "id": "chaos/r2B",
       "url": "https://0eb0v3mz56dk7efu.public.blob.vercel-storage.com/clips/chaos/r2B.mp4",
       "poster": "https://0eb0v3mz56dk7efu.public.blob.vercel-storage.com/clips/chaos/r2B.jpg",
-      "duration": 8,
-      "sample": true
+      "duration": 8
     },
     "chaos/r2C": {
       "id": "chaos/r2C",
@@ -93,8 +83,7 @@
       "id": "chaos/r2D",
       "url": "https://0eb0v3mz56dk7efu.public.blob.vercel-storage.com/clips/chaos/r2D.mp4",
       "poster": "https://0eb0v3mz56dk7efu.public.blob.vercel-storage.com/clips/chaos/r2D.jpg",
-      "duration": 8,
-      "sample": true
+      "duration": 8
     },
     "chaos/r3A": {
       "id": "chaos/r3A",
@@ -106,15 +95,13 @@
       "id": "chaos/r3B",
       "url": "https://0eb0v3mz56dk7efu.public.blob.vercel-storage.com/clips/chaos/r3B.mp4",
       "poster": "https://0eb0v3mz56dk7efu.public.blob.vercel-storage.com/clips/chaos/r3B.jpg",
-      "duration": 8,
-      "sample": true
+      "duration": 8
     },
     "chaos/r3C": {
       "id": "chaos/r3C",
       "url": "https://0eb0v3mz56dk7efu.public.blob.vercel-storage.com/clips/chaos/r3C.mp4",
       "poster": "https://0eb0v3mz56dk7efu.public.blob.vercel-storage.com/clips/chaos/r3C.jpg",
-      "duration": 8,
-      "sample": true
+      "duration": 8
     },
     "chaos/r3D": {
       "id": "chaos/r3D",
@@ -126,8 +113,7 @@
       "id": "chaos/r4A",
       "url": "https://0eb0v3mz56dk7efu.public.blob.vercel-storage.com/clips/chaos/r4A.mp4",
       "poster": "https://0eb0v3mz56dk7efu.public.blob.vercel-storage.com/clips/chaos/r4A.jpg",
-      "duration": 8,
-      "sample": true
+      "duration": 8
     },
     "chaos/r4B": {
       "id": "chaos/r4B",
@@ -139,15 +125,13 @@
       "id": "chaos/r4C",
       "url": "https://0eb0v3mz56dk7efu.public.blob.vercel-storage.com/clips/chaos/r4C.mp4",
       "poster": "https://0eb0v3mz56dk7efu.public.blob.vercel-storage.com/clips/chaos/r4C.jpg",
-      "duration": 8,
-      "sample": true
+      "duration": 8
     },
     "chaos/r4D": {
       "id": "chaos/r4D",
       "url": "https://0eb0v3mz56dk7efu.public.blob.vercel-storage.com/clips/chaos/r4D.mp4",
       "poster": "https://0eb0v3mz56dk7efu.public.blob.vercel-storage.com/clips/chaos/r4D.jpg",
-      "duration": 8,
-      "sample": true
+      "duration": 8
     },
     "chaos/r5A": {
       "id": "chaos/r5A",
@@ -159,8 +143,7 @@
       "id": "chaos/r5B",
       "url": "https://0eb0v3mz56dk7efu.public.blob.vercel-storage.com/clips/chaos/r5B.mp4",
       "poster": "https://0eb0v3mz56dk7efu.public.blob.vercel-storage.com/clips/chaos/r5B.jpg",
-      "duration": 8,
-      "sample": true
+      "duration": 8
     },
     "chaos/r5C": {
       "id": "chaos/r5C",
@@ -172,8 +155,7 @@
       "id": "chaos/r5D",
       "url": "https://0eb0v3mz56dk7efu.public.blob.vercel-storage.com/clips/chaos/r5D.mp4",
       "poster": "https://0eb0v3mz56dk7efu.public.blob.vercel-storage.com/clips/chaos/r5D.jpg",
-      "duration": 8,
-      "sample": true
+      "duration": 8
     },
     "sitcom/r1A": {
       "id": "sitcom/r1A",
@@ -309,19 +291,23 @@
           "options": [
             {
               "label": "Doge sees a giant red candle and screams",
-              "clipId": "doge/asteroid"
+              "clipId": "doge/asteroid",
+              "sample": true
             },
             {
               "label": "Doge finds his wallet went to zero",
-              "clipId": "doge/astronaut"
+              "clipId": "doge/astronaut",
+              "sample": true
             },
             {
               "label": "Doge tries to buy the dip with a credit card",
-              "clipId": "doge/idle"
+              "clipId": "doge/idle",
+              "sample": true
             },
             {
               "label": "Doge naps on a pile of hardware wallets",
-              "clipId": "doge/newsroom"
+              "clipId": "doge/newsroom",
+              "sample": true
             }
           ]
         },
@@ -330,19 +316,23 @@
           "options": [
             {
               "label": "Doge vs the Orange Man in a boxing ring",
-              "clipId": "doge/paw"
+              "clipId": "doge/paw",
+              "sample": true
             },
             {
               "label": "Doge testifies to a Senate committee",
-              "clipId": "doge/rocket"
+              "clipId": "doge/rocket",
+              "sample": true
             },
             {
               "label": "Doge gets a job at a Wall Street desk",
-              "clipId": "doge/asteroid"
+              "clipId": "doge/asteroid",
+              "sample": true
             },
             {
               "label": "Doge is interviewed by a hostile TV host",
-              "clipId": "doge/astronaut"
+              "clipId": "doge/astronaut",
+              "sample": true
             }
           ]
         },
@@ -351,19 +341,23 @@
           "options": [
             {
               "label": "Doge launches on a homemade rocket to the moon",
-              "clipId": "doge/idle"
+              "clipId": "doge/idle",
+              "sample": true
             },
             {
               "label": "Doge wins the boxing match by accident",
-              "clipId": "doge/newsroom"
+              "clipId": "doge/newsroom",
+              "sample": true
             },
             {
               "label": "Doge gets chased by a mob of angry investors",
-              "clipId": "doge/paw"
+              "clipId": "doge/paw",
+              "sample": true
             },
             {
               "label": "Doge accidentally becomes a senator",
-              "clipId": "doge/rocket"
+              "clipId": "doge/rocket",
+              "sample": true
             }
           ]
         },
@@ -372,19 +366,23 @@
           "options": [
             {
               "label": "Doge lands on the moon and plants a flag",
-              "clipId": "doge/asteroid"
+              "clipId": "doge/asteroid",
+              "sample": true
             },
             {
               "label": "Doge hosts a press conference",
-              "clipId": "doge/astronaut"
+              "clipId": "doge/astronaut",
+              "sample": true
             },
             {
               "label": "Doge runs a lemonade stand that accepts only coins",
-              "clipId": "doge/idle"
+              "clipId": "doge/idle",
+              "sample": true
             },
             {
               "label": "Doge gets stuck in an elevator with the Orange Man",
-              "clipId": "doge/newsroom"
+              "clipId": "doge/newsroom",
+              "sample": true
             }
           ]
         },
@@ -393,19 +391,23 @@
           "options": [
             {
               "label": "Doge rides a golden bull down Wall Street",
-              "clipId": "doge/paw"
+              "clipId": "doge/paw",
+              "sample": true
             },
             {
               "label": "Doge returns from the moon to a hero's welcome",
-              "clipId": "doge/rocket"
+              "clipId": "doge/rocket",
+              "sample": true
             },
             {
               "label": "Doge falls asleep mid-victory speech",
-              "clipId": "doge/asteroid"
+              "clipId": "doge/asteroid",
+              "sample": true
             },
             {
               "label": "Doge sells everything and buys a doghouse",
-              "clipId": "doge/astronaut"
+              "clipId": "doge/astronaut",
+              "sample": true
             }
           ]
         }
@@ -651,19 +653,23 @@
           "options": [
             {
               "label": "Rin picks up a glowing package",
-              "clipId": "chaos/r3B"
+              "clipId": "chaos/r3B",
+              "sample": true
             },
             {
               "label": "Rin races a police drone through traffic",
-              "clipId": "chaos/r4C"
+              "clipId": "chaos/r4C",
+              "sample": true
             },
             {
               "label": "Rin's bike stalls above the city",
-              "clipId": "chaos/r5D"
+              "clipId": "chaos/r5D",
+              "sample": true
             },
             {
               "label": "Rin gets a call from a stranger",
-              "clipId": "chaos/r2A"
+              "clipId": "chaos/r2A",
+              "sample": true
             }
           ]
         },
@@ -672,19 +678,23 @@
           "options": [
             {
               "label": "A tiny robot fox jumps out",
-              "clipId": "chaos/r3B"
+              "clipId": "chaos/r3B",
+              "sample": true
             },
             {
               "label": "The package is a map to the old city",
-              "clipId": "chaos/r4C"
+              "clipId": "chaos/r4C",
+              "sample": true
             },
             {
               "label": "A mech wakes up from the box",
-              "clipId": "chaos/r5D"
+              "clipId": "chaos/r5D",
+              "sample": true
             },
             {
               "label": "It is someone's memories",
-              "clipId": "chaos/r2A"
+              "clipId": "chaos/r2A",
+              "sample": true
             }
           ]
         },
@@ -693,19 +703,23 @@
           "options": [
             {
               "label": "A gang of neon samurai blocks the road",
-              "clipId": "chaos/r3B"
+              "clipId": "chaos/r3B",
+              "sample": true
             },
             {
               "label": "A corporate gunship descends",
-              "clipId": "chaos/r4C"
+              "clipId": "chaos/r4C",
+              "sample": true
             },
             {
               "label": "Rin's old partner reappears",
-              "clipId": "chaos/r5D"
+              "clipId": "chaos/r5D",
+              "sample": true
             },
             {
               "label": "The city's AI speaks through every screen",
-              "clipId": "chaos/r2A"
+              "clipId": "chaos/r2A",
+              "sample": true
             }
           ]
         },
@@ -714,19 +728,23 @@
           "options": [
             {
               "label": "The mech and Rin fight side by side",
-              "clipId": "chaos/r3B"
+              "clipId": "chaos/r3B",
+              "sample": true
             },
             {
               "label": "Rin outruns everyone through a train tunnel",
-              "clipId": "chaos/r4C"
+              "clipId": "chaos/r4C",
+              "sample": true
             },
             {
               "label": "The robot fox hacks the gunship",
-              "clipId": "chaos/r5D"
+              "clipId": "chaos/r5D",
+              "sample": true
             },
             {
               "label": "Rin duels the neon samurai leader",
-              "clipId": "chaos/r2A"
+              "clipId": "chaos/r2A",
+              "sample": true
             }
           ]
         },
@@ -735,19 +753,23 @@
           "options": [
             {
               "label": "Rin delivers the package after all",
-              "clipId": "chaos/r3B"
+              "clipId": "chaos/r3B",
+              "sample": true
             },
             {
               "label": "Rin keeps the robot fox",
-              "clipId": "chaos/r4C"
+              "clipId": "chaos/r4C",
+              "sample": true
             },
             {
               "label": "The old city rises",
-              "clipId": "chaos/r5D"
+              "clipId": "chaos/r5D",
+              "sample": true
             },
             {
               "label": "Rin finds the girl from the memories",
-              "clipId": "chaos/r2A"
+              "clipId": "chaos/r2A",
+              "sample": true
             }
           ]
         }
@@ -765,19 +787,23 @@
           "options": [
             {
               "label": "Pip notices the moon is gone",
-              "clipId": "chaos/r4A"
+              "clipId": "chaos/r4A",
+              "sample": true
             },
             {
               "label": "An owl says the moon fell in the lake",
-              "clipId": "chaos/r5B"
+              "clipId": "chaos/r5B",
+              "sample": true
             },
             {
               "label": "Pip finds moon footprints in the snow",
-              "clipId": "chaos/r1C"
+              "clipId": "chaos/r1C",
+              "sample": true
             },
             {
               "label": "The stars ask Pip for help",
-              "clipId": "chaos/r2D"
+              "clipId": "chaos/r2D",
+              "sample": true
             }
           ]
         },
@@ -786,19 +812,23 @@
           "options": [
             {
               "label": "Pip crosses a river on a turtle",
-              "clipId": "chaos/r4A"
+              "clipId": "chaos/r4A",
+              "sample": true
             },
             {
               "label": "Pip meets a fox who lost his shadow",
-              "clipId": "chaos/r5B"
+              "clipId": "chaos/r5B",
+              "sample": true
             },
             {
               "label": "Pip climbs the tallest tree",
-              "clipId": "chaos/r1C"
+              "clipId": "chaos/r1C",
+              "sample": true
             },
             {
               "label": "Pip finds a door in a hill",
-              "clipId": "chaos/r2D"
+              "clipId": "chaos/r2D",
+              "sample": true
             }
           ]
         },
@@ -807,19 +837,23 @@
           "options": [
             {
               "label": "The moon is asleep in the lake",
-              "clipId": "chaos/r4A"
+              "clipId": "chaos/r4A",
+              "sample": true
             },
             {
               "label": "A whale carries the moon on its back",
-              "clipId": "chaos/r5B"
+              "clipId": "chaos/r5B",
+              "sample": true
             },
             {
               "label": "Inside the hill is a moon-repair workshop",
-              "clipId": "chaos/r1C"
+              "clipId": "chaos/r1C",
+              "sample": true
             },
             {
               "label": "The moon is hiding because it is shy",
-              "clipId": "chaos/r2D"
+              "clipId": "chaos/r2D",
+              "sample": true
             }
           ]
         },
@@ -828,19 +862,23 @@
           "options": [
             {
               "label": "Pip tickles the moon awake",
-              "clipId": "chaos/r4A"
+              "clipId": "chaos/r4A",
+              "sample": true
             },
             {
               "label": "Pip sings the moon a song",
-              "clipId": "chaos/r5B"
+              "clipId": "chaos/r5B",
+              "sample": true
             },
             {
               "label": "Pip gives the moon the yellow scarf",
-              "clipId": "chaos/r1C"
+              "clipId": "chaos/r1C",
+              "sample": true
             },
             {
               "label": "The mice let Pip polish the last spot",
-              "clipId": "chaos/r2D"
+              "clipId": "chaos/r2D",
+              "sample": true
             }
           ]
         },
@@ -849,19 +887,23 @@
           "options": [
             {
               "label": "The moon carries Pip home",
-              "clipId": "chaos/r4A"
+              "clipId": "chaos/r4A",
+              "sample": true
             },
             {
               "label": "All the animals watch the moonrise",
-              "clipId": "chaos/r5B"
+              "clipId": "chaos/r5B",
+              "sample": true
             },
             {
               "label": "Pip falls asleep on the whale",
-              "clipId": "chaos/r1C"
+              "clipId": "chaos/r1C",
+              "sample": true
             },
             {
               "label": "The moon tucks Pip into bed",
-              "clipId": "chaos/r2D"
+              "clipId": "chaos/r2D",
+              "sample": true
             }
           ]
         }
@@ -879,19 +921,23 @@
           "options": [
             {
               "label": "The bartender has no face",
-              "clipId": "chaos/r4D"
+              "clipId": "chaos/r4D",
+              "sample": true
             },
             {
               "label": "A hitchhiker with wet footprints",
-              "clipId": "chaos/r1A"
+              "clipId": "chaos/r1A",
+              "sample": true
             },
             {
               "label": "The motel TV shows the viewer's room",
-              "clipId": "chaos/r2B"
+              "clipId": "chaos/r2B",
+              "sample": true
             },
             {
               "label": "The elevator goes to floor 13",
-              "clipId": "chaos/r3C"
+              "clipId": "chaos/r3C",
+              "sample": true
             }
           ]
         },
@@ -900,19 +946,23 @@
           "options": [
             {
               "label": "The faceless bartender pours something alive",
-              "clipId": "chaos/r4D"
+              "clipId": "chaos/r4D",
+              "sample": true
             },
             {
               "label": "The hitchhiker is already in the back seat",
-              "clipId": "chaos/r1A"
+              "clipId": "chaos/r1A",
+              "sample": true
             },
             {
               "label": "The figure in the corner steps closer on the TV",
-              "clipId": "chaos/r2B"
+              "clipId": "chaos/r2B",
+              "sample": true
             },
             {
               "label": "Something knocks from inside the walls",
-              "clipId": "chaos/r3C"
+              "clipId": "chaos/r3C",
+              "sample": true
             }
           ]
         },
@@ -921,19 +971,23 @@
           "options": [
             {
               "label": "The bar's door opens into the same bar",
-              "clipId": "chaos/r4D"
+              "clipId": "chaos/r4D",
+              "sample": true
             },
             {
               "label": "The car will not stop accelerating",
-              "clipId": "chaos/r1A"
+              "clipId": "chaos/r1A",
+              "sample": true
             },
             {
               "label": "The man climbs out the motel window",
-              "clipId": "chaos/r2B"
+              "clipId": "chaos/r2B",
+              "sample": true
             },
             {
               "label": "The hand pulls someone into the wall",
-              "clipId": "chaos/r3C"
+              "clipId": "chaos/r3C",
+              "sample": true
             }
           ]
         },
@@ -942,19 +996,23 @@
           "options": [
             {
               "label": "Everyone in the bar has no face",
-              "clipId": "chaos/r4D"
+              "clipId": "chaos/r4D",
+              "sample": true
             },
             {
               "label": "The hitchhiker is the driver's drowned brother",
-              "clipId": "chaos/r1A"
+              "clipId": "chaos/r1A",
+              "sample": true
             },
             {
               "label": "The parking lot cars are full of mannequins",
-              "clipId": "chaos/r2B"
+              "clipId": "chaos/r2B",
+              "sample": true
             },
             {
               "label": "Floor 13 is a room full of beds with the guests",
-              "clipId": "chaos/r3C"
+              "clipId": "chaos/r3C",
+              "sample": true
             }
           ]
         },
@@ -963,19 +1021,23 @@
           "options": [
             {
               "label": "The drinker takes his seat at the bar forever",
-              "clipId": "chaos/r4D"
+              "clipId": "chaos/r4D",
+              "sample": true
             },
             {
               "label": "The car drives into a lake",
-              "clipId": "chaos/r1A"
+              "clipId": "chaos/r1A",
+              "sample": true
             },
             {
               "label": "The motel sign flickers to VACANCY",
-              "clipId": "chaos/r2B"
+              "clipId": "chaos/r2B",
+              "sample": true
             },
             {
               "label": "The elevator doors close with you inside",
-              "clipId": "chaos/r3C"
+              "clipId": "chaos/r3C",
+              "sample": true
             }
           ]
         }

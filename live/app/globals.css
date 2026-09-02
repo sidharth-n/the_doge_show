@@ -27,11 +27,12 @@ body { background: var(--color-bg); color: var(--color-ink); font-family: var(--
 .tally.pvw { background: var(--color-amber); box-shadow: 0 0 10px rgba(255,176,0,.7); }
 @keyframes tallypulse { 0%,100% { opacity: 1 } 50% { opacity: .55 } }
 
-.cutflash { animation: cut .28s ease-out; }
+.cutflash { animation: cut .28s ease-out forwards; }
 @keyframes cut { 0% { opacity: 1 } 100% { opacity: 0 } }
 
 .scanline { background-image: repeating-linear-gradient(0deg, rgba(255,255,255,.025) 0 1px, transparent 1px 3px); pointer-events: none; }
 
+@layer components {
 .btn { @apply inline-flex items-center justify-center gap-2 rounded-md px-4 py-2 text-sm font-medium transition; }
 .btn-tally { background: var(--color-tally); color: #fff; }
 .btn-tally:hover { filter: brightness(1.1); }
@@ -41,6 +42,8 @@ body { background: var(--color-bg); color: var(--color-ink); font-family: var(--
 
 .field { @apply w-full rounded-md border border-line bg-panel px-3 py-2 text-sm outline-none; }
 .field:focus { border-color: var(--color-amber); }
+
+}
 
 :focus-visible { outline: 2px solid var(--color-amber); outline-offset: 2px; }
 @media (prefers-reduced-motion: reduce) { .tally.on { animation: none } .cutflash { animation: none } }

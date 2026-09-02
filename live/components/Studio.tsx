@@ -144,7 +144,7 @@ function Ballot({ id, view, left, w, onVoted }: { id: string; view: ChannelView;
                 <div className="absolute left-1.5 top-1.5 flex items-center gap-1 rounded bg-black/70 px-1.5 py-0.5">
                   <span className={`tally ${won ? "on" : mine === i ? "pvw" : ""}`} /><span className="mono text-[10px]">{won ? "ON AIR" : `PVW ${LETTERS[i]}`}</span>
                 </div>
-                {clip?.sample && <span className="mono absolute bottom-1 right-1 rounded bg-black/70 px-1 text-[9px] text-muted">sample</span>}
+                {o.sample && <span className="mono absolute bottom-1 right-1 rounded bg-black/70 px-1 text-[9px] text-muted">sample</span>}
               </div>
               <div className="p-2">
                 <div className="line-clamp-2 text-xs leading-snug sm:text-sm">{o.label}</div>

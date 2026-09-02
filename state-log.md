@@ -25,3 +25,22 @@ big section headers; full studio visible; only 2 H3 clips; ask before verifying/
 Newsroom pull (real: Verge/CoinDesk/HN/CoinGecko + agent-reach X for Erik/AskVenice), screenplay, voice audition → Kokoro,
 studio still + idle loop, 12 iterations on the mouth (Poisson blend was the fix), Remotion frame with all overlays, music+SFX.
 
+## 2026-08-30 (session 2) — ship prep
+### Handoff
+- Cleaned up Sid's message to Erik (kept his words, fixed language, no em dashes). Final text:
+  "Hey Erik, I chatted with Vanessa last week and sent over my resume, waiting for the callback. Meanwhile I saw
+  your tweet on the H3 Max model yesterday and really got intrigued by the possibilities ahead. Also saw fal.ai now
+  has a 24x7 live stream running on the model they trained, on Twitch. So I thought I'd build something along
+  similar lines. This is an experiment I have done: the world's first fully AI-powered 24x7 live news channel. The
+  AI aggregates news from across social media and other authentic sources, verifies it, and puts it live through a
+  show called The Doge Show. It consumes very few credits since the audio models are cheaper ones (Kokoro), and
+  it's basically collecting data and using LLMs (I used the Venice uncensored model here since Doge needs some
+  comedy and freedom of speech). Occasionally we can use H3 Max for b-roll or content that needs video, and we can
+  also scrape real images or articles from the internet to show on screen, so it looks much like a real news
+  channel. This is a 3-minute concept I've done and the project v1 is ready. Would love to know your thoughts on it."
+  Unconfirmed: "Vanessa" was a guess for "avennsa"; check with Sid before sending.
+- YouTube metadata drafted: title "The Doge Show | This Week in AI & Crypto | Ep. 1 (30 Aug 2026)", description
+  with tonight's headlines + how-it's-built list, tags, category News & Politics, altered-content = Yes.
+- Tried to re-auth youtube-api for the Doge Show channel; Sid stopped it ("no i do it"). `auth.mjs` unchanged.
+- **First thing next session:** ask Sid for the YouTube link and the Vanessa name check, then send to Erik.
+

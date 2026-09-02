@@ -1,0 +1,985 @@
+{
+  "generated": "2026-09-02T08:30:21.283Z",
+  "clips": {
+    "doge/asteroid": {
+      "id": "doge/asteroid",
+      "url": "https://0eb0v3mz56dk7efu.public.blob.vercel-storage.com/clips/doge/asteroid.mp4",
+      "poster": "https://0eb0v3mz56dk7efu.public.blob.vercel-storage.com/clips/doge/asteroid.jpg",
+      "duration": 10.144,
+      "sample": true
+    },
+    "doge/astronaut": {
+      "id": "doge/astronaut",
+      "url": "https://0eb0v3mz56dk7efu.public.blob.vercel-storage.com/clips/doge/astronaut.mp4",
+      "poster": "https://0eb0v3mz56dk7efu.public.blob.vercel-storage.com/clips/doge/astronaut.jpg",
+      "duration": 10.144,
+      "sample": true
+    },
+    "doge/idle": {
+      "id": "doge/idle",
+      "url": "https://0eb0v3mz56dk7efu.public.blob.vercel-storage.com/clips/doge/idle.mp4",
+      "poster": "https://0eb0v3mz56dk7efu.public.blob.vercel-storage.com/clips/doge/idle.jpg",
+      "duration": 5.083333,
+      "sample": true
+    },
+    "doge/newsroom": {
+      "id": "doge/newsroom",
+      "url": "https://0eb0v3mz56dk7efu.public.blob.vercel-storage.com/clips/doge/newsroom.mp4",
+      "poster": "https://0eb0v3mz56dk7efu.public.blob.vercel-storage.com/clips/doge/newsroom.jpg",
+      "duration": 8,
+      "sample": true
+    },
+    "doge/paw": {
+      "id": "doge/paw",
+      "url": "https://0eb0v3mz56dk7efu.public.blob.vercel-storage.com/clips/doge/paw.mp4",
+      "poster": "https://0eb0v3mz56dk7efu.public.blob.vercel-storage.com/clips/doge/paw.jpg",
+      "duration": 5.184,
+      "sample": true
+    },
+    "doge/rocket": {
+      "id": "doge/rocket",
+      "url": "https://0eb0v3mz56dk7efu.public.blob.vercel-storage.com/clips/doge/rocket.mp4",
+      "poster": "https://0eb0v3mz56dk7efu.public.blob.vercel-storage.com/clips/doge/rocket.jpg",
+      "duration": 15.104,
+      "sample": true
+    },
+    "chaos/r1A": {
+      "id": "chaos/r1A",
+      "url": "https://0eb0v3mz56dk7efu.public.blob.vercel-storage.com/clips/chaos/r1A.mp4",
+      "poster": "https://0eb0v3mz56dk7efu.public.blob.vercel-storage.com/clips/chaos/r1A.jpg",
+      "duration": 8,
+      "sample": true
+    },
+    "chaos/r1B": {
+      "id": "chaos/r1B",
+      "url": "https://0eb0v3mz56dk7efu.public.blob.vercel-storage.com/clips/chaos/r1B.mp4",
+      "poster": "https://0eb0v3mz56dk7efu.public.blob.vercel-storage.com/clips/chaos/r1B.jpg",
+      "duration": 8
+    },
+    "chaos/r1C": {
+      "id": "chaos/r1C",
+      "url": "https://0eb0v3mz56dk7efu.public.blob.vercel-storage.com/clips/chaos/r1C.mp4",
+      "poster": "https://0eb0v3mz56dk7efu.public.blob.vercel-storage.com/clips/chaos/r1C.jpg",
+      "duration": 8,
+      "sample": true
+    },
+    "chaos/r1D": {
+      "id": "chaos/r1D",
+      "url": "https://0eb0v3mz56dk7efu.public.blob.vercel-storage.com/clips/chaos/r1D.mp4",
+      "poster": "https://0eb0v3mz56dk7efu.public.blob.vercel-storage.com/clips/chaos/r1D.jpg",
+      "duration": 8
+    },
+    "chaos/r2A": {
+      "id": "chaos/r2A",
+      "url": "https://0eb0v3mz56dk7efu.public.blob.vercel-storage.com/clips/chaos/r2A.mp4",
+      "poster": "https://0eb0v3mz56dk7efu.public.blob.vercel-storage.com/clips/chaos/r2A.jpg",
+      "duration": 8,
+      "sample": true
+    },
+    "chaos/r2B": {
+      "id": "chaos/r2B",
+      "url": "https://0eb0v3mz56dk7efu.public.blob.vercel-storage.com/clips/chaos/r2B.mp4",
+      "poster": "https://0eb0v3mz56dk7efu.public.blob.vercel-storage.com/clips/chaos/r2B.jpg",
+      "duration": 8,
+      "sample": true
+    },
+    "chaos/r2C": {
+      "id": "chaos/r2C",
+      "url": "https://0eb0v3mz56dk7efu.public.blob.vercel-storage.com/clips/chaos/r2C.mp4",
+      "poster": "https://0eb0v3mz56dk7efu.public.blob.vercel-storage.com/clips/chaos/r2C.jpg",
+      "duration": 8
+    },
+    "chaos/r2D": {
+      "id": "chaos/r2D",
+      "url": "https://0eb0v3mz56dk7efu.public.blob.vercel-storage.com/clips/chaos/r2D.mp4",
+      "poster": "https://0eb0v3mz56dk7efu.public.blob.vercel-storage.com/clips/chaos/r2D.jpg",
+      "duration": 8,
+      "sample": true
+    },
+    "chaos/r3A": {
+      "id": "chaos/r3A",
+      "url": "https://0eb0v3mz56dk7efu.public.blob.vercel-storage.com/clips/chaos/r3A.mp4",
+      "poster": "https://0eb0v3mz56dk7efu.public.blob.vercel-storage.com/clips/chaos/r3A.jpg",
+      "duration": 8
+    },
+    "chaos/r3B": {
+      "id": "chaos/r3B",
+      "url": "https://0eb0v3mz56dk7efu.public.blob.vercel-storage.com/clips/chaos/r3B.mp4",
+      "poster": "https://0eb0v3mz56dk7efu.public.blob.vercel-storage.com/clips/chaos/r3B.jpg",
+      "duration": 8,
+      "sample": true
+    },
+    "chaos/r3C": {
+      "id": "chaos/r3C",
+      "url": "https://0eb0v3mz56dk7efu.public.blob.vercel-storage.com/clips/chaos/r3C.mp4",
+      "poster": "https://0eb0v3mz56dk7efu.public.blob.vercel-storage.com/clips/chaos/r3C.jpg",
+      "duration": 8,
+      "sample": true
+    },
+    "chaos/r3D": {
+      "id": "chaos/r3D",
+      "url": "https://0eb0v3mz56dk7efu.public.blob.vercel-storage.com/clips/chaos/r3D.mp4",
+      "poster": "https://0eb0v3mz56dk7efu.public.blob.vercel-storage.com/clips/chaos/r3D.jpg",
+      "duration": 8
+    },
+    "chaos/r4A": {
+      "id": "chaos/r4A",
+      "url": "https://0eb0v3mz56dk7efu.public.blob.vercel-storage.com/clips/chaos/r4A.mp4",
+      "poster": "https://0eb0v3mz56dk7efu.public.blob.vercel-storage.com/clips/chaos/r4A.jpg",
+      "duration": 8,
+      "sample": true
+    },
+    "chaos/r4B": {
+      "id": "chaos/r4B",
+      "url": "https://0eb0v3mz56dk7efu.public.blob.vercel-storage.com/clips/chaos/r4B.mp4",
+      "poster": "https://0eb0v3mz56dk7efu.public.blob.vercel-storage.com/clips/chaos/r4B.jpg",
+      "duration": 8
+    },
+    "chaos/r4C": {
+      "id": "chaos/r4C",
+      "url": "https://0eb0v3mz56dk7efu.public.blob.vercel-storage.com/clips/chaos/r4C.mp4",
+      "poster": "https://0eb0v3mz56dk7efu.public.blob.vercel-storage.com/clips/chaos/r4C.jpg",
+      "duration": 8,
+      "sample": true
+    },
+    "chaos/r4D": {
+      "id": "chaos/r4D",
+      "url": "https://0eb0v3mz56dk7efu.public.blob.vercel-storage.com/clips/chaos/r4D.mp4",
+      "poster": "https://0eb0v3mz56dk7efu.public.blob.vercel-storage.com/clips/chaos/r4D.jpg",
+      "duration": 8,
+      "sample": true
+    },
+    "chaos/r5A": {
+      "id": "chaos/r5A",
+      "url": "https://0eb0v3mz56dk7efu.public.blob.vercel-storage.com/clips/chaos/r5A.mp4",
+      "poster": "https://0eb0v3mz56dk7efu.public.blob.vercel-storage.com/clips/chaos/r5A.jpg",
+      "duration": 8
+    },
+    "chaos/r5B": {
+      "id": "chaos/r5B",
+      "url": "https://0eb0v3mz56dk7efu.public.blob.vercel-storage.com/clips/chaos/r5B.mp4",
+      "poster": "https://0eb0v3mz56dk7efu.public.blob.vercel-storage.com/clips/chaos/r5B.jpg",
+      "duration": 8,
+      "sample": true
+    },
+    "chaos/r5C": {
+      "id": "chaos/r5C",
+      "url": "https://0eb0v3mz56dk7efu.public.blob.vercel-storage.com/clips/chaos/r5C.mp4",
+      "poster": "https://0eb0v3mz56dk7efu.public.blob.vercel-storage.com/clips/chaos/r5C.jpg",
+      "duration": 8
+    },
+    "chaos/r5D": {
+      "id": "chaos/r5D",
+      "url": "https://0eb0v3mz56dk7efu.public.blob.vercel-storage.com/clips/chaos/r5D.mp4",
+      "poster": "https://0eb0v3mz56dk7efu.public.blob.vercel-storage.com/clips/chaos/r5D.jpg",
+      "duration": 8,
+      "sample": true
+    },
+    "sitcom/r1A": {
+      "id": "sitcom/r1A",
+      "url": "https://0eb0v3mz56dk7efu.public.blob.vercel-storage.com/clips/sitcom/r1A.mp4",
+      "poster": "https://0eb0v3mz56dk7efu.public.blob.vercel-storage.com/clips/sitcom/r1A.jpg",
+      "duration": 8
+    },
+    "sitcom/r1B": {
+      "id": "sitcom/r1B",
+      "url": "https://0eb0v3mz56dk7efu.public.blob.vercel-storage.com/clips/sitcom/r1B.mp4",
+      "poster": "https://0eb0v3mz56dk7efu.public.blob.vercel-storage.com/clips/sitcom/r1B.jpg",
+      "duration": 8
+    },
+    "sitcom/r1C": {
+      "id": "sitcom/r1C",
+      "url": "https://0eb0v3mz56dk7efu.public.blob.vercel-storage.com/clips/sitcom/r1C.mp4",
+      "poster": "https://0eb0v3mz56dk7efu.public.blob.vercel-storage.com/clips/sitcom/r1C.jpg",
+      "duration": 8
+    },
+    "sitcom/r1D": {
+      "id": "sitcom/r1D",
+      "url": "https://0eb0v3mz56dk7efu.public.blob.vercel-storage.com/clips/sitcom/r1D.mp4",
+      "poster": "https://0eb0v3mz56dk7efu.public.blob.vercel-storage.com/clips/sitcom/r1D.jpg",
+      "duration": 8
+    },
+    "sitcom/r2A": {
+      "id": "sitcom/r2A",
+      "url": "https://0eb0v3mz56dk7efu.public.blob.vercel-storage.com/clips/sitcom/r2A.mp4",
+      "poster": "https://0eb0v3mz56dk7efu.public.blob.vercel-storage.com/clips/sitcom/r2A.jpg",
+      "duration": 8
+    },
+    "sitcom/r2B": {
+      "id": "sitcom/r2B",
+      "url": "https://0eb0v3mz56dk7efu.public.blob.vercel-storage.com/clips/sitcom/r2B.mp4",
+      "poster": "https://0eb0v3mz56dk7efu.public.blob.vercel-storage.com/clips/sitcom/r2B.jpg",
+      "duration": 8
+    },
+    "sitcom/r2C": {
+      "id": "sitcom/r2C",
+      "url": "https://0eb0v3mz56dk7efu.public.blob.vercel-storage.com/clips/sitcom/r2C.mp4",
+      "poster": "https://0eb0v3mz56dk7efu.public.blob.vercel-storage.com/clips/sitcom/r2C.jpg",
+      "duration": 8
+    },
+    "sitcom/r2D": {
+      "id": "sitcom/r2D",
+      "url": "https://0eb0v3mz56dk7efu.public.blob.vercel-storage.com/clips/sitcom/r2D.mp4",
+      "poster": "https://0eb0v3mz56dk7efu.public.blob.vercel-storage.com/clips/sitcom/r2D.jpg",
+      "duration": 8
+    },
+    "sitcom/r3A": {
+      "id": "sitcom/r3A",
+      "url": "https://0eb0v3mz56dk7efu.public.blob.vercel-storage.com/clips/sitcom/r3A.mp4",
+      "poster": "https://0eb0v3mz56dk7efu.public.blob.vercel-storage.com/clips/sitcom/r3A.jpg",
+      "duration": 8
+    },
+    "sitcom/r3B": {
+      "id": "sitcom/r3B",
+      "url": "https://0eb0v3mz56dk7efu.public.blob.vercel-storage.com/clips/sitcom/r3B.mp4",
+      "poster": "https://0eb0v3mz56dk7efu.public.blob.vercel-storage.com/clips/sitcom/r3B.jpg",
+      "duration": 8
+    },
+    "sitcom/r3C": {
+      "id": "sitcom/r3C",
+      "url": "https://0eb0v3mz56dk7efu.public.blob.vercel-storage.com/clips/sitcom/r3C.mp4",
+      "poster": "https://0eb0v3mz56dk7efu.public.blob.vercel-storage.com/clips/sitcom/r3C.jpg",
+      "duration": 8
+    },
+    "sitcom/r3D": {
+      "id": "sitcom/r3D",
+      "url": "https://0eb0v3mz56dk7efu.public.blob.vercel-storage.com/clips/sitcom/r3D.mp4",
+      "poster": "https://0eb0v3mz56dk7efu.public.blob.vercel-storage.com/clips/sitcom/r3D.jpg",
+      "duration": 8
+    },
+    "sitcom/r4A": {
+      "id": "sitcom/r4A",
+      "url": "https://0eb0v3mz56dk7efu.public.blob.vercel-storage.com/clips/sitcom/r4A.mp4",
+      "poster": "https://0eb0v3mz56dk7efu.public.blob.vercel-storage.com/clips/sitcom/r4A.jpg",
+      "duration": 8
+    },
+    "sitcom/r4B": {
+      "id": "sitcom/r4B",
+      "url": "https://0eb0v3mz56dk7efu.public.blob.vercel-storage.com/clips/sitcom/r4B.mp4",
+      "poster": "https://0eb0v3mz56dk7efu.public.blob.vercel-storage.com/clips/sitcom/r4B.jpg",
+      "duration": 8
+    },
+    "sitcom/r4C": {
+      "id": "sitcom/r4C",
+      "url": "https://0eb0v3mz56dk7efu.public.blob.vercel-storage.com/clips/sitcom/r4C.mp4",
+      "poster": "https://0eb0v3mz56dk7efu.public.blob.vercel-storage.com/clips/sitcom/r4C.jpg",
+      "duration": 8
+    },
+    "sitcom/r4D": {
+      "id": "sitcom/r4D",
+      "url": "https://0eb0v3mz56dk7efu.public.blob.vercel-storage.com/clips/sitcom/r4D.mp4",
+      "poster": "https://0eb0v3mz56dk7efu.public.blob.vercel-storage.com/clips/sitcom/r4D.jpg",
+      "duration": 8
+    },
+    "sitcom/r5A": {
+      "id": "sitcom/r5A",
+      "url": "https://0eb0v3mz56dk7efu.public.blob.vercel-storage.com/clips/sitcom/r5A.mp4",
+      "poster": "https://0eb0v3mz56dk7efu.public.blob.vercel-storage.com/clips/sitcom/r5A.jpg",
+      "duration": 8
+    },
+    "sitcom/r5B": {
+      "id": "sitcom/r5B",
+      "url": "https://0eb0v3mz56dk7efu.public.blob.vercel-storage.com/clips/sitcom/r5B.mp4",
+      "poster": "https://0eb0v3mz56dk7efu.public.blob.vercel-storage.com/clips/sitcom/r5B.jpg",
+      "duration": 8
+    },
+    "sitcom/r5C": {
+      "id": "sitcom/r5C",
+      "url": "https://0eb0v3mz56dk7efu.public.blob.vercel-storage.com/clips/sitcom/r5C.mp4",
+      "poster": "https://0eb0v3mz56dk7efu.public.blob.vercel-storage.com/clips/sitcom/r5C.jpg",
+      "duration": 8
+    },
+    "sitcom/r5D": {
+      "id": "sitcom/r5D",
+      "url": "https://0eb0v3mz56dk7efu.public.blob.vercel-storage.com/clips/sitcom/r5D.mp4",
+      "poster": "https://0eb0v3mz56dk7efu.public.blob.vercel-storage.com/clips/sitcom/r5D.jpg",
+      "duration": 8
+    }
+  },
+  "channels": [
+    {
+      "id": "doge",
+      "name": "Doge",
+      "tagline": "One Shiba. Every bad idea in crypto.",
+      "adult": false,
+      "system": "A golden Shiba Inu in a black cap called the Doge stumbles through the crypto world. Every scene is a joke with a punchline. Never cruel, always absurd.",
+      "rounds": [
+        {
+          "beat": "Morning. The Doge checks the charts.",
+          "options": [
+            {
+              "label": "Doge sees a giant red candle and screams",
+              "clipId": "doge/asteroid"
+            },
+            {
+              "label": "Doge finds his wallet went to zero",
+              "clipId": "doge/astronaut"
+            },
+            {
+              "label": "Doge tries to buy the dip with a credit card",
+              "clipId": "doge/idle"
+            },
+            {
+              "label": "Doge naps on a pile of hardware wallets",
+              "clipId": "doge/newsroom"
+            }
+          ]
+        },
+        {
+          "beat": "The Doge gets a challenge.",
+          "options": [
+            {
+              "label": "Doge vs the Orange Man in a boxing ring",
+              "clipId": "doge/paw"
+            },
+            {
+              "label": "Doge testifies to a Senate committee",
+              "clipId": "doge/rocket"
+            },
+            {
+              "label": "Doge gets a job at a Wall Street desk",
+              "clipId": "doge/asteroid"
+            },
+            {
+              "label": "Doge is interviewed by a hostile TV host",
+              "clipId": "doge/astronaut"
+            }
+          ]
+        },
+        {
+          "beat": "Things escalate fast.",
+          "options": [
+            {
+              "label": "Doge launches on a homemade rocket to the moon",
+              "clipId": "doge/idle"
+            },
+            {
+              "label": "Doge wins the boxing match by accident",
+              "clipId": "doge/newsroom"
+            },
+            {
+              "label": "Doge gets chased by a mob of angry investors",
+              "clipId": "doge/paw"
+            },
+            {
+              "label": "Doge accidentally becomes a senator",
+              "clipId": "doge/rocket"
+            }
+          ]
+        },
+        {
+          "beat": "The Doge is somewhere it should not be.",
+          "options": [
+            {
+              "label": "Doge lands on the moon and plants a flag",
+              "clipId": "doge/asteroid"
+            },
+            {
+              "label": "Doge hosts a press conference",
+              "clipId": "doge/astronaut"
+            },
+            {
+              "label": "Doge runs a lemonade stand that accepts only coins",
+              "clipId": "doge/idle"
+            },
+            {
+              "label": "Doge gets stuck in an elevator with the Orange Man",
+              "clipId": "doge/newsroom"
+            }
+          ]
+        },
+        {
+          "beat": "The finale.",
+          "options": [
+            {
+              "label": "Doge rides a golden bull down Wall Street",
+              "clipId": "doge/paw"
+            },
+            {
+              "label": "Doge returns from the moon to a hero's welcome",
+              "clipId": "doge/rocket"
+            },
+            {
+              "label": "Doge falls asleep mid-victory speech",
+              "clipId": "doge/asteroid"
+            },
+            {
+              "label": "Doge sells everything and buys a doghouse",
+              "clipId": "doge/astronaut"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "chaos",
+      "name": "Chaos",
+      "tagline": "No rules, no plot, no mercy.",
+      "adult": false,
+      "system": "Anything can happen. Every scene is a new impossible thing filmed as if it were real.",
+      "rounds": [
+        {
+          "beat": "Start somewhere strange.",
+          "options": [
+            {
+              "label": "A cat delivers a TED talk",
+              "clipId": "chaos/r1A"
+            },
+            {
+              "label": "A volcano erupts confetti",
+              "clipId": "chaos/r1B"
+            },
+            {
+              "label": "Grandma wins a drag race",
+              "clipId": "chaos/r1C"
+            },
+            {
+              "label": "Fish learn to walk today",
+              "clipId": "chaos/r1D"
+            }
+          ]
+        },
+        {
+          "beat": "Make it bigger.",
+          "options": [
+            {
+              "label": "The moon lands on Earth for a visit",
+              "clipId": "chaos/r2A"
+            },
+            {
+              "label": "A traffic jam of dinosaurs",
+              "clipId": "chaos/r2B"
+            },
+            {
+              "label": "Skyscrapers play musical chairs",
+              "clipId": "chaos/r2C"
+            },
+            {
+              "label": "It rains rubber ducks",
+              "clipId": "chaos/r2D"
+            }
+          ]
+        },
+        {
+          "beat": "Somebody has to deal with it.",
+          "options": [
+            {
+              "label": "The army deploys against the ducks",
+              "clipId": "chaos/r3A"
+            },
+            {
+              "label": "A toddler negotiates with the dinosaurs",
+              "clipId": "chaos/r3B"
+            },
+            {
+              "label": "The moon apologizes on live TV",
+              "clipId": "chaos/r3C"
+            },
+            {
+              "label": "The cat runs for mayor",
+              "clipId": "chaos/r3D"
+            }
+          ]
+        },
+        {
+          "beat": "It gets out of hand.",
+          "options": [
+            {
+              "label": "The ocean stands up and walks away",
+              "clipId": "chaos/r4A"
+            },
+            {
+              "label": "Gravity takes a lunch break",
+              "clipId": "chaos/r4B"
+            },
+            {
+              "label": "The sun sets in the wrong place",
+              "clipId": "chaos/r4C"
+            },
+            {
+              "label": "Every statue comes alive and stretches",
+              "clipId": "chaos/r4D"
+            }
+          ]
+        },
+        {
+          "beat": "End it with a bang.",
+          "options": [
+            {
+              "label": "Everyone floats up into a giant group hug",
+              "clipId": "chaos/r5A"
+            },
+            {
+              "label": "The cat is sworn in as mayor",
+              "clipId": "chaos/r5B"
+            },
+            {
+              "label": "The ocean comes back and lies down",
+              "clipId": "chaos/r5C"
+            },
+            {
+              "label": "Fade to a single rubber duck",
+              "clipId": "chaos/r5D"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sitcom",
+      "name": "Sitcom",
+      "tagline": "Three roommates, one apartment, zero rent paid.",
+      "adult": false,
+      "system": "A classic sitcom about three roommates. Every scene is a setup and a punchline. Keep it warm.",
+      "rounds": [
+        {
+          "beat": "Cold open.",
+          "options": [
+            {
+              "label": "Max has adopted a goat",
+              "clipId": "sitcom/r1A"
+            },
+            {
+              "label": "The rent is due and nobody has it",
+              "clipId": "sitcom/r1B"
+            },
+            {
+              "label": "Priya's date is the landlord",
+              "clipId": "sitcom/r1C"
+            },
+            {
+              "label": "Jo built a hot tub in the living room",
+              "clipId": "sitcom/r1D"
+            }
+          ]
+        },
+        {
+          "beat": "The plan.",
+          "options": [
+            {
+              "label": "They start a goat yoga business",
+              "clipId": "sitcom/r2A"
+            },
+            {
+              "label": "They rent the hot tub by the hour",
+              "clipId": "sitcom/r2B"
+            },
+            {
+              "label": "Max pretends to be a famous chef",
+              "clipId": "sitcom/r2C"
+            },
+            {
+              "label": "Priya fakes an engagement to the landlord",
+              "clipId": "sitcom/r2D"
+            }
+          ]
+        },
+        {
+          "beat": "It goes wrong.",
+          "options": [
+            {
+              "label": "The goat eats the rent money",
+              "clipId": "sitcom/r3A"
+            },
+            {
+              "label": "The hot tub leaks into the downstairs apartment",
+              "clipId": "sitcom/r3B"
+            },
+            {
+              "label": "The landlord brings his mother to dinner",
+              "clipId": "sitcom/r3C"
+            },
+            {
+              "label": "A health inspector shows up",
+              "clipId": "sitcom/r3D"
+            }
+          ]
+        },
+        {
+          "beat": "Damage control.",
+          "options": [
+            {
+              "label": "They hide the goat in the fridge",
+              "clipId": "sitcom/r4A"
+            },
+            {
+              "label": "Jo distracts everyone with a song",
+              "clipId": "sitcom/r4B"
+            },
+            {
+              "label": "Priya confesses everything",
+              "clipId": "sitcom/r4C"
+            },
+            {
+              "label": "Max blames the goat for everything",
+              "clipId": "sitcom/r4D"
+            }
+          ]
+        },
+        {
+          "beat": "Tag.",
+          "options": [
+            {
+              "label": "The landlord's mother moves in",
+              "clipId": "sitcom/r5A"
+            },
+            {
+              "label": "The goat pays the rent",
+              "clipId": "sitcom/r5B"
+            },
+            {
+              "label": "They all end up in the hot tub",
+              "clipId": "sitcom/r5C"
+            },
+            {
+              "label": "Max adopts a second goat",
+              "clipId": "sitcom/r5D"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "anime",
+      "name": "Anime",
+      "tagline": "Neo-Kyoto, 2099. A courier with a past.",
+      "adult": false,
+      "system": "A cyberpunk anime about Rin, a courier who delivers the wrong package. Action with heart.",
+      "rounds": [
+        {
+          "beat": "The delivery.",
+          "options": [
+            {
+              "label": "Rin picks up a glowing package",
+              "clipId": "chaos/r3B"
+            },
+            {
+              "label": "Rin races a police drone through traffic",
+              "clipId": "chaos/r4C"
+            },
+            {
+              "label": "Rin's bike stalls above the city",
+              "clipId": "chaos/r5D"
+            },
+            {
+              "label": "Rin gets a call from a stranger",
+              "clipId": "chaos/r2A"
+            }
+          ]
+        },
+        {
+          "beat": "The package opens.",
+          "options": [
+            {
+              "label": "A tiny robot fox jumps out",
+              "clipId": "chaos/r3B"
+            },
+            {
+              "label": "The package is a map to the old city",
+              "clipId": "chaos/r4C"
+            },
+            {
+              "label": "A mech wakes up from the box",
+              "clipId": "chaos/r5D"
+            },
+            {
+              "label": "It is someone's memories",
+              "clipId": "chaos/r2A"
+            }
+          ]
+        },
+        {
+          "beat": "The hunters arrive.",
+          "options": [
+            {
+              "label": "A gang of neon samurai blocks the road",
+              "clipId": "chaos/r3B"
+            },
+            {
+              "label": "A corporate gunship descends",
+              "clipId": "chaos/r4C"
+            },
+            {
+              "label": "Rin's old partner reappears",
+              "clipId": "chaos/r5D"
+            },
+            {
+              "label": "The city's AI speaks through every screen",
+              "clipId": "chaos/r2A"
+            }
+          ]
+        },
+        {
+          "beat": "The fight.",
+          "options": [
+            {
+              "label": "The mech and Rin fight side by side",
+              "clipId": "chaos/r3B"
+            },
+            {
+              "label": "Rin outruns everyone through a train tunnel",
+              "clipId": "chaos/r4C"
+            },
+            {
+              "label": "The robot fox hacks the gunship",
+              "clipId": "chaos/r5D"
+            },
+            {
+              "label": "Rin duels the neon samurai leader",
+              "clipId": "chaos/r2A"
+            }
+          ]
+        },
+        {
+          "beat": "Dawn.",
+          "options": [
+            {
+              "label": "Rin delivers the package after all",
+              "clipId": "chaos/r3B"
+            },
+            {
+              "label": "Rin keeps the robot fox",
+              "clipId": "chaos/r4C"
+            },
+            {
+              "label": "The old city rises",
+              "clipId": "chaos/r5D"
+            },
+            {
+              "label": "Rin finds the girl from the memories",
+              "clipId": "chaos/r2A"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "storybook",
+      "name": "Storybook",
+      "tagline": "A bear, a lantern, and a very long night.",
+      "adult": false,
+      "system": "A gentle bedtime story about Pip the bear cub looking for the moon. Wonder, no fear.",
+      "rounds": [
+        {
+          "beat": "The moon is missing.",
+          "options": [
+            {
+              "label": "Pip notices the moon is gone",
+              "clipId": "chaos/r4A"
+            },
+            {
+              "label": "An owl says the moon fell in the lake",
+              "clipId": "chaos/r5B"
+            },
+            {
+              "label": "Pip finds moon footprints in the snow",
+              "clipId": "chaos/r1C"
+            },
+            {
+              "label": "The stars ask Pip for help",
+              "clipId": "chaos/r2D"
+            }
+          ]
+        },
+        {
+          "beat": "Into the forest.",
+          "options": [
+            {
+              "label": "Pip crosses a river on a turtle",
+              "clipId": "chaos/r4A"
+            },
+            {
+              "label": "Pip meets a fox who lost his shadow",
+              "clipId": "chaos/r5B"
+            },
+            {
+              "label": "Pip climbs the tallest tree",
+              "clipId": "chaos/r1C"
+            },
+            {
+              "label": "Pip finds a door in a hill",
+              "clipId": "chaos/r2D"
+            }
+          ]
+        },
+        {
+          "beat": "Something magical.",
+          "options": [
+            {
+              "label": "The moon is asleep in the lake",
+              "clipId": "chaos/r4A"
+            },
+            {
+              "label": "A whale carries the moon on its back",
+              "clipId": "chaos/r5B"
+            },
+            {
+              "label": "Inside the hill is a moon-repair workshop",
+              "clipId": "chaos/r1C"
+            },
+            {
+              "label": "The moon is hiding because it is shy",
+              "clipId": "chaos/r2D"
+            }
+          ]
+        },
+        {
+          "beat": "Helping the moon.",
+          "options": [
+            {
+              "label": "Pip tickles the moon awake",
+              "clipId": "chaos/r4A"
+            },
+            {
+              "label": "Pip sings the moon a song",
+              "clipId": "chaos/r5B"
+            },
+            {
+              "label": "Pip gives the moon the yellow scarf",
+              "clipId": "chaos/r1C"
+            },
+            {
+              "label": "The mice let Pip polish the last spot",
+              "clipId": "chaos/r2D"
+            }
+          ]
+        },
+        {
+          "beat": "Goodnight.",
+          "options": [
+            {
+              "label": "The moon carries Pip home",
+              "clipId": "chaos/r4A"
+            },
+            {
+              "label": "All the animals watch the moonrise",
+              "clipId": "chaos/r5B"
+            },
+            {
+              "label": "Pip falls asleep on the whale",
+              "clipId": "chaos/r1C"
+            },
+            {
+              "label": "The moon tucks Pip into bed",
+              "clipId": "chaos/r2D"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "afterdark",
+      "name": "After Dark",
+      "tagline": "Unfiltered. Horror, dark comedy, no safety rails.",
+      "adult": true,
+      "system": "A late-night horror anthology. Dark, strange, gory when it earns it. Uncensored, never illegal.",
+      "rounds": [
+        {
+          "beat": "Last call.",
+          "options": [
+            {
+              "label": "The bartender has no face",
+              "clipId": "chaos/r4D"
+            },
+            {
+              "label": "A hitchhiker with wet footprints",
+              "clipId": "chaos/r1A"
+            },
+            {
+              "label": "The motel TV shows the viewer's room",
+              "clipId": "chaos/r2B"
+            },
+            {
+              "label": "The elevator goes to floor 13",
+              "clipId": "chaos/r3C"
+            }
+          ]
+        },
+        {
+          "beat": "It notices you.",
+          "options": [
+            {
+              "label": "The faceless bartender pours something alive",
+              "clipId": "chaos/r4D"
+            },
+            {
+              "label": "The hitchhiker is already in the back seat",
+              "clipId": "chaos/r1A"
+            },
+            {
+              "label": "The figure in the corner steps closer on the TV",
+              "clipId": "chaos/r2B"
+            },
+            {
+              "label": "Something knocks from inside the walls",
+              "clipId": "chaos/r3C"
+            }
+          ]
+        },
+        {
+          "beat": "Run.",
+          "options": [
+            {
+              "label": "The bar's door opens into the same bar",
+              "clipId": "chaos/r4D"
+            },
+            {
+              "label": "The car will not stop accelerating",
+              "clipId": "chaos/r1A"
+            },
+            {
+              "label": "The man climbs out the motel window",
+              "clipId": "chaos/r2B"
+            },
+            {
+              "label": "The hand pulls someone into the wall",
+              "clipId": "chaos/r3C"
+            }
+          ]
+        },
+        {
+          "beat": "The reveal.",
+          "options": [
+            {
+              "label": "Everyone in the bar has no face",
+              "clipId": "chaos/r4D"
+            },
+            {
+              "label": "The hitchhiker is the driver's drowned brother",
+              "clipId": "chaos/r1A"
+            },
+            {
+              "label": "The parking lot cars are full of mannequins",
+              "clipId": "chaos/r2B"
+            },
+            {
+              "label": "Floor 13 is a room full of beds with the guests",
+              "clipId": "chaos/r3C"
+            }
+          ]
+        },
+        {
+          "beat": "No escape.",
+          "options": [
+            {
+              "label": "The drinker takes his seat at the bar forever",
+              "clipId": "chaos/r4D"
+            },
+            {
+              "label": "The car drives into a lake",
+              "clipId": "chaos/r1A"
+            },
+            {
+              "label": "The motel sign flickers to VACANCY",
+              "clipId": "chaos/r2B"
+            },
+            {
+              "label": "The elevator doors close with you inside",
+              "clipId": "chaos/r3C"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

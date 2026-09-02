@@ -1,0 +1,46 @@
+@import "tailwindcss";
+
+@theme {
+  --color-bg: #0b0d12;
+  --color-panel: #141821;
+  --color-panel2: #1b2030;
+  --color-line: #262c3a;
+  --color-ink: #ece6da;
+  --color-muted: #8b93a7;
+  --color-tally: #ff2d2d;
+  --color-amber: #ffb000;
+  --color-diem: #6ee7f0;
+  --font-display: var(--font-barlow-condensed), "Arial Narrow", sans-serif;
+  --font-sans: var(--font-plex-sans), system-ui, sans-serif;
+  --font-mono: var(--font-plex-mono), ui-monospace, monospace;
+}
+
+html { color-scheme: dark; }
+body { background: var(--color-bg); color: var(--color-ink); font-family: var(--font-sans); -webkit-font-smoothing: antialiased; }
+
+.display { font-family: var(--font-display); text-transform: uppercase; letter-spacing: 0.01em; }
+.mono { font-family: var(--font-mono); font-variant-numeric: tabular-nums; }
+
+/* tally lamp: the one signature device */
+.tally { width: 10px; height: 10px; border-radius: 9999px; background: #3a1010; box-shadow: inset 0 0 0 1px #5a1c1c; }
+.tally.on { background: var(--color-tally); box-shadow: 0 0 0 2px rgba(255,45,45,.25), 0 0 14px rgba(255,45,45,.8); animation: tallypulse 1.6s ease-in-out infinite; }
+.tally.pvw { background: var(--color-amber); box-shadow: 0 0 10px rgba(255,176,0,.7); }
+@keyframes tallypulse { 0%,100% { opacity: 1 } 50% { opacity: .55 } }
+
+.cutflash { animation: cut .28s ease-out; }
+@keyframes cut { 0% { opacity: 1 } 100% { opacity: 0 } }
+
+.scanline { background-image: repeating-linear-gradient(0deg, rgba(255,255,255,.025) 0 1px, transparent 1px 3px); pointer-events: none; }
+
+.btn { @apply inline-flex items-center justify-center gap-2 rounded-md px-4 py-2 text-sm font-medium transition; }
+.btn-tally { background: var(--color-tally); color: #fff; }
+.btn-tally:hover { filter: brightness(1.1); }
+.btn-ghost { border: 1px solid var(--color-line); color: var(--color-ink); }
+.btn-ghost:hover { background: var(--color-panel2); }
+.btn-amber { background: var(--color-amber); color: #111; }
+
+.field { @apply w-full rounded-md border border-line bg-panel px-3 py-2 text-sm outline-none; }
+.field:focus { border-color: var(--color-amber); }
+
+:focus-visible { outline: 2px solid var(--color-amber); outline-offset: 2px; }
+@media (prefers-reduced-motion: reduce) { .tally.on { animation: none } .cutflash { animation: none } }

@@ -1,0 +1,252 @@
+{
+  "clip": { "resolution": "480P", "duration": "8s", "aspect_ratio": "16:9" },
+  "channels": [
+    {
+      "id": "doge",
+      "name": "Doge",
+      "tagline": "One Shiba. Every bad idea in crypto.",
+      "adult": false,
+      "model": "minimax-h3-max-reference-to-video",
+      "reference": "../studio/assets/loop-frame0.png",
+      "style": "The Doge: a golden Shiba Inu wearing a black baseball cap, expressive, slapstick comedy, cinematic lighting, 24fps, no text on screen.",
+      "system": "A golden Shiba Inu in a black cap called the Doge stumbles through the crypto world. Every scene is a joke with a punchline. Never cruel, always absurd.",
+      "rounds": [
+        { "beat": "Morning. The Doge checks the charts.", "options": [
+          { "label": "Doge sees a giant red candle and screams", "prompt": "The Doge stares at a wall of monitors as a huge red candle appears, jaw drops, coffee mug slides off the desk in slow motion." },
+          { "label": "Doge finds his wallet went to zero", "prompt": "The Doge taps a phone, sees a balance of zero, flips the phone in the air, catches it, taps again, still zero, sighs dramatically." },
+          { "label": "Doge tries to buy the dip with a credit card", "prompt": "The Doge frantically swipes a credit card through a laptop keyboard like a card reader, sparks fly, the screen says DECLINED." },
+          { "label": "Doge naps on a pile of hardware wallets", "prompt": "The Doge sleeps blissfully on a mountain of small metal hardware wallets, one paw twitching, a dream bubble showing a rocket." }
+        ]},
+        { "beat": "The Doge gets a challenge.", "options": [
+          { "label": "Doge vs the Orange Man in a boxing ring", "prompt": "The Doge in red boxing gloves bounces in a boxing ring facing a very tan man with a blond swoop hairstyle and a long red tie, the crowd roars." },
+          { "label": "Doge testifies to a Senate committee", "prompt": "The Doge sits at a wooden hearing table in a tiny suit in front of a row of stern senators, adjusts a microphone, raises one paw to swear in." },
+          { "label": "Doge gets a job at a Wall Street desk", "prompt": "The Doge in a pinstripe suit at a Wall Street trading floor, three phones ringing, paws slamming keyboards, papers flying." },
+          { "label": "Doge is interviewed by a hostile TV host", "prompt": "The Doge on a cable news set, a shouting host jabs a finger, the Doge tilts its head, very confused, a graphic behind reads nothing." }
+        ]},
+        { "beat": "Things escalate fast.", "options": [
+          { "label": "Doge launches on a homemade rocket to the moon", "prompt": "The Doge strapped to a cardboard rocket in a backyard, fuse lit, launch, the rocket climbs past clouds, the Doge grins with ears flapping." },
+          { "label": "Doge wins the boxing match by accident", "prompt": "The Doge trips in the boxing ring, its glove swings up and accidentally lands a knockout, the referee lifts the Doge's paw, confetti falls." },
+          { "label": "Doge gets chased by a mob of angry investors", "prompt": "The Doge sprints down a city street chased by a crowd in suits waving printed charts, dives into a taxi." },
+          { "label": "Doge accidentally becomes a senator", "prompt": "The Doge is handed a gavel at the hearing table, bangs it once, everyone stands and applauds, the Doge looks terrified." }
+        ]},
+        { "beat": "The Doge is somewhere it should not be.", "options": [
+          { "label": "Doge lands on the moon and plants a flag", "prompt": "The Doge in a tiny spacesuit bounces on the lunar surface, plants a flag with a paw print on it, Earth rises behind." },
+          { "label": "Doge hosts a press conference", "prompt": "The Doge at a podium with a dozen microphones, flashbulbs popping, holds up a single paw for silence, then yawns." },
+          { "label": "Doge runs a lemonade stand that accepts only coins", "prompt": "The Doge behind a lemonade stand with a sign showing coin symbols, a long line of customers holding phones, the Doge pours lemonade." },
+          { "label": "Doge gets stuck in an elevator with the Orange Man", "prompt": "The Doge and a very tan man with a blond swoop hairstyle stand awkwardly in a stopped elevator, both look at the ceiling, the lights flicker." }
+        ]},
+        { "beat": "The finale.", "options": [
+          { "label": "Doge rides a golden bull down Wall Street", "prompt": "The Doge rides a charging golden bull statue come to life down Wall Street, traders leap aside, ticker tape rains down." },
+          { "label": "Doge returns from the moon to a hero's welcome", "prompt": "A capsule splashes down, the hatch opens, the Doge emerges in a spacesuit waving, boats honk, a rainbow." },
+          { "label": "Doge falls asleep mid-victory speech", "prompt": "The Doge on a stage at a podium mid-speech slowly leans on the podium and falls asleep, the crowd applauds anyway." },
+          { "label": "Doge sells everything and buys a doghouse", "prompt": "The Doge signs a paper with a paw print, receives a golden key, walks into a tiny red doghouse with a satellite dish, closes the door." }
+        ]}
+      ]
+    },
+    {
+      "id": "chaos",
+      "name": "Chaos",
+      "tagline": "No rules, no plot, no mercy.",
+      "adult": false,
+      "model": "minimax-h3-max-text-to-video",
+      "style": "Hyper-real cinematic, wide lens, dramatic lighting, absurd premise played completely straight, 24fps, no text on screen.",
+      "system": "Anything can happen. Every scene is a new impossible thing filmed as if it were real.",
+      "rounds": [
+        { "beat": "Start somewhere strange.", "options": [
+          { "label": "A cat delivers a TED talk", "prompt": "A tabby cat stands at a podium on a red circle stage delivering a talk to a rapt audience, slides behind it, dramatic paw gesture." },
+          { "label": "A volcano erupts confetti", "prompt": "A snow-capped volcano erupts, but the plume is millions of pieces of colorful confetti drifting over a small village, villagers cheer." },
+          { "label": "Grandma wins a drag race", "prompt": "An elderly woman in a cardigan does a burnout in a purple muscle car at a drag strip, launches, wins, waves from the window." },
+          { "label": "Fish learn to walk today", "prompt": "Thousands of small fish walk out of the ocean onto a beach on tiny legs, sunbathers stare, one fish holds a beach ball." }
+        ]},
+        { "beat": "Make it bigger.", "options": [
+          { "label": "The moon lands on Earth for a visit", "prompt": "A colossal moon gently touches down in a wheat field, dust rolls out, a farmer looks up from a tractor, unimpressed." },
+          { "label": "A traffic jam of dinosaurs", "prompt": "A rush-hour freeway packed with dinosaurs in the lanes instead of cars, a T-rex honks a horn, a helicopter reports overhead." },
+          { "label": "Skyscrapers play musical chairs", "prompt": "Downtown skyscrapers slide across the city grid swapping positions like musical chairs, pedestrians hold onto lampposts." },
+          { "label": "It rains rubber ducks", "prompt": "A thunderstorm over a city where yellow rubber ducks fall instead of rain, bouncing off umbrellas and filling the streets." }
+        ]},
+        { "beat": "Somebody has to deal with it.", "options": [
+          { "label": "The army deploys against the ducks", "prompt": "Soldiers in full gear advance down a street knee-deep in rubber ducks, a commander shouts into a radio, a duck squeaks under a boot." },
+          { "label": "A toddler negotiates with the dinosaurs", "prompt": "A toddler in a diaper stands on the freeway holding a juice box, addressing a bowing T-rex, news cameras roll." },
+          { "label": "The moon apologizes on live TV", "prompt": "A news studio interview where the guest is a giant moon with a gentle glowing face, the host nods sympathetically." },
+          { "label": "The cat runs for mayor", "prompt": "The tabby cat in a small tie waves from a campaign bus, crowds hold signs with a paw print, balloons everywhere." }
+        ]},
+        { "beat": "It gets out of hand.", "options": [
+          { "label": "The ocean stands up and walks away", "prompt": "The entire ocean rises into a towering walking figure of water and strides inland, ships slide off its shoulders, people watch from a cliff." },
+          { "label": "Gravity takes a lunch break", "prompt": "In a city square everything floats gently upward, cars, pigeons, a hot dog cart, a man calmly eats a floating sandwich." },
+          { "label": "The sun sets in the wrong place", "prompt": "The sun slowly sets into the middle of a city street between two buildings, steam rises from the asphalt, drivers wait at a red light." },
+          { "label": "Every statue comes alive and stretches", "prompt": "Bronze and marble statues across a European plaza step off their plinths, stretch and yawn like they've been standing for centuries." }
+        ]},
+        { "beat": "End it with a bang.", "options": [
+          { "label": "Everyone floats up into a giant group hug", "prompt": "Thousands of people float upward above a city and drift into one enormous slow group hug in the clouds at sunset." },
+          { "label": "The cat is sworn in as mayor", "prompt": "The tabby cat places a paw on a book at a ceremony on city hall steps, cannons fire confetti, a marching band plays." },
+          { "label": "The ocean comes back and lies down", "prompt": "The walking ocean figure returns to the coast and slowly lies down, becoming the sea again, waves settle, a surfer catches the first wave." },
+          { "label": "Fade to a single rubber duck", "prompt": "A quiet street at dawn covered in rubber ducks, one duck slowly rotates toward camera and blinks." }
+        ]}
+      ]
+    },
+    {
+      "id": "sitcom",
+      "name": "Sitcom",
+      "tagline": "Three roommates, one apartment, zero rent paid.",
+      "adult": false,
+      "model": "minimax-h3-max-text-to-video",
+      "style": "Multi-camera 90s sitcom look, warm studio lighting, a cozy apartment set with a couch and a kitchen behind, three roommates: Priya (short black hair, red hoodie), Max (tall, curly hair, glasses), Jo (blonde, denim jacket), 24fps, no text on screen.",
+      "system": "A classic sitcom about three roommates. Every scene is a setup and a punchline. Keep it warm.",
+      "rounds": [
+        { "beat": "Cold open.", "options": [
+          { "label": "Max has adopted a goat", "prompt": "Max walks in the apartment door leading a small goat on a leash, Priya and Jo freeze on the couch mid-snack, the goat eats a magazine." },
+          { "label": "The rent is due and nobody has it", "prompt": "The three roommates sit around the kitchen table staring at an envelope marked with a red stamp, Jo slowly slides it toward Max." },
+          { "label": "Priya's date is the landlord", "prompt": "Priya opens the front door dressed up for a date, the man at the door is the grumpy landlord holding flowers, Max chokes on cereal." },
+          { "label": "Jo built a hot tub in the living room", "prompt": "Jo sits in a hot tub in the middle of the living room wearing sunglasses, Priya and Max stand in the doorway holding groceries." }
+        ]},
+        { "beat": "The plan.", "options": [
+          { "label": "They start a goat yoga business", "prompt": "The living room is full of strangers doing yoga while the goat walks across their backs, Max collects cash at the door." },
+          { "label": "They rent the hot tub by the hour", "prompt": "A queue of neighbors in bathrobes waits in the hallway, Jo takes bookings on a clipboard, Priya hands out towels." },
+          { "label": "Max pretends to be a famous chef", "prompt": "Max in a tall chef hat flips a pancake that sticks to the ceiling, Priya films on a phone, Jo applauds." },
+          { "label": "Priya fakes an engagement to the landlord", "prompt": "Priya shows off a ring made of a pop-tab to the landlord at the door, Max and Jo peek from behind the couch, the goat bleats." }
+        ]},
+        { "beat": "It goes wrong.", "options": [
+          { "label": "The goat eats the rent money", "prompt": "The goat chews a fan of cash on the kitchen table while the three roommates lunge in slow motion to stop it." },
+          { "label": "The hot tub leaks into the downstairs apartment", "prompt": "Water pours through the ceiling of the neighbor's apartment below onto a man reading a newspaper, he keeps reading." },
+          { "label": "The landlord brings his mother to dinner", "prompt": "An awkward dinner at the tiny table, the landlord's tiny elderly mother inspects Priya through thick glasses, Max serves burnt pancakes." },
+          { "label": "A health inspector shows up", "prompt": "A stern health inspector in a suit stands in the doorway with a clipboard while a goat yoga class is in full swing behind Max." }
+        ]},
+        { "beat": "Damage control.", "options": [
+          { "label": "They hide the goat in the fridge", "prompt": "Max shoves the goat gently into the refrigerator as the inspector turns around, the goat's face peeks out from behind a milk carton." },
+          { "label": "Jo distracts everyone with a song", "prompt": "Jo stands on the coffee table playing a ukulele very loudly, the inspector taps a foot despite himself, Priya mops water." },
+          { "label": "Priya confesses everything", "prompt": "Priya stands and delivers a dramatic confession at dinner, arms wide, the landlord's mother slowly starts to laugh." },
+          { "label": "Max blames the goat for everything", "prompt": "Max points at the goat, the goat looks at Max, the whole room looks at the goat, the goat bleats once." }
+        ]},
+        { "beat": "Tag.", "options": [
+          { "label": "The landlord's mother moves in", "prompt": "The tiny elderly mother sits on the couch between the roommates holding the goat, remote in hand, everyone stares at the TV in silence." },
+          { "label": "The goat pays the rent", "prompt": "The goat drops a chewed but complete envelope of cash at the landlord's feet at the door, the landlord picks it up, nods, leaves." },
+          { "label": "They all end up in the hot tub", "prompt": "The three roommates, the landlord and the goat sit in the hot tub together, sunglasses on, Jo raises a glass." },
+          { "label": "Max adopts a second goat", "prompt": "Max walks in the door leading two goats, Priya and Jo scream in unison, the first goat looks delighted." }
+        ]}
+      ]
+    },
+    {
+      "id": "anime",
+      "name": "Anime",
+      "tagline": "Neo-Kyoto, 2099. A courier with a past.",
+      "adult": false,
+      "model": "minimax-h3-max-text-to-video",
+      "style": "2D anime style, cel shading, dynamic camera, rain-soaked neon city Neo-Kyoto, hero: Rin, a young courier with a silver bob haircut, orange jacket, hoverbike, 24fps, no text on screen.",
+      "system": "A cyberpunk anime about Rin, a courier who delivers the wrong package. Action with heart.",
+      "rounds": [
+        { "beat": "The delivery.", "options": [
+          { "label": "Rin picks up a glowing package", "prompt": "Rin receives a small box glowing blue from a hooded figure under a noodle stand awning, rain sheets down, neon reflects on wet ground." },
+          { "label": "Rin races a police drone through traffic", "prompt": "Rin on a hoverbike weaves between flying cars in a neon canyon while a red police drone chases, sparks off a billboard." },
+          { "label": "Rin's bike stalls above the city", "prompt": "Rin's hoverbike sputters and dips above a glittering skyline, Rin thumps the dashboard, the engine roars back with blue flame." },
+          { "label": "Rin gets a call from a stranger", "prompt": "Rin's wrist screen lights up with an unknown caller, a distorted masked face appears, Rin narrows her eyes under the rain." }
+        ]},
+        { "beat": "The package opens.", "options": [
+          { "label": "A tiny robot fox jumps out", "prompt": "The glowing box opens and a small robotic fox with glowing eyes leaps out onto Rin's shoulder, sniffs, and chirps." },
+          { "label": "The package is a map to the old city", "prompt": "A hologram unfolds from the box showing a 3D map of a buried old city under Neo-Kyoto, a red marker pulses." },
+          { "label": "A mech wakes up from the box", "prompt": "The small box unfolds and expands into a three-story mech that towers over Rin in an alley, eyes lighting up one by one." },
+          { "label": "It is someone's memories", "prompt": "The box projects flickering memories of a girl with Rin's face in a sunlit field, Rin drops the box in shock." }
+        ]},
+        { "beat": "The hunters arrive.", "options": [
+          { "label": "A gang of neon samurai blocks the road", "prompt": "Five figures in neon-lined armor with glowing katanas stand in a rain-slick street blocking Rin's hoverbike, steam rises." },
+          { "label": "A corporate gunship descends", "prompt": "A massive corporate gunship with searchlights drops between skyscrapers, spotlights sweep across Rin on her bike." },
+          { "label": "Rin's old partner reappears", "prompt": "A tall man in a long black coat steps from the shadows with a scarred face, Rin's expression flickers between anger and relief." },
+          { "label": "The city's AI speaks through every screen", "prompt": "Every billboard in the neon street switches to the same glowing eye that turns to look at Rin, rain freezes in the air for a second." }
+        ]},
+        { "beat": "The fight.", "options": [
+          { "label": "The mech and Rin fight side by side", "prompt": "The mech punches through a gunship while Rin on her hoverbike loops around it firing a grappling line, explosion of sparks." },
+          { "label": "Rin outruns everyone through a train tunnel", "prompt": "Rin's hoverbike screams through a maglev tunnel inches ahead of a train, the robot fox clings to her jacket." },
+          { "label": "The robot fox hacks the gunship", "prompt": "The tiny robot fox leaps onto the gunship hull, eyes flash, the gunship's lights turn from red to blue and it lowers its weapons." },
+          { "label": "Rin duels the neon samurai leader", "prompt": "Rin, holding a glowing wrench like a sword, clashes with the samurai leader's katana on a rooftop in the rain, slow motion sparks." }
+        ]},
+        { "beat": "Dawn.", "options": [
+          { "label": "Rin delivers the package after all", "prompt": "Rin hands the glowing box to an old woman on a quiet rooftop garden at sunrise, the old woman smiles and bows." },
+          { "label": "Rin keeps the robot fox", "prompt": "Rin rides her hoverbike into a golden sunrise above the city with the robot fox on her shoulder, wind in her silver hair." },
+          { "label": "The old city rises", "prompt": "Ancient towers rise out of the ground beneath Neo-Kyoto at dawn, glowing with old symbols, Rin watches from a bridge." },
+          { "label": "Rin finds the girl from the memories", "prompt": "Rin steps into a sunlit field at the edge of the city where a girl with her face waits, both slowly raise a hand." }
+        ]}
+      ]
+    },
+    {
+      "id": "storybook",
+      "name": "Storybook",
+      "tagline": "A bear, a lantern, and a very long night.",
+      "adult": false,
+      "model": "minimax-h3-max-text-to-video",
+      "style": "Painterly children's picture book style, soft watercolor textures, gentle warm light, hero: a small brown bear cub named Pip in a yellow scarf carrying a lantern, 24fps, no text on screen.",
+      "system": "A gentle bedtime story about Pip the bear cub looking for the moon. Wonder, no fear.",
+      "rounds": [
+        { "beat": "The moon is missing.", "options": [
+          { "label": "Pip notices the moon is gone", "prompt": "Pip the bear cub stands at the window of a cozy treehouse looking at a starry sky with no moon, lantern in paw, ears droop." },
+          { "label": "An owl says the moon fell in the lake", "prompt": "A large wise owl on a branch whispers to Pip and points a wing toward a shimmering lake in the forest." },
+          { "label": "Pip finds moon footprints in the snow", "prompt": "Pip crouches with the lantern over glowing silver footprints in fresh snow leading into a dark forest." },
+          { "label": "The stars ask Pip for help", "prompt": "Tiny stars drift down from the sky and circle around Pip's lantern, tugging at the yellow scarf toward the forest." }
+        ]},
+        { "beat": "Into the forest.", "options": [
+          { "label": "Pip crosses a river on a turtle", "prompt": "Pip rides on the back of a huge friendly turtle across a moonless river, lantern lighting the ripples, fireflies follow." },
+          { "label": "Pip meets a fox who lost his shadow", "prompt": "A small red fox sits sadly on a log, Pip holds the lantern up and the fox's shadow reappears, the fox jumps for joy." },
+          { "label": "Pip climbs the tallest tree", "prompt": "Pip climbs a giant tree with a lantern hooked on a paw, the forest spreads out below, an owl watches." },
+          { "label": "Pip finds a door in a hill", "prompt": "Pip pushes open a tiny round wooden door in a grassy hill, warm golden light spills out." }
+        ]},
+        { "beat": "Something magical.", "options": [
+          { "label": "The moon is asleep in the lake", "prompt": "Pip looks over the edge of the turtle's shell and sees the moon sleeping under the water, softly snoring, bubbles rising." },
+          { "label": "A whale carries the moon on its back", "prompt": "A great gentle whale glides through the night sky above the forest with the moon resting on its back, Pip waves from a treetop." },
+          { "label": "Inside the hill is a moon-repair workshop", "prompt": "Inside the hill, tiny mice in aprons polish the moon on a workbench with cloths, the moon giggles, Pip peeks in." },
+          { "label": "The moon is hiding because it is shy", "prompt": "Pip finds the moon peeking out from behind a mountain, blushing pink, Pip holds up the lantern like a friendly wave." }
+        ]},
+        { "beat": "Helping the moon.", "options": [
+          { "label": "Pip tickles the moon awake", "prompt": "Pip leans over the water and gently tickles the sleeping moon with a feather, the moon giggles and rises dripping into the sky." },
+          { "label": "Pip sings the moon a song", "prompt": "Pip sits on the whale's back singing softly with eyes closed, the moon glows brighter with every note, stars gather." },
+          { "label": "Pip gives the moon the yellow scarf", "prompt": "Pip wraps the yellow scarf around the shy moon, the moon smiles and floats up wearing the scarf." },
+          { "label": "The mice let Pip polish the last spot", "prompt": "Pip polishes a small dull spot on the moon with a tiny cloth until it shines, the mice cheer and toss their aprons." }
+        ]},
+        { "beat": "Goodnight.", "options": [
+          { "label": "The moon carries Pip home", "prompt": "The moon, wearing a yellow scarf, floats over the forest carrying a sleepy Pip curled on top, back toward the treehouse." },
+          { "label": "All the animals watch the moonrise", "prompt": "Pip, the fox, the turtle, the owl and the mice sit in a row on a hill watching the full moon rise, lantern between them." },
+          { "label": "Pip falls asleep on the whale", "prompt": "Pip sleeps curled on the whale's back as it drifts slowly across a sky now full of moonlight, the lantern flickers out." },
+          { "label": "The moon tucks Pip into bed", "prompt": "Moonlight pours through the treehouse window and gently pulls a blanket over sleeping Pip, the lantern glows on the sill." }
+        ]}
+      ]
+    },
+    {
+      "id": "afterdark",
+      "name": "After Dark",
+      "tagline": "Unfiltered. Horror, dark comedy, no safety rails.",
+      "adult": true,
+      "model": "minimax-h3-max-text-to-video",
+      "style": "Gritty 35mm horror film look, high contrast, deep shadows, practical-effects feel, unsettling, 24fps, no text on screen.",
+      "system": "A late-night horror anthology. Dark, strange, gory when it earns it. Uncensored, never illegal.",
+      "rounds": [
+        { "beat": "Last call.", "options": [
+          { "label": "The bartender has no face", "prompt": "A dim roadside bar, the bartender turns around and has smooth skin where a face should be, a lone drinker slowly lowers his glass." },
+          { "label": "A hitchhiker with wet footprints", "prompt": "Night highway, headlights reveal a soaked hitchhiker in a dry desert, wet footprints trail behind him into darkness." },
+          { "label": "The motel TV shows the viewer's room", "prompt": "A man in a motel room watches the TV show a live feed of his own room from behind him, he slowly turns to look at the corner." },
+          { "label": "The elevator goes to floor 13", "prompt": "A hotel elevator's button panel lights up a 13 that was not there before, the doors open onto a corridor of dripping red wallpaper." }
+        ]},
+        { "beat": "It notices you.", "options": [
+          { "label": "The faceless bartender pours something alive", "prompt": "The faceless bartender pours a black liquid that writhes and reaches out of the glass toward the drinker's hand." },
+          { "label": "The hitchhiker is already in the back seat", "prompt": "The driver glances in the rearview mirror, the hitchhiker sits in the back seat dripping water, smiling too wide." },
+          { "label": "The figure in the corner steps closer on the TV", "prompt": "On the motel TV the dark figure in the corner of the room takes one step forward, the man does not dare turn around again." },
+          { "label": "Something knocks from inside the walls", "prompt": "In the red corridor a rhythmic knocking comes from inside the walls, the wallpaper bulges outward in the shape of a hand." }
+        ]},
+        { "beat": "Run.", "options": [
+          { "label": "The bar's door opens into the same bar", "prompt": "The drinker bursts out of the bar door and runs into the identical bar again, the faceless bartender waits, polishing a glass." },
+          { "label": "The car will not stop accelerating", "prompt": "The driver stamps the brake, the speedometer climbs, the hitchhiker leans forward between the seats, water pours from his sleeves." },
+          { "label": "The man climbs out the motel window", "prompt": "The man crawls out of a motel bathroom window into a parking lot where every car's headlights turn on at once." },
+          { "label": "The hand pulls someone into the wall", "prompt": "A wallpaper hand grabs a hotel guest by the ankle and drags him into the wall, the wallpaper smooths over, a shoe is left behind." }
+        ]},
+        { "beat": "The reveal.", "options": [
+          { "label": "Everyone in the bar has no face", "prompt": "The drinker turns to the room and every patron at every table slowly looks up with no face, the jukebox plays on." },
+          { "label": "The hitchhiker is the driver's drowned brother", "prompt": "The hitchhiker's face in the mirror becomes the driver's own face, bloated and pale, mouthing the driver's name." },
+          { "label": "The parking lot cars are full of mannequins", "prompt": "Every parked car holds a mannequin family staring straight ahead, one mannequin's head slowly turns toward the man." },
+          { "label": "Floor 13 is a room full of beds with the guests", "prompt": "A vast hotel ballroom of hospital beds with every guest of the hotel asleep and wired to the walls, wallpaper pulsing like veins." }
+        ]},
+        { "beat": "No escape.", "options": [
+          { "label": "The drinker takes his seat at the bar forever", "prompt": "The drinker slowly sits back down at the bar, the bartender slides a fresh glass, the drinker's face begins to smooth over." },
+          { "label": "The car drives into a lake", "prompt": "The car plunges off a bridge into a black lake, headlights fading underwater, the hitchhiker stands dry on the bridge above." },
+          { "label": "The motel sign flickers to VACANCY", "prompt": "The motel neon sign buzzes from NO VACANCY to VACANCY, a mannequin hand rests on the front desk bell." },
+          { "label": "The elevator doors close with you inside", "prompt": "Elevator doors close on a hallway full of faceless guests, the panel lights 13 again, and the descent begins." }
+        ]}
+      ]
+    }
+  ]
+}
